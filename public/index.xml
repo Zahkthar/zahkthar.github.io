@@ -6,7 +6,20 @@
     <description>Recent content on Zahkthar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Nov 2022 13:08:30 +0200</lastBuildDate><atom:link href="https://zahkthar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 02 Nov 2022 14:00:00 +0200</lastBuildDate><atom:link href="https://zahkthar.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Le condensateur</title>
+      <link>https://zahkthar.github.io/post/composants/composants_condensateur/</link>
+      <pubDate>Wed, 02 Nov 2022 14:00:00 +0200</pubDate>
+      
+      <guid>https://zahkthar.github.io/post/composants/composants_condensateur/</guid>
+      <description>Globalement, le condensateur est simplement une &amp;ldquo;petite batterie&amp;rdquo;, il permet de stocker de l&amp;rsquo;énergie électrique et de la restituer.
+C&amp;rsquo;est quand même un petit peu plus compliqué que ça malheuresement&amp;hellip; Mais on peut déjà saisir l&amp;rsquo;intérêt de ce composant dans un circuit.
+Voici quelles formes peut avoir un condensateur :
+Voici donc le programme pour aujourd&amp;rsquo;hui :
+Présentation rapide du composant Capacité équivalente en dérivation Capacité équivalente en série Exemples d&amp;rsquo;utilisations pratique Présentation rapide du composant Basiquement, un condensateur est constitué de deux armatures conductrices (qu&amp;rsquo;on appelle généralement électrode) séparées par un isolant (ou diélectrique pour le nom technique).</description>
+    </item>
+    
     <item>
       <title>Les sources d&#39;énergie électrique</title>
       <link>https://zahkthar.github.io/post/cours/cours_les-sources-d%C3%A9nergie-%C3%A9lectrique/</link>

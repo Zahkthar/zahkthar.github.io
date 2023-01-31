@@ -3,12 +3,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Zahkthar - La résistance </title>
+    <title>Zahkthar - Le condensateur </title>
     
     
     <meta content="Zahkthar" name="keywords">
     
-    <meta content="Zahkthar - La résistance est un des composants de base de l&#39;électronique, nous allons donc en faire un bref tour." name="description">
+    <meta content="Zahkthar - Le condensateur se retrouve dans quasiment tous les circuits, pourquoi ? Rappels et formules au programme !" name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     
@@ -98,10 +98,10 @@ layui.use('element', function(){
             <div class="layui-card single-card">
                 <br />
                 <blockquote class="self-elem-quote  markdown-body single-title" >
-                    <h1>La résistance</h1>
+                    <h1>Le condensateur</h1>
                     <h3 style="margin-top:10px; margin-bottom:10px"> 
     <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
-    <span>2022-10-05</span>
+    <span>2022-11-02</span>
 
     
     
@@ -134,83 +134,95 @@ layui.use('element', function(){
 
                 </blockquote>
                 <div class="layui-card-body markdown-body single-content">
-                    <p><strong>Un résumé des choses à savoir sur la résistance :</strong></p>
-<p>La résistance est un des composants les plus courants des circuits électroniques. Nous en avons légèrement parlé dans &ldquo;<a href="https://zahkthar.github.io/post/cours/cours_les-lois-fondamentales-en-r%C3%A9gime-continu/">Les lois fondamentales en régime continu</a>&rdquo; mais dans cet article, je vais tenter de faire un résumé de tout ce qu&rsquo;il y a à savoir pour pouvoir utiliser simplement ce composant.</p>
-<p>Voici donc le sommaire de l&rsquo;article :</p>
+                    <p>Globalement, le condensateur est simplement une &ldquo;petite batterie&rdquo;, il permet de stocker de l&rsquo;énergie électrique et de la restituer.</p>
+<p>C&rsquo;est quand même un petit peu plus compliqué que ça malheuresement&hellip; Mais on peut déjà saisir l&rsquo;intérêt de ce composant dans un circuit.</p>
+<p>Voici quelles formes peut avoir un condensateur :</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b9/Capacitors_%287189597135%29.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Capacitors_%287189597135%29.jpg#center" alt="Image condensateurs" title="Condensateurs électrochimiques"></a></p>
+<p>Voici donc le programme pour aujourd&rsquo;hui :</p>
 <ol>
-<li><a href="#les-unit%C3%A9s-li%C3%A9es-%C3%A0-la-r%C3%A9sistance">Les unités liées à la résistance</a></li>
-<li><a href="#rappel-de-la-loi-dohm">La loi d&rsquo;Ohm</a></li>
-<li><a href="#leffet-joule">L&rsquo;effet Joule</a></li>
-<li><a href="#r%C3%A9sistance-%C3%A9quivalente-en-s%C3%A9rie">Résistance équivalente en série</a></li>
-<li><a href="#r%C3%A9sistance-%C3%A9quivalente-en-d%C3%A9rivation">Résistance équivalente en dérivation</a></li>
+<li><a href="#pr%C3%A9sentation-rapide-du-composant">Présentation rapide du composant</a></li>
+<li><a href="#capacit%C3%A9-%C3%A9quivalente-en-d%C3%A9rivation">Capacité équivalente en dérivation</a></li>
+<li><a href="#capacit%C3%A9-%C3%A9quivalente-en-s%C3%A9rie">Capacité équivalente en série</a></li>
+<li><a href="#exemples-dutilisations-pratique">Exemples d&rsquo;utilisations pratique</a></li>
 </ol>
-<h3 id="les-unités-liées-à-la-résistance">Les unités liées à la résistance</h3>
-<p>Dans le composant électrique qu&rsquo;est la résistance, il y a quelques grandeurs que l&rsquo;on peut connaître selon son type ou son matériau.</p>
-<h4 id="la-résistivité-électrique-dun-matériau">La résistivité électrique d&rsquo;un matériau</h4>
-<p>La résistivité d&rsquo;un matériau (symbolisé par la lettre ρ -&gt; rho) représente sa capacité à s&rsquo;opposer à la circulation d&rsquo;un courant électrique. Il s&rsquo;agit plus simplement de la <strong>résistance en Ohm d&rsquo;un tronçon d&rsquo;un mètre de longueur et d&rsquo;un mètre carré de section</strong>. Son unité est le &ldquo;omhs-mètre&rdquo; de symbole <strong>Ω⋅m</strong>. La résistivité d&rsquo;un élément métallique croit linéairement en fonction de la température selon un coefficient propre au matériau en question. (C&rsquo;est cet effet qui est derrière les résistances de platines utilisées pour les sondes de température type Pt-100)</p>
-<h4 id="la-résistance-électrique">La résistance électrique</h4>
-<p>La résistance électrique dans une résistance dépend directement de la résistivité du matériau utilisé, qu&rsquo;on va venir diviser ou multiplier selon la longueur et la section de notre conducteur. Sur les résistances, la valeur de la résistance électrique est généralement donnée via un code couleur que nous verrons juste après, mais si l&rsquo;on voulait calculer soi-même la résistance d&rsquo;un conducteur, nous pourrions utiliser cette formule :</p>
-<p>$$R = \rho * \frac{L}{S}$$</p>
-<p>Où :</p>
+<h3 id="présentation-rapide-du-composant">Présentation rapide du composant</h3>
+<p>Basiquement, un condensateur est constitué de deux armatures conductrices (qu&rsquo;on appelle généralement électrode) séparées par un isolant (ou diélectrique pour le nom technique). Le symbole du condensateur n&rsquo;a donc pas été choisi par hasard et l&rsquo;on reconnaît bien les deux électrodes séparées par un espace !</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Symbole_condensateur.png"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Symbole_condensateur.png#center" alt="Symbole condensateur" title="Condensateurs électrochimiques"></a></p>
+<p>Lorsque le condensateur est branché sur une source d&rsquo;alimentation continue (admettons une tension de 5V), les électrons vont aller du &ldquo;+&rdquo; vers le &ldquo;-&rdquo;, comme on pourrait s&rsquo;y attendre. Mais il n&rsquo;y a pas de contact dans un condensateur, comme on peut le deviner à son symbole. Les deux bornes étaient avant équilibrées, maintenant toute les électrons vont vers le &ldquo;-&rdquo;.</p>
+<p>Un électron ayant une quantité d&rsquo;énergie négative, la borne &ldquo;-&rdquo; va se charger en énergie négative alors que la borne &ldquo;+&rdquo; va &ldquo;perdre de l&rsquo;énergie négative&rdquo;, ce qui va rendre sa tension plus positive encore !</p>
+<p><a href="/res/images/Composants/Condensateur/CondensateurEnCircuit.png#center"><img src="/res/images/Composants/Condensateur/CondensateurEnCircuit.png#center" alt="Un condensateur en circuit" title="Condensateur en circuit"></a></p>
+<p>Une fois que le condensateur sera chargé, une tension de 5V sera présente sur sa borne &ldquo;+&rdquo; et de 0V sur sa borne &ldquo;-&rdquo;, soit la tension d&rsquo;alimentation. A partir de ce moment, il n&rsquo;y a plus de courant dans le circuit, le courant venant de la différence de tension.</p>
+<p>Ici, il n&rsquo;y a pas de résistance (R = 0, donc I est très élevé car I = U/R) donc le condensateur passe de 0V à la tension d&rsquo;alimentation globalement instantanément ! Ce qui n&rsquo;est pas forecément ce que l&rsquo;on veut. On peut donc mettre une résistance dans le circuit pour limiter le courant et donc changer le temps de charge du condensateur.</p>
+<p><a href="/res/images/Composants/Condensateur/CondensateurResistanceCircuit.png#center"><img src="/res/images/Composants/Condensateur/CondensateurResistanceCircuit.png#center" alt="Condensateur avec résistance" title="Condensateur et résistance en circuit"></a></p>
+<p>La tension aux bornes du condensateur n&rsquo;évoluant pas de façon linéaire mais exponentielle, comme on peut le voir sur la courbe d&rsquo;exemple suivante, la formule pour avoir le &ldquo;pourcentage de charge en fonction du temps&rdquo; ne sera pas aussi simple que la loi d&rsquo;Ohm.</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/3/36/Charge_et_d%C3%A9charge_d%27un_condensateur.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Charge_et_d%C3%A9charge_d%27un_condensateur.svg" alt="Graphique charge/décharge d&amp;rsquo;un condensateur" title="Graphique charge/décharge d'un condensateur"></a></p>
+<p>Le but ici n&rsquo;étant pas de rentrer dans la complexité d&rsquo;un cours de physique, on va se contenter de voir les formules ! Dans les circuits de ce type (qu&rsquo;on appelle circuit RC pour Résistance-Condensateur, mais il en existe d&rsquo;autres comme LC ou RLC faisant intervenir une bobine), il intervient ce qu&rsquo;on appelle une <strong>constante de temps</strong>.</p>
+<p>La constante de temps dans un circuit RC est donnée par la formule suivante :</p>
+<p>$$τ = R*C$$</p>
+<p>où :</p>
 <ul>
-<li>ρ (rho) est la résistivité du matériau en <strong>omhs-mètre</strong> (Ω⋅m)</li>
-<li>L est la longueur en <strong>mètres</strong> (m)</li>
-<li>S est la section du conducteur en <strong>mètre carrés</strong> (m²)</li>
+<li>le τ est la lettre grecque tau et représente notre constante de temps en seconde.</li>
+<li>R est la valeur de la résistance</li>
+<li>C est la capacité du condensateur</li>
 </ul>
-<h4 id="la-conductance-électrique">La conductance électrique</h4>
-<p>Cette unité est plus rare que son homologue la résistance mais en fait elles sont très fortement liées. En effet, la conductance électrique est le strict inverse de la résistance !</p>
-<p>$$G = \frac{1}{R}$$</p>
-<p>Ou via la loi d&rsquo;Ohm (qui est le point d&rsquo;après) :</p>
-<p>$$G = \frac{I}{U}$$</p>
-<p>Son symbole est généralement G et son unité est le <strong>Siemens</strong> (S).</p>
-<p>Elle correspond à la capacité d&rsquo;un conducteur à conduire le courant, contrairement à la résistance électrique qui est la faculté d&rsquo;un conducteur à résister au courant. Par extension, plus la conductance est grande (et donc plus la résistance est petite), et plus le courant sera élevé.</p>
-<h3 id="la-loi-dohm">La loi d&rsquo;Ohm</h3>
-<p>Nous avions déjà introduit cette loi dans l&rsquo;article précédent (cf. &ldquo;<a href="https://zahkthar.github.io/post/cours/cours_les-lois-fondamentales-en-r%C3%A9gime-continu/">Les lois fondamentales en régime continu</a>&rdquo;) mais je vais quand même en refaire un rapide résumé.</p>
-<p><strong>George Simon Ohm</strong> en 1827 a trouvé empiriquement une relation directe entre l&rsquo;intensité traversant un élément résistif (une résistance) et la tension à ses bornes. En effet, si l&rsquo;on trace la courbe de caractéristique d&rsquo;une résistance (le courant qui la traverse en fonction de la tension à ses bornes) nous voyons que le coefficient directeur de la droite est la résistance !</p>
-<p><a href="/res/images/Composants/Resistance/CourbeCaracteristique.png"><img src="/res/images/Composants/Resistance/CourbeCaracteristique.png#center" alt="Courbe caractéristique d&amp;rsquo;une résistance" title="Courbe caractéristique d'une résistance"></a></p>
-<p>Dans cet exemple, nous avons une résistance de 2 Ohms, la tension en ordonnée et l&rsquo;intensité en abscisse. Nous voyons donc que pour chaque volt que l&rsquo;on monte, l&rsquo;intensité monte de 2 ampères. Le coefficient directeur est bien 2, soit la valeur de notre résistance.</p>
-<p>On en déduit donc la formule générale de la loi d&rsquo;Ohm :</p>
-<p>$$U = R * I$$</p>
-<h3 id="leffet-joule">L&rsquo;effet Joule</h3>
-<p>En courant continu, l&rsquo;effet Joule correspond à la perte d&rsquo;énergie électrique en énergie thermique au passage d&rsquo;une résistance.</p>
-<p>Pour l&rsquo;expliquer plus simplement, nous avons déjà la formule de la puissance dans un coin de notre tête :</p>
-<p>$$P = U * I$$</p>
-<p>Ainsi que la loi d&rsquo;Ohm que nous venons de revoir :</p>
-<p>$$U = R * I$$</p>
-<p>Nous pouvons donc mélanger les deux formules et donc remplacer le U présent dans la formule de la puissance par R * I, ce qui nous donne :</p>
-<p>$$P = R * I * I$$
-$$P = R * I^{2}$$</p>
-<p>Grâce à cette formule, nous pouvons maintenant calculer la puissance consommée par une résistance !</p>
-<p>Mais l&rsquo;effet Joule correspond à la quantité d&rsquo;énergie dissipée dans la résistance et non la puissance. Mais nous savons que l&rsquo;énergie se calcule via la formule suivante :</p>
-<p>$$W = P * t$$</p>
-<p>Et si on remet notre formule pour la puissance consommée par une résistance, nous obtenons la formule caractéristique de l&rsquo;effet Joule :</p>
-<p>$$W = R * I^{2} * t$$</p>
-<p>Cette formule, assez logiquement, nous permet de calculer la quantité d&rsquo;énergie dissipée par une résistance. On parle généralement de pertes thermique, étant donné que la chaleur n&rsquo;est pas une énergie intéressante dans un circuit électrique (à part si l&rsquo;intérêt est de produire de la chaleur, comme dans un four ou un radiateur par exemple).</p>
-<h3 id="résistance-équivalente-en-série">Résistance équivalente en série</h3>
-<p>Plusieurs résistances en série sont équivalentes à une seule résistance dont la valeur est la somme des résistances composantes.</p>
-<p>Cette règle peut être démontrée simplement avec la loi d&rsquo;Ohm mais gardons simplement l&rsquo;idée générale : <strong>La résistance électrique des résistances en séries s&rsquo;additionnent.</strong></p>
-<p><a href="/res/images/Composants/Resistance/ResistancesEnSerie.png"><img src="/res/images/Composants/Resistance/ResistancesEnSerie.png#center" alt="Résistance équivalente en série" title="Résistance équivalente en série"></a></p>
-<p>Dans cet exemple, deux résistances de 10kΩ placées en série sont équivalentes à une résistance de 20kΩ.</p>
-<p>$$Req = \sum_{n = 1}^{k} Rn$$</p>
-<p>Où n est la résistance actuelle et k la dernière résistance en série.</p>
-<p>Ce qui est finalement un résultat assez logique dans l&rsquo;idée, si le courant est freiné deux fois par une résistance de 10kΩ, c&rsquo;est la même chose que s&rsquo;il était freiné une seule fois par une résistance somme de 20kΩ.</p>
-<h3 id="résistance-équivalente-en-dérivation">Résistance équivalente en dérivation</h3>
-<p>Si maintenant les résistances R1 et R2 sont montées en dérivation, quelle sera la résistance équivalente ?</p>
-<p><a href="/res/images/Composants/Resistance/ResistancesEnDerivation.png"><img src="/res/images/Composants/Resistance/ResistancesEnDerivation.png#center" alt="Résistance équivalente en dérivation" title="Résistance équivalente en dérivation"></a></p>
-<p>Et bien c&rsquo;était tout l&rsquo;intérêt d&rsquo;avoir présenté la <a href="#la-conductance-%C3%A9lectrique">conductance électrique</a> un peu plus haut. En série, les résistances s&rsquo;additionnent, mais en dérivation, ce sont les conductances qui s&rsquo;additionnent ! Ce qui est assez logique, plusieurs conducteurs résistifs mis en parallèle conduisent mieux le courant que s&rsquo;ils étaient seuls. Par extension logique que l&rsquo;on validera juste après par la formule, une infinité de résistance mises en parallèle équivaut à une résistance quasi nulle.</p>
-<p>$$Geq = \sum_{n = 1}^{k} Gn$$</p>
-<p>Où n est la résistance actuelle et k la dernière résistance en parallèle.</p>
-<p>Nous savons que la conductance est l&rsquo;inverse de la résistance, donc :</p>
-<p>$$Req = \frac{1}{\sum_{n = 1}^{k} Gn} \Rightarrow \frac{1}{\sum_{n = 1}^{k} \frac{1}{Rn}}$$</p>
-<p>Ou plus simplement dans l&rsquo;exemple juste au dessus :</p>
-<p>$$Req = \frac{1}{\frac{1}{R1} + \frac{1}{R2}} = 5kΩ$$</p>
-<p>A noter que dans le cas particulier où il n&rsquo;y aurait que deux résistances en parallèle, il existe une formule plus simple qui consiste à faire le produit sur la somme des résistances :</p>
-<p>$$Req = \frac{R1 * R2}{R1 + R2}$$</p>
-<p>Nous pouvons en déduire plusieurs choses :</p>
-<ol>
-<li>La résistance équivalente de plusieurs résistances en dérivation sera toujours plus petite que la plus petite des résistances prises en compte dans le calcul, ce qui correspond à l&rsquo;idée générale juste au dessus.</li>
-<li>Si deux résistances égales sont mises en dérivation, la résistance équivalente sera égale à une des résistance divisée par 2.</li>
-</ol>
+<p>La constante de temps τ est le temps nécéssaire en seconde pour le condensateur pour monter à 63% de sa charge (où 37% s&rsquo;il se décharge) en fonction de la résistance.</p>
+<p>On peut garder en mémoire ce tableau (ou cet article en favoris 👀) pour avoir une équivalence simple :</p>
+<table>
+<thead>
+<tr>
+<th>Constante de temps</th>
+<th>Charge</th>
+<th>Décharge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0τ</td>
+<td>0%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>1τ</td>
+<td>63%</td>
+<td>37%</td>
+</tr>
+<tr>
+<td>2τ</td>
+<td>87%</td>
+<td>13%</td>
+</tr>
+<tr>
+<td>3τ</td>
+<td>95%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>5τ</td>
+<td>100%</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<p>La dernière ligne avec 5τ est fausse par définition car la tension n&rsquo;atteint jamais 100% (elle monte de plus en plus lentement mais n&rsquo;atteint jamais la tension d&rsquo;alimentation) mais c&rsquo;est généralement un repère qui est pris : 5τ = complètement chargé ou complètement vide.</p>
+<h3 id="capacité-équivalente-en-dérivation">Capacité équivalente en dérivation</h3>
+<p>Cette partie et la suivante seront plus simple que la précédente car elle ressemble beaucoup à celle sur <a href="https://zahkthar.github.io/post/composants/composants_r%C3%A9sistance/">la résistance</a>.</p>
+<p>En parrallèle, les capacité s&rsquo;additionnent.</p>
+<p><a href="/res/images/Composants/Condensateur/CondensateursDerivation.png#center"><img src="/res/images/Composants/Condensateur/CondensateursDerivation.png#center" alt="Condensateurs en dérivation" title="Condensateurs en dérivation"></a></p>
+<p>Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :</p>
+<p>$$C = C1 + C2 + C3 = 300µF$$</p>
+<p>On peut remarquer que les capacités s&rsquo;additionnent en parralèle comme les résistances en série.</p>
+<h3 id="capacité-équivalente-en-série">Capacité équivalente en série</h3>
+<p>En série, les capacité se comportent comme les résistances en dérivation.</p>
+<p><a href="/res/images/Composants/Condensateur/CondensateursSerie.png#center"><img src="/res/images/Composants/Condensateur/CondensateursSerie.png#center" alt="Condensateurs en série" title="Condensateurs en série"></a></p>
+<p>Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :</p>
+<p>$$\frac{1}{C} = \frac{1}{C1} + \frac{1}{C2} + \frac{1}{C3}$$
+$$C = \frac{1}{\frac{1}{C1} + \frac{1}{C2} + \frac{1}{C3}} = 33.3µF$$</p>
+<p>A noter que la formule quand il n&rsquo;y a que 2 condensateurs fonctionne toujours :</p>
+<p>$$C = \frac{C1*C2}{C1+C2}$$</p>
+<h3 id="exemples-dutilisations-pratique">Exemples d&rsquo;utilisations pratique</h3>
+<p>Il y a beaucoup d&rsquo;applications réelle aux condensateurs, ce qui en fait un des composants les plus présents des circuits électroniques. On peut simplement l&rsquo;utiliser pour ajouter du délai dans un circuit, mais on peut aussi utiliser sa capacité à absorber l&rsquo;énergie pour faire du traitement de signal (lisser une alimentation 5V qui serait un peu bruitée). On peut également l&rsquo;utiliser pour transformer une tension alternative en tension continue.</p>
+<p>Le condensateur peut aussi tout simplement être là pour stocker de l&rsquo;énergie (on parle plus de supercondensateur dans ce cas d&rsquo;utilisation précis).</p>
+<p>Un exemple pour la culture générale de cette utilisation serait le flash des anciens appareils photos qui était dans beaucoup de cas un condensateur avec une haute tension qui se chargait et qui relâchait tout d&rsquo;un coup pour produire le flash bien connu.</p>
 <p> </p>
 </div>
             </div>
