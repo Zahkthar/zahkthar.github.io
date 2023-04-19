@@ -5,11 +5,11 @@ date: 2023-01-31T11:30:00+02:00
 description: "Le condensateur se retrouve dans quasiment tous les circuits, pourquoi ? Rappels et formules au programme !"
 
 Catégories: [
-    "Composants"
+    "Electronique"
 ]
 
 Étiquettes: [
-    "Théorie"
+    "Composants"
 ]
 
 Séries: ["Les bases de l'électronique"]
@@ -80,7 +80,7 @@ La dernière ligne avec 5τ est fausse par définition car la tension n'atteint 
 
 ### Capacité équivalente en dérivation
 
-Cette partie et la suivante seront plus simple que la précédente car elle ressemble beaucoup à celle sur [la résistance]({{< ref "post/Composants/Composants_Résistance" >}}).
+Cette partie et la suivante seront plus simple que la précédente car elle ressemble beaucoup à celle sur [la résistance]({{< ref "post/Electronique/Composants/Composants_Résistance" >}}).
 
 En parrallèle, les capacité s'additionnent.
 

@@ -1,16 +1,16 @@
 ---
 author: "Zahkthar"
 title: "Lois des diviseurs"
-date: 2022-11-02T15:00:00+02:00 # Changer
+date: 2023-04-18T15:00:00+02:00 # Changer
 description: "Comment diviser une tension ou un courant ?"
 
 Catégories: [
-    "Cours"
+    "Electronique"
 ]
 
 Étiquettes: [
+    "Cours",
     "Lois",
-    "Théorie",
     "Montages"
 ]
 
