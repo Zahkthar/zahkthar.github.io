@@ -29,24 +29,25 @@ footnoteReturnLinkContents = "^"
     name = "A propos"
     url = "/about/"
     weight = 10
-
-# [[menu.main]]
-#     identifier = "zone"
-#     name = "Zone"
-#     url = "/zone/"
-#     weight = 10
+    
 
 [[menu.footer]]
     identifier = "home"
-name = "Accueil"
+    name = "Accueil"
     url = "/"
     weight = 1
 
 [[menu.footer]]
-    identifier = "about"
-    name = "A propos"
-    url = "/about/"
+    identifier = "fabriceSincere"
+    name = "Fabrice Sincère"
+    url = "http://fabrice.sincere.pagesperso-orange.fr/"
     weight = 2
+
+[[menu.footer]]
+    identifier = "sonelec"
+    name = "Sonelec"
+    url = "https://www.sonelec-musique.com/electronique.html"
+    weight = 3
 
 [taxonomies]
 category = "Catégories"

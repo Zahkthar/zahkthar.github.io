@@ -101,11 +101,11 @@ En série, les capacité se comportent comme les résistances en dérivation.
 Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :
 
 $$\frac{1}{\text{C}} = \frac{1}{\text{C1}} + \frac{1}{\text{C2}} + \frac{1}{\text{C3}}$$
-$$C = \frac{1}{\frac{1}{\text{C1}} + \frac{1}{\text{C2}} + \frac{1}{\text{C3}}} = 33.3\text{µF}$$
+$$\text{C} = \frac{1}{\frac{1}{\text{C1}} + \frac{1}{\text{C2}} + \frac{1}{\text{C3}}} = 33.3\text{µF}$$
 
 A noter que la formule quand il n'y a que 2 condensateurs fonctionne toujours :
 
-$$C = \frac{\text{C1} * \text{C2}}{\text{C1} + \text{C2}}$$
+$$\text{C} = \frac{\text{C1} * \text{C2}}{\text{C1} + \text{C2}}$$
 
 ### Exemples d'utilisations pratique
 
