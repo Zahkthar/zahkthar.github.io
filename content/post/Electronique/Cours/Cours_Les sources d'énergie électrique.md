@@ -61,7 +61,7 @@ On peut en déduire que la tension du générateur réel de tension (ici V1 et R
 
 $$E = \text{UV1} - \text{UR1}$$
 
-$$\Rightarrow E = \text{UV1} - (\text{R1} * I)$$
+$$\Rightarrow E = \text{UV1} - (\text{R1} * \text{I})$$
 
 Et cette fois ci, la tension n'est bel et bien plus du tout constante mais plus l'intensité devient grande, et plus la chute de tension dans la résistance R1 est grande à cause des pertes dues à l'effet Joule.
 
@@ -73,9 +73,9 @@ Une résistance interne de 2Ω peut être beaucoup ou peu selon les types d'alim
 
 Note : La résistance interne d'une source de tension peut être déterminée empiriquement avec la tension de l'alim pendant qu'elle tire du courant et la tension à vide de la source grâce à la formule :
 
-$$\text{UV1} - E = \text{UR1}$$
+$$U_{V1} - \text{E} = U_{R1}$$
 
-$$\text{R1} = \frac{\text{UR1}}{I} = \frac{\text{UV1} - E}{I}$$
+$$\text{R1} = \frac{U_{R1}}{\text{I}} = \frac{U_{V1} - \text{E}}{\text{I}}$$
 
 ### La source de courant
 
@@ -97,7 +97,7 @@ Nous nous retrouvons donc avec un modèle équivalent à celui-ci :
 
 La tension aux bornes de R2 que l'on peut appeler UR2 se calcule donc avec la loi d'Ohm :
 
-$$U_{R2} = R2*(I - I_{R1})$$
+$$U_{R2} = \text{R2}*(\text{I} - I_{R1})$$
 
 Où :
 - I est l'intensité totale, ici 2A
@@ -105,8 +105,8 @@ Où :
 
 Ce qui implique que :
 
-$$I_{R1} = I - I_{R2}$$
-$$\Rightarrow I_{R2} = I - (\frac{U_{R2}}{R2})$$
+$$I_{R1} = \text{I} - I_{R2}$$
+$$\Rightarrow I_{R2} = \text{I} - (\frac{U_{R2}}{\text{R2}})$$
 
 [![Courbe caractéristique d'une source de courant réelle](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantReelle.png#center "Courbe caractéristique d'une source de courant reelle")](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantReelle.png)
 

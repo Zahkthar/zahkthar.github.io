@@ -37,7 +37,7 @@ La charge électrique d'un électron étant négative (-1.6 * 10-19 C -> Coulomb
 
 Si on note "dq" la charge électrique en Coulombs transportées par les électrons traversant un conducteur pendant une durée "dt", l'intensité que l'on notera I (ou i) sera donnée par la formule :
 
-$$I = \frac{dq}{dt}$$
+$$\text{I} = \frac{\text{dq}}{\text{dt}}$$
 
 Où :
 - I est en **Ampères** (A)
@@ -60,11 +60,11 @@ Ici, la somme des courants i1 et i2 qui rentrent dans le nœud est égale à la 
 
 La tension n'est pas une grandeur qu'il est facile de définir sans entrer dans la théorie. Mais par analogie, on arrive à s'approcher du sens de cette grandeur. On peut faire l'analogie entre la tension électrique à un point donnée du circuit et l'énergie potentielle en mécanique.
 
-$$Ep = m * g * h$$
+$$\text{Ep} = \text{m} * \text{g} * \text{h}$$
 
 L'énergie potentielle dépend directement de la hauteur à laquelle se trouve l'objet de la formule. La hauteur maximale serait dans cet exemple la tension d'alimentation (par exemple 5 volts) qui diminue à chaque fois que l'on rencontre un conducteur.
 
-[![Pont diviseur de tension](https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg#center "Pont diviseur de tension")](https://fr.wikipedia.org/wiki/Diviseur_de_tension#/media/Fichier:Pont_diviseur_tension.svg)
+[![Pont diviseur de tension](https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg#center "Pont diviseur de tension")](upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg)
 
 Dans ce circuit, que l'on appelle un "pont diviseur de tension" (nous y reviendrons plus tard), si on imagine que U est la tension d'alimentation du circuit, 5V par exemple, avant la première résistance la tension sera égale à U, soit 5V. Après la première résistance, la tension aura chuté. Après la deuxième résistance, la tension sera égale à 0.
 
@@ -88,11 +88,11 @@ La loi des mailles nous dit que lorsque l'on traverse une maille (c'est-à-dire 
 
 Dans cette image, nous pouvons voir une maille d'un circuit plus grand. Selon cette loi, la somme des tensions présentes maille présente sur cette image est égale à zéro. Ici :
 
-$$v1+v2+v3+v4 = 0$$
+$$\text{v1} + \text{v2} + \text{v3} + \text{v4} = 0$$
 
 Si nous reprenons un exemple avec une tension d'alimentation de 5V et que nous admettons que "R1 = R2 = R3", c'est à dire que la tension aux bornes de chaque résistance est égale. Nous aurons donc :
 
-$$v1 = v2 = v3 = v4 / 3$$
+$$\text{v1} = \text{v2} = \text{v3} = \text{v4} / 3$$
 
 Soit 1.66...V par résistance. Mais là vous vous demandez sûrement : "Mais 5 + 1.66 + 1.66 +1.66 ça fait 10 pas 0" et oui, vu comme ça, le résultat est bien de 10V. Mais il y a un souci, une résistance **s'oppose** au passage du courant, donc ici la tension **chute** de 1.66V entre l'entrée et la sortie de la résistance. Si vous regardez une nouvelle fois [le schéma du pont diviseur](#la-tension-électrique), vous remarquerez que les flèches représentant les tensions U1 et U2 sont dans le sens opposé à la flèche représentant la tension d'alimentation U. C'est justement en raison du fait que la résistance s'oppose au passage du courant. Si nous reprenons donc notre calcul où nous en étions mais cette fois si en inversant les tensions aux bornes des résistances, nous obtenons :
 
@@ -118,7 +118,7 @@ La résistance électrique est la propriété d'un conducteur à s'opposer au pa
 
 La loi d'Ohm est la loi empirique nommée en référence à **Georg Simon Ohm** qui l'a publiée en 1827 qui relie l'intensité du courant électrique traversant un conducteur à la tension à ses bornes. Elle énonce que :
 
-$$U = R * I$$
+$$\text{U} = \text{R} * \text{I}$$
 
 Où :
 - U est la tension en **Volts** (V)
@@ -140,7 +140,7 @@ La principale caractéristique principale d'une résistance étant d'opposer une
 
 La puissance traversant un conducteur se calcule avec la formule suivante :
 
-$$P = U * I$$
+$$\text{P} = \text{U} * \text{I}$$
 
 Où :
 - P est la puissance en **Watts** (W)
@@ -149,18 +149,18 @@ Où :
 
 La puissance correspond au débit d'énergie électrique reçue par le conducteur (**attention !** Ce n'est pas le débit de charge électrique/le flux électrique passant dans le conducteur, à savoir [l'intensité](#la-charge-électrique-lintensité-et-la-loi-des-nœuds), il s'agit bien ici d'un débit **d'énergie**). D'où cette formule également valide :
 
-$$P = W / t$$
+$$\text{P} = \text{W} / \text{t}$$
 
 Où :
 - P est la puissance en **Watts** (W)
 - W est la quantité d'énergie en **Joules** (J)
-- I est le temps en **secondes** (A)
+- t est le temps en **secondes** (A)
 
 #### L'énergie
 
 La quantité d'énergie électrique consommée par un conducteur pendant un temps donné est donnée par la formule suivante :
 
-$$W = P * t$$
+$$\text{W} = \text{P} * \text{t}$$
 
 Avec les mêmes unités que la formule ci-dessus.
 

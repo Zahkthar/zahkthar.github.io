@@ -88,7 +88,7 @@ En parrallèle, les capacité s'additionnent.
 
 Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :
 
-$$C = C1 + C2 + C3 = 300µF$$
+$$\text{C} = \text{C1} + \text{C2} + \text{C3} = 300\text{µF}$$
 
 On peut remarquer que les capacités s'additionnent en parralèle comme les résistances en série.
 
@@ -100,12 +100,12 @@ En série, les capacité se comportent comme les résistances en dérivation.
 
 Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :
 
-$$\frac{1}{C} = \frac{1}{C1} + \frac{1}{C2} + \frac{1}{C3}$$
-$$C = \frac{1}{\frac{1}{C1} + \frac{1}{C2} + \frac{1}{C3}} = 33.3µF$$
+$$\frac{1}{\text{C}} = \frac{1}{\text{C1}} + \frac{1}{\text{C2}} + \frac{1}{\text{C3}}$$
+$$C = \frac{1}{\frac{1}{\text{C1}} + \frac{1}{\text{C2}} + \frac{1}{\text{C3}}} = 33.3\text{µF}$$
 
 A noter que la formule quand il n'y a que 2 condensateurs fonctionne toujours :
 
-$$C = \frac{C1*C2}{C1+C2}$$
+$$C = \frac{\text{C1} * \text{C2}}{\text{C1} + \text{C2}}$$
 
 ### Exemples d'utilisations pratique
 

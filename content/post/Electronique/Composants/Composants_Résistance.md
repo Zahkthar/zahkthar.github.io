@@ -39,7 +39,7 @@ La résistivité d'un matériau (symbolisé par la lettre ρ -> rho) représente
 
 La résistance électrique dans une résistance dépend directement de la résistivité du matériau utilisé, qu'on va venir diviser ou multiplier selon la longueur et la section de notre conducteur. Sur les résistances, la valeur de la résistance électrique est généralement donnée via un code couleur que nous verrons juste après, mais si l'on voulait calculer soi-même la résistance d'un conducteur, nous pourrions utiliser cette formule :
 
-$$R = \rho * \frac{L}{S}$$
+$$R = \rho * \frac{\text{L}}{\text{S}}$$
 
 Où :
 - ρ (rho) est la résistivité du matériau en **omhs-mètre** (Ω⋅m)
@@ -50,11 +50,11 @@ Où :
 
 Cette unité est plus rare que son homologue la résistance mais en fait elles sont très fortement liées. En effet, la conductance électrique est le strict inverse de la résistance !
 
-$$G = \frac{1}{R}$$
+$$G = \frac{1}{\text{R}}$$
 
 Ou via la loi d'Ohm (qui est le point d'après) :
 
-$$G = \frac{I}{U}$$
+$$G = \frac{\text{I}}{\text{U}}$$
 
 Son symbole est généralement G et son unité est le **Siemens** (S).
 
@@ -72,7 +72,7 @@ Dans cet exemple, nous avons une résistance de 2 Ohms, la tension en ordonnée 
 
 On en déduit donc la formule générale de la loi d'Ohm :
 
-$$U = R * I$$
+$$\text{U} = \text{R} * \text{I}$$
 
 ### L'effet Joule
 
@@ -80,26 +80,26 @@ En courant continu, l'effet Joule correspond à la perte d'énergie électrique 
 
 Pour l'expliquer plus simplement, nous avons déjà la formule de la puissance dans un coin de notre tête :
 
-$$P = U * I$$
+$$\text{P} = \text{U} * \text{I}$$
 
 Ainsi que la loi d'Ohm que nous venons de revoir :
 
-$$U = R * I$$
+$$\text{U} = \text{R} * \text{I}$$
 
 Nous pouvons donc mélanger les deux formules et donc remplacer le U présent dans la formule de la puissance par R * I, ce qui nous donne :
 
-$$P = R * I * I$$
-$$P = R * I^{2}$$
+$$\text{P} = \text{R} * \text{I} * \text{I}$$
+$$\text{P} = \text{R} * \text{I}^{2}$$
 
 Grâce à cette formule, nous pouvons maintenant calculer la puissance consommée par une résistance ! 
 
 Mais l'effet Joule correspond à la quantité d'énergie dissipée dans la résistance et non la puissance. Mais nous savons que l'énergie se calcule via la formule suivante :
 
-$$W = P * t$$
+$$\text{W} = \text{P} * \text{t}$$
 
 Et si on remet notre formule pour la puissance consommée par une résistance, nous obtenons la formule caractéristique de l'effet Joule :
 
-$$W = R * I^{2} * t$$
+$$\text{W} = \text{R} * \text{I}^{2} * \text{t}$$
 
 Cette formule, assez logiquement, nous permet de calculer la quantité d'énergie dissipée par une résistance. On parle généralement de pertes thermique, étant donné que la chaleur n'est pas une énergie intéressante dans un circuit électrique (à part si l'intérêt est de produire de la chaleur, comme dans un four ou un radiateur par exemple).
 
@@ -113,7 +113,7 @@ Cette règle peut être démontrée simplement avec la loi d'Ohm mais gardons si
 
 Dans cet exemple, deux résistances de 10kΩ placées en série sont équivalentes à une résistance de 20kΩ.
 
-$$Req = \sum_{n = 1}^{k} Rn$$
+$$\text{Req} = \sum_{n = 1}^{k} \text{Rn}$$
 
 Où n est la résistance actuelle et k la dernière résistance en série.
 
@@ -127,21 +127,21 @@ Si maintenant les résistances R1 et R2 sont montées en dérivation, quelle ser
 
 Et bien c'était tout l'intérêt d'avoir présenté la [conductance électrique](#la-conductance-électrique) un peu plus haut. En série, les résistances s'additionnent, mais en dérivation, ce sont les conductances qui s'additionnent ! Ce qui est assez logique, plusieurs conducteurs résistifs mis en parallèle conduisent mieux le courant que s'ils étaient seuls. Par extension logique que l'on validera juste après par la formule, une infinité de résistance mises en parallèle équivaut à une résistance quasi nulle.
 
-$$Geq = \sum_{n = 1}^{k} Gn$$
+$$\text{Geq} = \sum_{n = 1}^{k} \text{Gn}$$
 
 Où n est la résistance actuelle et k la dernière résistance en parallèle.
 
 Nous savons que la conductance est l'inverse de la résistance, donc :
 
-$$Req = \frac{1}{\sum_{n = 1}^{k} Gn} \Rightarrow \frac{1}{\sum_{n = 1}^{k} \frac{1}{Rn}}$$
+$$\text{Req} = \frac{1}{\sum_{n = 1}^{k} \text{Gn}} \Rightarrow \frac{1}{\sum_{n = 1}^{k} \frac{1}{\text{Rn}}}$$
 
 Ou plus simplement dans l'exemple juste au dessus :
 
-$$Req = \frac{1}{\frac{1}{R1} + \frac{1}{R2}} = 5kΩ$$
+$$\text{Req} = \frac{1}{\frac{1}{\text{R1}} + \frac{1}{\text{R2}}} = 5\text{kΩ}$$
 
 A noter que dans le cas particulier où il n'y aurait que deux résistances en parallèle, il existe une formule plus simple qui consiste à faire le produit sur la somme des résistances :
 
-$$Req = \frac{R1 * R2}{R1 + R2}$$
+$$\text{Req} = \frac{\text{R1} * \text{R2}}{\text{R1} + \text{R2}}$$
 
 Nous pouvons en déduire plusieurs choses :
 1. La résistance équivalente de plusieurs résistances en dérivation sera toujours plus petite que la plus petite des résistances prises en compte dans le calcul, ce qui correspond à l'idée générale juste au dessus.

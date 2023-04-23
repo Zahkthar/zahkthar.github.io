@@ -16,8 +16,9 @@ footnoteReturnLinkContents = "^"
     portrait = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
     bio = """
     
-    Ancien étudiant en électronique et actuel étudiant en informatique, passionné des deux domaines, je publie ici "régulièrement" des articles traitant des deux.
-    Ils traîtent de principes d'électronique et de programmation, particulièrement embarquée. Un ordre de lecture est proposé <a href="post/informations/informations_vous-ne-savez-pas-par-ou-commencer/" style="text-decoration: underline;">ici</a>
+    Ancien étudiant en électronique et actuel étudiant en informatique, je publie ici "régulièrement" des articles traitant des deux.
+    Ils traîtent de principes d'électronique et de programmation, particulièrement embarquée. Un ordre de lecture est proposé
+    <a href="post/informations/informations_vous-ne-savez-pas-par-ou-commencer/" style="text-decoration: underline;">ici</a>.
     
     """
     copyright = "Copyright © 2022, Zahkthar; tous droits réservés."
