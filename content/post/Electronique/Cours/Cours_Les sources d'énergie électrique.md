@@ -41,7 +41,7 @@ La manière dont la source va fournir l'énergie peut donc être séparée en de
 
 Une source de tension parfaite est un générateur dont la tension est parfaitement contante et l'intensité varie en fonction de la charge.
 
-[![Courbe caractéristique d'une source de tension parfaite](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceTensionParfaite.png#center "Courbe caractéristique d'une source de tension parfaite")](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceTensionParfaite.png)
+[![Courbe caractéristique d'une source de tension parfaite](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceTensionParfaite.png#center "Courbe caractéristique d'une source de tension parfaite")](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceTensionParfaite.png)
 
 La tension UAB aux bornes de la source est constante quelle que soit l'intensité du courant généré. La source est dite "idéale"
 
@@ -53,7 +53,7 @@ En réalité, la source de tension doit prendre en compte les pertes par effet J
 
 On se retrouve donc avec un modèle équivalent à une source réelle de tension :
 
-[![Modèle équivalent d'une source de tension réelle](/res/images/Cours/LesSourcesDEnergieElectrique/ModeleEquivalentSourceTensionReelle.png#center "Modèle équivalent source de tension réelle")](/res/images/Cours/LesSourcesDEnergieElectrique/ModeleEquivalentSourceTensionReelle.png)
+[![Modèle équivalent d'une source de tension réelle](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/ModeleEquivalentSourceTensionReelle.png#center "Modèle équivalent source de tension réelle")](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/ModeleEquivalentSourceTensionReelle.png)
 
 Où l'on voit bien la résistance interne, ici R1 et R2 qui représente la charge alimentés par un générateur parfait V1.
 
@@ -65,7 +65,7 @@ $$\Rightarrow E = \text{UV1} - (\text{R1} * \text{I})$$
 
 Et cette fois ci, la tension n'est bel et bien plus du tout constante mais plus l'intensité devient grande, et plus la chute de tension dans la résistance R1 est grande à cause des pertes dues à l'effet Joule.
 
-[![Courbe caractéristique d'une source de tension réelle](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceTensionReelle.png#center "Courbe caractéristique d'une source de tension réelle")](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceTensionReelle.png)
+[![Courbe caractéristique d'une source de tension réelle](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceTensionReelle.png#center "Courbe caractéristique d'une source de tension réelle")](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceTensionReelle.png)
 
 Nous voyons bien sur la courbe que le coefficient directeur est l'opposé de la valeur de la résistance interne de la source de tension.
 
@@ -83,7 +83,7 @@ $$\text{R1} = \frac{U_{R1}}{\text{I}} = \frac{U_{V1} - \text{E}}{\text{I}}$$
 
 Une source de courant parfaite est un générateur dont le courant est parfaitement contant et la tension varie en fonction de la charge
 
-[![Courbe caractéristique d'une source de courant réelle](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantParfaite.png#center "Courbe caractéristique d'une source de courant parfaite")](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantParfaite.png)
+[![Courbe caractéristique d'une source de courant réelle](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantParfaite.png#center "Courbe caractéristique d'une source de courant parfaite")](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantParfaite.png)
 
 #### La source de courant réelle
 
@@ -93,7 +93,7 @@ Dans un circuit avec plusieures résistances en série (cf. [source de tension r
 
 Nous nous retrouvons donc avec un modèle équivalent à celui-ci :
 
-[![Courbe caractéristique d'une source de courant réelle](/res/images/Cours/LesSourcesDEnergieElectrique/ModeleEquivalentSourceCourantReelle.png#center "Modèle équivalent source de courant réelle")](/res/images/Cours/LesSourcesDEnergieElectrique/ModeleEquivalentSourceCourantReelle.png)
+[![Courbe caractéristique d'une source de courant réelle](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/ModeleEquivalentSourceCourantReelle.png#center "Modèle équivalent source de courant réelle")](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/ModeleEquivalentSourceCourantReelle.png)
 
 La tension aux bornes de R2 que l'on peut appeler UR2 se calcule donc avec la loi d'Ohm :
 
@@ -108,7 +108,7 @@ Ce qui implique que :
 $$I_{R1} = \text{I} - I_{R2}$$
 $$\Rightarrow I_{R2} = \text{I} - (\frac{U_{R2}}{\text{R2}})$$
 
-[![Courbe caractéristique d'une source de courant réelle](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantReelle.png#center "Courbe caractéristique d'une source de courant reelle")](/res/images/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantReelle.png)
+[![Courbe caractéristique d'une source de courant réelle](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantReelle.png#center "Courbe caractéristique d'une source de courant reelle")](/res/images/Electronique/Cours/LesSourcesDEnergieElectrique/CaractéristiqueSourceCourantReelle.png)
 
 $$\text{Courbe prise avec R2 = 30Ω}$$
 

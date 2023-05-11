@@ -40,13 +40,13 @@ Lorsque le condensateur est branché sur une source d'alimentation continue (adm
 
 Un électron ayant une quantité d'énergie négative, la borne "-" va se charger en énergie négative alors que la borne "+" va "perdre de l'énergie négative", ce qui va rendre sa tension plus positive encore !
 
-[![Un condensateur en circuit](/res/images/Composants/Condensateur/CondensateurEnCircuit.png#center "Condensateur en circuit")](/res/images/Composants/Condensateur/CondensateurEnCircuit.png#center)
+[![Un condensateur en circuit](/res/images/Electronique/Composants/Condensateur/CondensateurEnCircuit.png#center "Condensateur en circuit")](/res/images/Electronique/Composants/Condensateur/CondensateurEnCircuit.png#center)
 
 Une fois que le condensateur sera chargé, une tension de 5V sera présente sur sa borne "+" et de 0V sur sa borne "-", soit la tension d'alimentation. A partir de ce moment, il n'y a plus de courant dans le circuit, le courant venant de la différence de tension.
 
 Ici, il n'y a pas de résistance (R = 0, donc I est très élevé car I = U/R) donc le condensateur passe de 0V à la tension d'alimentation globalement instantanément ! Ce qui n'est pas forecément ce que l'on veut. On peut donc mettre une résistance dans le circuit pour limiter le courant et donc changer le temps de charge du condensateur.
 
-[![Condensateur avec résistance](/res/images/Composants/Condensateur/CondensateurResistanceCircuit.png#center "Condensateur et résistance en circuit")](/res/images/Composants/Condensateur/CondensateurResistanceCircuit.png#center)
+[![Condensateur avec résistance](/res/images/Electronique/Composants/Condensateur/CondensateurResistanceCircuit.png#center "Condensateur et résistance en circuit")](/res/images/Electronique/Composants/Condensateur/CondensateurResistanceCircuit.png#center)
 
 La tension aux bornes du condensateur n'évoluant pas de façon linéaire mais exponentielle, comme on peut le voir sur la courbe d'exemple suivante, la formule pour avoir le "pourcentage de charge en fonction du temps" ne sera pas aussi simple que la loi d'Ohm.
 
@@ -84,7 +84,7 @@ Cette partie et la suivante seront plus simple que la précédente car elle ress
 
 En parrallèle, les capacité s'additionnent.
 
-[![Condensateurs en dérivation](/res/images/Composants/Condensateur/CondensateursDerivation.png#center "Condensateurs en dérivation")](/res/images/Composants/Condensateur/CondensateursDerivation.png#center)
+[![Condensateurs en dérivation](/res/images/Electronique/Composants/Condensateur/CondensateursDerivation.png#center "Condensateurs en dérivation")](/res/images/Electronique/Composants/Condensateur/CondensateursDerivation.png#center)
 
 Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :
 
@@ -96,7 +96,7 @@ On peut remarquer que les capacités s'additionnent en parralèle comme les rés
 
 En série, les capacité se comportent comme les résistances en dérivation.
 
-[![Condensateurs en série](/res/images/Composants/Condensateur/CondensateursSerie.png#center "Condensateurs en série")](/res/images/Composants/Condensateur/CondensateursSerie.png#center)
+[![Condensateurs en série](/res/images/Electronique/Composants/Condensateur/CondensateursSerie.png#center "Condensateurs en série")](/res/images/Electronique/Composants/Condensateur/CondensateursSerie.png#center)
 
 Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :
 
