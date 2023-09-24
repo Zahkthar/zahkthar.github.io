@@ -46,7 +46,7 @@ Révélation du jour : une diode est une jonction PN !
 
 ### Fonctionnement d'un transistor bipolaire
 
-(Je vais ici me concentrer sur le transistor NPN, qui est le plus courant, mais les calculs sont valablement pour les transistor PNP, il suffit de remplacer les valeurs Vce par Vec, Vbe par Veb et Vcb par Vbc.)
+(Je vais ici me concentrer sur le transistor NPN, qui est le plus courant, mais les calculs sont valables pour les transistor PNP, il suffit de remplacer les valeurs Vce par Vec, Vbe par Veb et Vcb par Vbc.)
 
 #### Les termes
 
@@ -89,7 +89,7 @@ Dans ce régime, le courant Ic est proportionnel au courant de base Ib par un co
 Dans ce régime, donc, la valeur du courant Ic est égale à :
 $$I_C = \beta * I_B$$
 
-#### Utilisation d'un transistor bipolaire
+#### Utilisations d'un transistor bipolaire
 
 Après ceci, vous devriez pouvoir déduire deux utilités principales du transistor bipolaire :
 - Amplifier le courant
