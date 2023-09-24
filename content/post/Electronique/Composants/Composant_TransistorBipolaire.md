@@ -1,7 +1,7 @@
 ---
 author: "Zahkthar"
 title: "Le transistor bipolaire"
-date: 2023-08-03T13:00:00+02:00
+date: 2023-09-24T21:45:00+02:00
 description: "Démystifions le légendaire composant, le transistor !"
 
 Catégories: [

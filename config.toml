@@ -21,7 +21,7 @@ footnoteReturnLinkContents = "^"
     <a href="post/informations/informations_vous-ne-savez-pas-par-ou-commencer/" style="text-decoration: underline;">ici</a>.
     
     """
-    copyright = "Copyright © 2022, Zahkthar; tous droits réservés."
+    copyright = "Copyright © 2023, Zahkthar; tous droits réservés."
 
 
 [[menu.main]]
