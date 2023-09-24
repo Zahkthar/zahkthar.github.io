@@ -18,7 +18,7 @@ draft: false
 
 **Que fait un transistor ? Pourquoi est-il si présent dans nos circuits ?**
 
-Pilier de l'électronique moderne, présent dans les circuits de puissance, de contrôle et surtout les circuits numériques, on a de cesse de le mettre absolument partout. Mais pourquoi ? Qu'a-t-il de si spécial ? Nous allons voir ça dans cet article, dans lequel je ferais un bref rappel de physique pour ceux que ça intéresse puis sur un guide pratique sur la façon dont on peut en tirer parti dans nos circuits.
+Pilier de l'électronique moderne, présent dans les circuits de puissance, de contrôle et surtout les circuits numériques, on a de cesse de le mettre absolument partout. Mais pourquoi ? Qu'a-t-il de si spécial ? Nous allons voir ça dans cet article, dans lequel je ferais un bref rappel de physique pour ceux que ça intéresse puis un guide pratique sur la façon dont on peut en tirer parti dans nos circuits.
 
 Le programme pour aujourd'hui :
 1. [Rappels physique](#rappels-physique)
