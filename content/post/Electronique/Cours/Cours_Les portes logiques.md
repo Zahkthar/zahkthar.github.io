@@ -36,7 +36,7 @@ Cela nous conduit à l'essence même de l'informatique moderne : les bits. En co
 
 ### Les différentes portes
 
-#### Les portes principales
+#### Les portes OUI et NON
 
 Les portes OUI et NON, aussi appelleés portes YES et NOT
 
@@ -68,15 +68,42 @@ Son implémentation physique peut varier, un petit peu, voici celle que je vous 
 
 On voit bien ici le fonctionnement. Quand il y a un 0V à la base du transistor, ledit transistor est bloqué. Le courant passe donc du générateur à la résistance R1, puis à la diode D1. Quand il y a 5V dans la base, il devient saturé. Le courant passe donc par la résistance R1 puis par le transistor pour aller à la masse.
 
-AND / OR
+#### Les portes AND et OR
 
-NAND / NOR
+La porte ET, ou AND en anglais est une porte qui a en sortie 1 si et seulement si les deux entrées sont à 1
 
-Théorème de Morgan
+Voici sa table de vérité :
+
+| A | B | Sortie |
+|---|---|--------|
+| 0 | 0 | 0      |
+| 0 | 1 | 0      |
+| 1 | 0 | 0      |
+| 1 | 1 | 1      |
+
+Ainsi que son implémentation électrique :
+
+[![La porte ET](/res/images/Electronique/Cours/LesPortesLogiques/ANDGate.png#center "La porte ET")](/res/images/Electronique/Cours/LesPortesLogiques/ANDGate.png)
+
+La lumière n'est allumée que lorsque les deux entrées sont à 1. On peut aussi noter quelque chose d'intéressant qu'on peut voir sur ce schéma, c'est la tension à la sortie du 2ème transistor qui n'est plus que d'environ 4V sur les 5V de l'alimentation. En effet, un transistor ayant une tension de seuil (un peu comme une diode), il y a une perte de tension à travers chaque transistor équivalent à sa tension de seuil. 4V suffisent cependant pour être considérés comme un 1 d'un point de vue logique (la tension de seuil est d'environ 0.7V à titre général, mais lisez le datasheet de votre transistor quand même), ce n'est donc pas un véritable problème ici mais ça peut influencer votre façon de concevoir un circuit (si vous voulez faire une porte ET à 50 entrées par exemple, pourquoi pas finalement ?).
+
+[TODO]: <Ajouter la représentation symbolique de la porte ET>
+
+#### Les portes NAND et NOR
+
+
+
+#### Théorème de Morgan
+
+
 
 #### Les portes secondaires
 
-XOR / XNOR
+
+
+#### Les portes XOR et XNOR
+
+
 
 ### Conclusion
 
