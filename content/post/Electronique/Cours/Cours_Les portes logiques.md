@@ -1,7 +1,7 @@
 ---
 author: "Zahkthar"
 title: "Les portes logiques"
-date: 2023-09-25T10:30:00+02:00
+date: 2023-09-30T00:00:00+02:00
 description: "Empilons les transistors !"
 
 Catégories: [
