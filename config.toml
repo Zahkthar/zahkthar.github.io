@@ -8,7 +8,7 @@ enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
 [params]
-    metaDescription = "Zahkthar - Blog Électronique & Inforamtique"
+    metaDescription = "Zahkthar - Blog Électronique & Informatique"
     author = "Zahkthar"
     description = "Auteur"
     logo = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
