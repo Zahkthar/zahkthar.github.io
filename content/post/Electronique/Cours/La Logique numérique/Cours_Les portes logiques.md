@@ -14,7 +14,7 @@ Catégories: [
     "Logique"
 ]
 
-Séries: ["Les bases de l'électronique"]
+Séries: ["La logique numérique"]
 draft: false
 ---
 

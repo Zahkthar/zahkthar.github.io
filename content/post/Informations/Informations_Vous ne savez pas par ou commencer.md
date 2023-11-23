@@ -20,7 +20,7 @@ draft: false
 
 | Les articles à lire en premier                 |
 |------------------------------------------------|
-| [Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Cours_Les lois fondamentales en régime continu.md" >}}) |
+| [Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Les bases de l'électronique/Cours_Les lois fondamentales en régime continu.md" >}}) |
 
 ---
 

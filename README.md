@@ -2,6 +2,7 @@
 
 ## Les prochains articles à paraître :
 
-- La diode
-- Le transistor
-- Un peu de logique booléenne
+- Les circuits intégrés
+- La numération (binaire, hexadécimal)
+- Oscilateurs
+- Projet - Encore à décider

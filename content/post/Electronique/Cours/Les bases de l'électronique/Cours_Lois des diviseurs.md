@@ -20,7 +20,7 @@ draft: false
 
 **Comment diviser une tension ? Un courant ?**
 
-Vous voulez diviser une tension ou un courant par un facteur arbitraire et utiliser les [lois de Kirchhoff]({{< ref "post/Electronique/Cours/Cours_Les lois fondamentales en régime continu.md" >}}) vous fait mal au crâne ? Que ce soit dans un contexte de création ou d'analyse de circuit, les diviseurs en électronique sont très courants. Je vais vous présenter ici deux d'entre eux très communs qui vont simplifieront la vie !
+Vous voulez diviser une tension ou un courant par un facteur arbitraire et utiliser les [lois de Kirchhoff]({{< ref "post/Electronique/Cours/Les bases de l'électronique/Cours_Les lois fondamentales en régime continu.md" >}}) vous fait mal au crâne ? Que ce soit dans un contexte de création ou d'analyse de circuit, les diviseurs en électronique sont très courants. Je vais vous présenter ici deux d'entre eux très communs qui vont simplifieront la vie !
 
 Le sommaire de l'article :
 1. [Le diviseur de tension](#le-diviseur-de-tension)
@@ -31,7 +31,7 @@ Le sommaire de l'article :
 
 #### Le diviseur de tension non chargé
 
-Reprenons circuit rapidement présenté dans l'article "[Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Cours_Les lois fondamentales en régime continu.md" >}})".
+Reprenons circuit rapidement présenté dans l'article "[Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Les bases de l'électronique/Cours_Les lois fondamentales en régime continu.md" >}})".
 
 [![Pont diviseur de tension non chargé](https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg#center "Pont diviseur de tension non chargé")](upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg)
 
