@@ -59,7 +59,7 @@ Avec toutes ces informations, on peut deviner ce que fait un CI ayant pour nom "
 
 #### Les portes logiques
 
-Si vous n'avez pas déjà lu [l'article qui leur est dédié]({{< ref "post\Electronique\Cours\La Logique numérique\Cours_Les portes_logiques.md" >}}), allez le lire, ça ne donnera que plus de contexte à pourquoi les circuits intégrés sont pratiques ! Dans celui-ci, nous avions vu comment créer des portes logiques de toutes pièces, avec seulement des transistors et des résistances. C'est possible de faire ça à la marge dans un circuit, mais dès l'instant où l'on a besoin de plusieurs portes logiques, voire de centaines, ça devient vite infernal...
+Si vous n'avez pas déjà lu [l'article qui leur est dédié]({{< ref "post/Electronique/Cours/La Logique numérique/Cours_Les portes_logiques.md" >}}), allez le lire, ça ne donnera que plus de contexte à pourquoi les circuits intégrés sont pratiques ! Dans celui-ci, nous avions vu comment créer des portes logiques de toutes pièces, avec seulement des transistors et des résistances. C'est possible de faire ça à la marge dans un circuit, mais dès l'instant où l'on a besoin de plusieurs portes logiques, voire de centaines, ça devient vite infernal...
 
 ##### La porte AND
 
