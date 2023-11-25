@@ -48,6 +48,12 @@ footnoteReturnLinkContents = "^"
     name = "Sonelec"
     url = "https://www.sonelec-musique.com/electronique.html"
     weight = 3
+    
+[[menu.footer]]
+    identifier = "555TimeCircuits"
+    name = "555 Timer Circuits"
+    url = "https://www.555-timer-circuits.com/"
+    weight = 4
 
 [taxonomies]
 category = "Catégories"

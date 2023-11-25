@@ -18,7 +18,7 @@ draft: false
 
 **Un résumé des choses à savoir sur la résistance :**
 
-La résistance est un des composants les plus courants des circuits électroniques. Nous en avons légèrement parlé dans "[Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Cours_Les lois fondamentales en régime continu.md" >}})" mais dans cet article, je vais tenter de faire un résumé de tout ce qu'il y a à savoir pour pouvoir utiliser simplement ce composant.
+La résistance est un des composants les plus courants des circuits électroniques. Nous en avons légèrement parlé dans "[Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Les bases de l'électronique/Cours_Les lois fondamentales en régime continu.md" >}})" mais dans cet article, je vais tenter de faire un résumé de tout ce qu'il y a à savoir pour pouvoir utiliser simplement ce composant.
 
 Voici donc le sommaire de l'article :
 1. [Les unités liées à la résistance](#les-unités-liées-à-la-résistance)
@@ -62,7 +62,7 @@ Elle correspond à la capacité d'un conducteur à conduire le courant, contrair
 
 ### La loi d'Ohm
 
-Nous avions déjà introduit cette loi dans l'article précédent (cf. "[Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Cours_Les lois fondamentales en régime continu.md" >}})") mais je vais quand même en refaire un rapide résumé.
+Nous avions déjà introduit cette loi dans l'article précédent (cf. "[Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Les bases de l'électronique/Cours_Les lois fondamentales en régime continu.md" >}})") mais je vais quand même en refaire un rapide résumé.
 
 **George Simon Ohm** en 1827 a trouvé empiriquement une relation directe entre l'intensité traversant un élément résistif (une résistance) et la tension à ses bornes. En effet, si l'on trace la courbe de caractéristique d'une résistance (le courant qui la traverse en fonction de la tension à ses bornes) nous voyons que le coefficient directeur de la droite est la résistance !
 
