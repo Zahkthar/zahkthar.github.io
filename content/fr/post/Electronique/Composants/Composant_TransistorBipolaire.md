@@ -4,15 +4,16 @@ title: "Le transistor bipolaire"
 date: 2023-09-24T21:45:00+02:00
 description: "Démystifions le légendaire composant, le transistor !"
 
-Catégories: [
+categories: [
     "Electronique"
 ]
 
-Étiquettes: [
+tags: [
     "Composants"
 ]
 
-Séries: ["Les bases de l'électronique"]
+series: ["Les bases de l'électronique"]
+
 draft: false
 ---
 

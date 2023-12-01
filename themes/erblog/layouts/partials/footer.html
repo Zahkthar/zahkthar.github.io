@@ -1,22 +1,35 @@
 <footer>
-    {{ if .Site.Menus.footer }}
-
     <div class="layui-container">
         <div class="layui-row">
-            <div class="layui-col-md4 layui-col-sm6 layui-col-xs6">
-                <h3>Liens utiles</h3>
+            <h3>{{ .Site.Params.languagesTitle }}</h3>
+        </div>
+        
+        <div class="layui-row">
+            {{ range $.Site.Home.AllTranslations }}
+            <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
+                <a href="{{ .Permalink }}"><p class="footer-url">{{ .Language.LanguageName }}</p></a>
             </div>
+            {{ end }}
+        </div>
+        
+        <hr>
+        
+        {{ if .Site.Menus.footer }}
+
+        <div class="layui-row">
+            <h3>{{ .Site.Params.usefulLinksTitle }}</h3>
         </div>
         <div class="layui-row">
             {{ range sort .Site.Menus.footer }}
             <div class="layui-col-md4 layui-col-sm6 layui-col-xs12">
                 <a href="{{ .URL }}"><p class="footer-url">{{ .Name }}</p></a>
             </div>
-            {{end}}
+            {{ end }}
         </div>
+
+        {{end}}
     </div>
-    {{end}}
-    
+
     <div class="layui-container">
         <p class="copyright">{{ .Site.Params.copyright | default "&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>." | safeHTML }}</p>
     </div>

@@ -1,17 +1,17 @@
 <header class="layui-header layui-bg-cyan">
 
-    {{if .Site.Params.logo}}
+    {{ if .Site.Params.logo }}
         <a href=""><img src="{{.Site.Params.logo | relURL }}" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
-    {{end}}
+    {{ end }}
     
-    <a class="nav-self-logo" href="{{ "/" | relURL }}">
-        {{.Site.Title}}
+    <a class="nav-self-logo" href="{{ .Lang | relURL }}">
+        {{ .Site.Title }}
     </a>
 
     <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
         <!-- For Desktop -->
-        <!--<li class="layui-nav-item" id="nav_big"><a href="/">Home</a></li>-->
-        <li class="layui-nav-item" id="nav_big"><a href="{{ "/post/" | relURL }}">Articles</a></li>
+        <!-- <li class="layui-nav-item" id="nav_big"><a href="/">Home</a></li>-->
+        <!-- <li class="layui-nav-item" id="nav_big"><a href="{{ "/post/" | relURL }}">Articles</a></li> -->
         <!-- <li class="layui-nav-item" id="nav_big"><a href="{{ "/gallery/" | relURL }}">Gallery</a></li> -->
 
         {{ if .Site.Menus.main }}

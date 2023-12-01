@@ -4,17 +4,18 @@ title: "Les sources d'énergie électrique"
 date: 2022-11-02T13:08:30+02:00
 description: "Qu'est-ce qu'une source d'énergie électrique ?"
 
-Catégories: [
+categories: [
     "Electronique"
 ]
 
-Étiquettes: [
+tags: [
     "Cours",
     "Lois",
     "Alimentation"
 ]
 
-Séries: ["Les bases de l'électronique"]
+series: ["Les bases de l'électronique"]
+
 draft: false
 ---
 

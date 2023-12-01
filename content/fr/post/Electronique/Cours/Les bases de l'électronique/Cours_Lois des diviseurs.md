@@ -4,17 +4,18 @@ title: "Lois des diviseurs"
 date: 2023-04-23T16:00:00+02:00
 description: "Comment diviser une tension ou un courant ?"
 
-Catégories: [
+categories: [
     "Electronique"
 ]
 
-Étiquettes: [
+tags: [
     "Cours",
     "Lois",
     "Montages"
 ]
 
-Séries: ["Les bases de l'électronique"]
+series: ["Les bases de l'électronique"]
+
 draft: false
 ---
 

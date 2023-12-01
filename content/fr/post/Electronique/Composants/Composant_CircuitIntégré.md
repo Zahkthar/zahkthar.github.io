@@ -4,17 +4,18 @@ title: "Les circuits intégrés"
 date: 2023-11-25T12:00:00+02:00
 description: "Description"
 
-Catégories: [
+categories: [
     "Electronique"
 ]
 
-Étiquettes: [
+tags: [
     "Composants",
     "Alimentation",
     "Montages"
 ]
 
-Séries: ["Les bases de l'électronique"]
+series: ["Les bases de l'électronique"]
+
 draft: false
 ---
 

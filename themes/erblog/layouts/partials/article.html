@@ -10,6 +10,8 @@
 				{{ .Summary | truncate 150 " ..." }}
             {{else if .Summary}}
                 {{.Summary}}
-            {{end}} <a href="{{.RelPermalink}}"><span style="color:#01AAED">Lire plus</span></a>
+            {{end}}
+            
+            <a href="{{.RelPermalink}}"><span style="color:#01AAED">{{ .Site.Params.readMore }}</span></a>
         </h3>
     </blockquote>

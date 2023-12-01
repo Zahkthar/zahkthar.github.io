@@ -4,15 +4,16 @@ title: "Vous ne savez pas par où commencer ?"
 date: 2022-09-15T17:32:02+02:00
 description: "Je vous propose ici un ordre de lecture des articles du site"
 
-Catégories: [
+categories: [
     "Informations"
 ]
 
-Étiquettes: [
+tags: [
     "Plan du site"
 ]
 
-Séries: ["Aide aux lecteurs"]
+series: ["Aide aux lecteurs"]
+
 draft: false
 ---
 
@@ -26,7 +27,7 @@ draft: false
 
 | Ordre conseillé de lecture des séries                                              |
 |------------------------------------------------------------------------------------|
-| [Les bases de l'électronique]( {{< ref "/séries/les-bases-de-lélectronique" >}} )  |
-| [Aide au lecteur]( {{< ref "/séries/aide-aux-lecteurs" >}} )                       |
+| [Les bases de l'électronique]( {{< ref "/series/les-bases-de-lélectronique" >}} )  |
+| [Aide au lecteur]( {{< ref "/series/aide-aux-lecteurs" >}} )                       |
 
 &nbsp;

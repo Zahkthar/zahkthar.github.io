@@ -3,79 +3,219 @@ title = "Zahkthar"
 theme = "erblog"
 paginate = 3
 languageCode = "en"
-DefaultContentLanguage = "fr"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
+DefaultContentLanguage = "fr"
+[languages]
+    [languages.fr]
+        contentDir = 'content/fr'
+        disabled = false
+        languageCode = 'fr-FR'
+        languageDirection = 'ltr'
+        languageName = 'French'
+        weight = 1
+
+        [languages.fr.params]
+            metaDescription = "Zahkthar - Blog Électronique & Informatique"
+            description = "Auteur"
+            bio = """
+    
+            Actuellement étudiant, je publie ici "régulièrement" des articles traitant principalement d'électronique et de programmation, particulièrement embarquée. 
+            Un ordre de lecture est proposé <a href="post/informations/informations_vous-ne-savez-pas-par-ou-commencer/" style="text-decoration: underline;">ici</a>.
+            
+            """
+            copyright = "Copyright © 2023, Zahkthar; tous droits réservés."
+            
+            lastArticles = "Les derniers articles"
+            readMore = "Lire plus"
+
+            languagesTitle = "Langues"
+            usefulLinksTitle = "Liens utiles"
+
+        [languages.fr.menu]
+            [[languages.fr.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "chevron-right"
+                weight = 1
+            [[languages.fr.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "github"
+                weight = 2
+            [[languages.fr.menu.icon]]
+                url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                name = "music"
+                weight = 3
+            [[languages.fr.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "chevron-left"
+                weight = 4
+
+            [[languages.fr.menu.main]]
+                identifier = "posts"
+                name = "Articles"
+                url = "/post/"
+                weight = 10
+            [[languages.fr.menu.main]]
+                identifier = "about"
+                name = "A propos"
+                url = "/about/"
+                weight = 20
+
+            [[languages.fr.menu.footer]]
+                identifier = "home"
+                name = "Accueil"
+                url = "/"
+                weight = 10
+            [[languages.fr.menu.footer]]
+                identifier = "fabriceSincere"
+                name = "Fabrice Sincère"
+                url = "http://fabrice.sincere.pagesperso-orange.fr/"
+                weight = 20
+            [[languages.fr.menu.footer]]
+                identifier = "sonelec"
+                name = "Sonelec"
+                url = "https://www.sonelec-musique.com/electronique.html"
+                weight = 30
+            [[languages.fr.menu.footer]]
+                identifier = "555TimeCircuits"
+                name = "555 Timer Circuits"
+                url = "https://www.555-timer-circuits.com/"
+                weight = 40
+    [languages.en]
+        contentDir = 'content/en'
+        disabled = false
+        languageCode = 'en-US'
+        languageDirection = 'ltr'
+        languageName = 'English'
+        weight = 2
+
+        [languages.en.params]
+            metaDescription = "Zahkthar - Blog about Electronics & Computer Science"
+            description = "Author"
+            bio = """
+    
+            Currently a student, I "regularly" publish articles here mostly dealing with electronics and programming, particularly embedded. 
+            
+            """
+            copyright = "Copyright © 2023, Zahkthar; All rights reserved."
+
+            lastArticles = "Last articles"
+            readMore = "Read more"
+
+            languagesTitle = "Languages"
+            usefulLinksTitle = "Useful links"
+
+        [languages.en.menu]
+            [[languages.en.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "chevron-right"
+                weight = 1
+            [[languages.en.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "github"
+                weight = 2
+            [[languages.en.menu.icon]]
+                url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                name = "music"
+                weight = 3
+            [[languages.en.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "chevron-left"
+                weight = 4
+
+            [[languages.en.menu.main]]
+                identifier = "posts"
+                name = "Articles"
+                url = "/en/post/"
+                weight = 10
+            [[languages.en.menu.main]]
+                identifier = "about"
+                name = "About"
+                url = "/en/about/"
+                weight = 20
+
+            [[languages.en.menu.footer]]
+                identifier = "home"
+                name = "Home"
+                url = "/"
+                weight = 10
+            [[languages.en.menu.footer]]
+                identifier = "555TimeCircuits"
+                name = "555 Timer Circuits"
+                url = "https://www.555-timer-circuits.com/"
+                weight = 20
+    [languages.de]
+        contentDir = 'content/de'
+        disabled = false
+        languageCode = 'de'
+        languageDirection = 'ltr'
+        languageName = 'Deutsch'
+        weight = 3
+
+        [languages.de.params]
+            metaDescription = "Zahkthar - Blog about Electronics & Computer Science"
+            description = "Author"
+            bio = """
+    
+            Ich bin zurzeit Student und veröffentliche hier "regelmäßig" Artikel, die sich hauptsächlich mit Elektronik und Programmierung, insbesondere eingebettete, befassen.  
+            
+            """
+            copyright = "Copyright © 2023, Zahkthar; Alle Rechte vorbehalten."
+
+            lastArticles = "Die letzten Artikel"
+            readMore = "Mehr"
+
+            languagesTitle = "Sprachen"
+            usefulLinksTitle = "Nützliche Links"
+
+        [languages.de.menu]
+            [[languages.de.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "chevron-right"
+                weight = 1
+            [[languages.de.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "github"
+                weight = 2
+            [[languages.de.menu.icon]]
+                url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                name = "music"
+                weight = 3
+            [[languages.de.menu.icon]]
+                url = "https://github.com/Zahkthar"
+                name = "chevron-left"
+                weight = 4
+
+            [[languages.de.menu.main]]
+                identifier = "posts"
+                name = "Articles"
+                url = "/de/post/"
+                weight = 10
+            [[languages.de.menu.main]]
+                identifier = "about"
+                name = "About"
+                url = "/de/about/"
+                weight = 20
+
+            [[languages.de.menu.footer]]
+                identifier = "home"
+                name = "Home"
+                url = "/"
+                weight = 10
+            [[languages.de.menu.footer]]
+                identifier = "555TimeCircuits"
+                name = "555 Timer Circuits"
+                url = "https://www.555-timer-circuits.com/"
+                weight = 20
+
 [params]
-    metaDescription = "Zahkthar - Blog Électronique & Informatique"
     author = "Zahkthar"
-    description = "Auteur"
     logo = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
     favicon = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
     portrait = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
-    bio = """
-    
-    Ancien étudiant en électronique et actuel étudiant en informatique, je publie ici "régulièrement" des articles traitant des deux domaines.
-    Ils traiteront donc principalement d'électronique et de programmation, particulièrement embarquée. Un ordre de lecture est proposé
-    <a href="post/informations/informations_vous-ne-savez-pas-par-ou-commencer/" style="text-decoration: underline;">ici</a>.
-    
-    """
-    copyright = "Copyright © 2023, Zahkthar; tous droits réservés."
-
-
-[[menu.main]]
-    identifier = "about"
-    name = "A propos"
-    url = "/about/"
-    weight = 10
-    
-
-[[menu.footer]]
-    identifier = "home"
-    name = "Accueil"
-    url = "/"
-    weight = 1
-
-[[menu.footer]]
-    identifier = "fabriceSincere"
-    name = "Fabrice Sincère"
-    url = "http://fabrice.sincere.pagesperso-orange.fr/"
-    weight = 2
-
-[[menu.footer]]
-    identifier = "sonelec"
-    name = "Sonelec"
-    url = "https://www.sonelec-musique.com/electronique.html"
-    weight = 3
-    
-[[menu.footer]]
-    identifier = "555TimeCircuits"
-    name = "555 Timer Circuits"
-    url = "https://www.555-timer-circuits.com/"
-    weight = 4
 
 [taxonomies]
-category = "Catégories"
-series = "Séries"
-tag = "Étiquettes"
-
-[[menu.icon]]
-    url = "https://github.com/Zahkthar"
-    name = "chevron-right"
-    weight = 1
-
-[[menu.icon]]
-    url = "https://github.com/Zahkthar"
-    name = "github"
-    weight = 2
-
-[[menu.icon]]
-    url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    name = "music"
-    weight = 3
-
-[[menu.icon]]
-    url = "https://github.com/Zahkthar"
-    name = "chevron-left"
-    weight = 4
+    category = "Categories"
+    series = "Series"
+    tag = "Tags"

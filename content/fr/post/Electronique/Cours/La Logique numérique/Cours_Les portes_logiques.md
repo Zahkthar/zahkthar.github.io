@@ -4,17 +4,18 @@ title: "Les portes logiques"
 date: 2023-09-30T00:00:00+02:00
 description: "Empilons les transistors !"
 
-Catégories: [
+categories: [
     "Electronique"
 ]
 
-Étiquettes: [
+tags: [
     "Cours",
     "Montages",
     "Logique"
 ]
 
-Séries: ["La logique numérique"]
+series: ["La logique numérique"]
+
 draft: false
 ---
 

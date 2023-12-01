@@ -4,15 +4,16 @@ title: "Le condensateur"
 date: 2023-01-31T11:30:00+02:00
 description: "Le condensateur se retrouve dans quasiment tous les circuits, pourquoi ? Rappels et formules au programme !"
 
-Catégories: [
+categories: [
     "Electronique"
 ]
 
-Étiquettes: [
+tags: [
     "Composants"
 ]
 
-Séries: ["Les bases de l'électronique"]
+series: ["Les bases de l'électronique"]
+
 draft: false
 ---
 

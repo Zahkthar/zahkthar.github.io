@@ -4,15 +4,16 @@ title: "La diode"
 date: 2023-06-11T16:00:00+02:00
 description: "A quoi sert la diode ? Comment peut-on s'en servir ?"
 
-Catégories: [
+categories: [
     "Electronique"
 ]
 
-Étiquettes: [
+tags: [
     "Composants"
 ]
 
-Séries: ["Les bases de l'électronique"]
+series: ["Les bases de l'électronique"]
+
 draft: false
 ---
 
