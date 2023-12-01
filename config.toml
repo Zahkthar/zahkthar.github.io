@@ -33,6 +33,10 @@ DefaultContentLanguage = "fr"
             languagesTitle = "Langues"
             usefulLinksTitle = "Liens utiles"
 
+            categoryName = "Catégories"
+            seriesName = "Séries"
+            tagsName = "Étiquettes"
+
         [languages.fr.menu]
             [[languages.fr.menu.icon]]
                 url = "https://github.com/Zahkthar"
@@ -106,6 +110,10 @@ DefaultContentLanguage = "fr"
             languagesTitle = "Languages"
             usefulLinksTitle = "Useful links"
 
+            categoryName = "Categories"
+            seriesName = "Series"
+            tagsName = "Tags"
+
         [languages.en.menu]
             [[languages.en.menu.icon]]
                 url = "https://github.com/Zahkthar"
@@ -155,7 +163,7 @@ DefaultContentLanguage = "fr"
 
         [languages.de.params]
             metaDescription = "Zahkthar - Blog about Electronics & Computer Science"
-            description = "Author"
+            description = "Autor"
             bio = """
     
             Ich bin zurzeit Student und veröffentliche hier "regelmäßig" Artikel, die sich hauptsächlich mit Elektronik und Programmierung, insbesondere eingebettete, befassen.  
@@ -168,6 +176,10 @@ DefaultContentLanguage = "fr"
 
             languagesTitle = "Sprachen"
             usefulLinksTitle = "Nützliche Links"
+
+            categoryName = "Kategorien"
+            seriesName = "Serien"
+            tagsName = "Tags"
 
         [languages.de.menu]
             [[languages.de.menu.icon]]
@@ -189,7 +201,7 @@ DefaultContentLanguage = "fr"
 
             [[languages.de.menu.main]]
                 identifier = "posts"
-                name = "Articles"
+                name = "Artikel"
                 url = "/de/post/"
                 weight = 10
             [[languages.de.menu.main]]
