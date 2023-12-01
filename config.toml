@@ -13,7 +13,7 @@ DefaultContentLanguage = "fr"
         disabled = false
         languageCode = 'fr-FR'
         languageDirection = 'ltr'
-        languageName = 'French'
+        languageName = 'Français'
         weight = 1
 
         [languages.fr.params]
