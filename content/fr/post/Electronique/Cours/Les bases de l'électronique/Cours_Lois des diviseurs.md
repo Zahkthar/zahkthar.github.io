@@ -112,7 +112,7 @@ Pour exactement la même raison que dans l'article sur [la résistance]({{< ref 
 
 Dans ce pont diviseur de courant, nous affirmons que l'intensité dans la branche I2 est à égale à :
 
-$$\text{I2} = \text{I} * \frac{\text{G2}}{\text{G2} + \text{G2}}$$
+$$\text{I2} = \text{I} * \frac{\text{G2}}{\text{G1} + \text{G2}}$$
 
 Avec I valant l'intensité totale et G1 et G2 l'inverse de R1 et R2. Libre à vous de prouver formellement cette formule.
 
