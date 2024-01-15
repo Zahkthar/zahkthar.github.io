@@ -79,7 +79,7 @@ Ce CI fait parti d'une famille bien connue de circuit intégrés. La famille des
 Encore un temps d'explication pour décortiquer les noms de circuits logiques !
 
 Les noms des circuits de cette famille sont divisés en 3 parties :
-- Le 78 vient de Texas Instrument. Les composants dits TTL (nous y reviendrons dans quelques lignes) chez TI sont séparés en 3 gammes de températures
+- Le 74 vient de Texas Instrument. Les composants dits TTL (nous y reviendrons dans quelques lignes) chez TI sont séparés en 3 gammes de températures
     - 54 supportant des températures comprises entre -55°C et 125°C (militaire)
     - 64 supportant des températures comprises entre -40°C et 85°C (industriel)
     - 74 supportant des températures comprises entre 0°C et 70°C (commercial) -> Ce que nous avons ici
