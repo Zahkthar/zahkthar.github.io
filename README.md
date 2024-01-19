@@ -2,7 +2,6 @@
 
 ## Les prochains articles à paraître :
 
-- Les circuits intégrés
-- La numération (binaire, hexadécimal)
-- Oscilateurs
+- NE555
 - Projet - Encore à décider
+- La numération (binaire, hexadécimal)

@@ -81,7 +81,7 @@ La dernière ligne avec 5τ est fausse par définition car la tension n'atteint 
 
 ### Capacité équivalente en dérivation
 
-Cette partie et la suivante seront plus simple que la précédente car elle ressemble beaucoup à celle sur [la résistance]({{< ref "post/Electronique/Composants/Composants_Résistance" >}}).
+Cette partie et la suivante seront plus simple que la précédente car elle ressemble beaucoup à celle sur [la résistance]({{< ref "post/Electronique/Composants/Composant_Résistance" >}}).
 
 En parrallèle, les capacité s'additionnent.
 

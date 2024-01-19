@@ -22,7 +22,7 @@ draft: false
 Ça ne viendrait plus à l'idée de personne aujourd'hui de concevoir un circuit uniquement avec les composants de base. Nous allons voir aujourd'hui une révolution dans le monde de l'électronique, le moyen de miniaturiser plusieurs composants en une seule puce, un seul **circuit intégré** !
 
 Au programme :
-1. [Introduction aux circuits cntégrés](#introduction-aux-circuits-intégrés)
+1. [Introduction aux circuits intégrés](#introduction-aux-circuits-intégrés)
 2. [Quelques exemples](#quelques-exemples)
 3. [Le futur des circuits intégrés](#le-futur-des-circuits-intégrés)
 4. [Conclusion](#conclusion)

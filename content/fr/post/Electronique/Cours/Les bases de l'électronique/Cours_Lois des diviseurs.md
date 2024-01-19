@@ -81,7 +81,7 @@ Si vous avez essayé juste après avoir lu la première partie de cet article de
 
 En effet, même si le pont diviseur de tension est **très utile pour conditionner une tension**, il est très **mauvais pour alimenter** et nous allons voir pourquoi.
 
-Vous vous êtes peut-être également demandé ce que signifiait l'adjectif "chargé" dans le contexte des diviseurs de tension, je vais vous le dire tout de suite. Nous avons vu dans l'article présentant [la résistance]({{< ref "post/Electronique/Composants/Composants_Résistance.md" >}}), lorsque l'on met en **parallèle** deux résistances, elles peuvent être représentées par **une seule résistance équivalente** d'une valeur différente.
+Vous vous êtes peut-être également demandé ce que signifiait l'adjectif "chargé" dans le contexte des diviseurs de tension, je vais vous le dire tout de suite. Nous avons vu dans l'article présentant [la résistance]({{< ref "post/Electronique/Composants/Composant_Résistance.md" >}}), lorsque l'on met en **parallèle** deux résistances, elles peuvent être représentées par **une seule résistance équivalente** d'une valeur différente.
 
 [![Pont diviseur de tension chargé](https://upload.wikimedia.org/wikipedia/commons/5/56/Pont_divisuer_tension_charge.svg#center "Pont diviseur de tension chargé")](https://upload.wikimedia.org/wikipedia/commons/5/56/Pont_divisuer_tension_charge.svg)
 $$\text{(On remercie chaleureusement wikipedia pour ces images)}$$
@@ -106,7 +106,7 @@ La bonne solution serait d'utiliser un circuit (que l'on peut aussi trouver int�
 
 Cette partie sera beaucoup plus courte que la première car nous avons déjà quasiment tout vu. Nous savons maintenant que pour diviser une tension, il fallait mettre plusieurs résistances **en série**. Et bien pour diviser un courant, il suffit de mettre plusieurs résistances **en parallèle** !
 
-Pour exactement la même raison que dans l'article sur [la résistance]({{< ref "post/Electronique/Composants/Composants_Résistance.md" >}}), les résistances s'additionnaient en série et les conductances (l'inverse de la résistance) s'additionnaient en parallèle, ici nous pouvons adapter notre formule précédemment trouvée.
+Pour exactement la même raison que dans l'article sur [la résistance]({{< ref "post/Electronique/Composants/Composant_Résistance.md" >}}), les résistances s'additionnaient en série et les conductances (l'inverse de la résistance) s'additionnaient en parallèle, ici nous pouvons adapter notre formule précédemment trouvée.
 
 [![Pont diviseur de courant non chargé](https://upload.wikimedia.org/wikipedia/commons/2/2e/Diviseur_de_courant.svg#center "Pont diviseur de tension chargé")](https://upload.wikimedia.org/wikipedia/commons/2/2e/Diviseur_de_courant.svg)
 

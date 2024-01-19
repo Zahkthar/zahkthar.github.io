@@ -6,6 +6,8 @@ languageCode = "en"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 
+GoogleAnalytics = "G-RNH1Y9WEBS"
+
 DefaultContentLanguage = "fr"
 [languages]
     [languages.fr]
@@ -226,6 +228,7 @@ DefaultContentLanguage = "fr"
     logo = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
     favicon = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
     portrait = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
+    math = 1
 
 [taxonomies]
     category = "Categories"
