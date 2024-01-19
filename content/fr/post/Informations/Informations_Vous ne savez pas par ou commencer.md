@@ -19,15 +19,12 @@ draft: false
 
 **Vous venez d'arriver pour la première fois sur le site ou vous cherchez un ordre de lecture conseillé ? C'est ce que je propose de faire ici en faisant une sorte de sommaire du site sur cet article**
 
-| Les articles à lire en premier                 |
-|------------------------------------------------|
-| [Les lois fondamentales en régime continu]({{< ref "post/Electronique/Cours/Les bases de l'électronique/Cours_Les lois fondamentales en régime continu.md" >}}) |
-
 ---
 
 | Ordre conseillé de lecture des séries                                              |
 |------------------------------------------------------------------------------------|
 | [Les bases de l'électronique]( {{< ref "/series/les-bases-de-lélectronique" >}} )  |
+| [La logique numérique]( {{< ref "/series/la-logique-numérique/" >}} )              |
 | [Aide au lecteur]( {{< ref "/series/aide-aux-lecteurs" >}} )                       |
 
 &nbsp;
