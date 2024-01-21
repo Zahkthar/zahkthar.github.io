@@ -25,19 +25,22 @@ Le monde de l'électronique regorge de composants fascinants, et parmi eux, le N
 
 
 Voici donc le sommaire de l'article :
-1. [Fonctionnement du NE555](#fonctionnement-du-ne555)
-2. [Mode bistsable](#mode-bistable)
-3. [Mode monostable](#mode-monostable)
-4. [Mode astable](#mode-astable)
-5. [Conclusion](#conclusion)
+1. [Bref historique](#bref-historique)
+2. [Fonctionnement du NE555](#fonctionnement-du-ne555)
+3. [Mode bistsable](#mode-bistable)
+4. [Mode monostable](#mode-monostable)
+5. [Mode astable](#mode-astable)
+6. [Conclusion](#conclusion)
 
-### Fonctionnement du NE555
+### Bref historique
 
 Le NE555 est un circuit intégré qui a été introduit sur le marché dans les années 1970 par la société Signetics. Sa popularité persiste aujourd'hui en raison de sa simplicité d'utilisation et de sa capacité à remplir de multiples fonctions. Ce composant est couramment utilisé pour des tâches de temporisation, de génération de signaux, et bien plus encore.
 
 [![Un NE555](https://upload.wikimedia.org/wikipedia/commons/2/21/Signetics_NE555N.JPG#center "Un NE555")](https://upload.wikimedia.org/wikipedia/commons/2/21/Signetics_NE555N.JPG)
 
 Ici on remarque que ce NE555 est dans un boîtier de type DIP-8. DIP pour "Dual In-line Package" car c'est un boîtier à deux rangées de pattes et 8 car il y a 8 pattes. Il existe également dans bien d'autres formats.
+
+### Fonctionnement du NE555
 
 [![Diagramme interne du NE555](https://upload.wikimedia.org/wikipedia/commons/2/2e/555_esquema.png#center "Diagramme interne du NE555")](https://upload.wikimedia.org/wikipedia/commons/2/2e/555_esquema.png)
 
@@ -98,7 +101,7 @@ Elle nous donne aussi deux moyens de récupérer sa valeur :
 - La broche $\text{Q}$, qui donne le contenu de la bascule
 - La broche $\overline{\text{Q}}$, qui donne l'inverse du contenu de la bascule
 
-On se sert en général de l'un ou de l'autre, ici on se sert de $\overline{\text{Q}}$ comme on peut le voir avec le cercle sur le [diagramme en plus haut](#description-du-fonctionnement)
+On se sert en général de l'un ou de l'autre, ici on se sert de $\overline{\text{Q}}$ comme on peut le voir avec le cercle sur le [diagramme plus haut](#fonctionnement-du-ne555)
 
 #### La broche discharge
 
@@ -118,7 +121,7 @@ On peut en déduire basiquement trois modes de fonctionnement pour le NE555. Le 
 
 [![Circuit mode bistable](/res/images/Electronique/Composants/NE555/bistable-circuit.png#center "Circuit mode bistable")](/res/images/Electronique/Composants/NE555/bistable-circuit.png)
 
-Partons du principe que la valeur de départ est 0.
+Partons du principe que la valeur de départ est 0. Ce n'est pas très important de toutes façons mais Trigger est relié à 5V et Threshold est en l'air. Il n'y a donc pas de contrainte sur la valeur de sortie du 555. La valeur de sortie par défaut sera la valeur par défaut de la bascule RS, qui est indéterminée, pas de bol. On reverra ça plus en détail dans un prochain article sur les mémoires électronique.
 
 Tant que l'on ne fait rien, la sortie reste à 0, nous avons un premier état stable. Lorsque nous appuyons sur le bouton de droite, relié à trigger, nous allons relier la broche Trigger à la masse. Or on l'avait vu juste au dessus, Si Trigger < 1/3 de Vcc (Vcc = 5V dans ce schéma), la sortie du 555 va a 1.
 
@@ -128,7 +131,43 @@ Si en revanche on appuye sur le bouton relié à reset, on envoie un 0 dans la b
 
 [![Trame mode bistable](/res/images/Electronique/Composants/NE555/bistable-oscillo.png#center "Trame mode bistable")](/res/images/Electronique/Composants/NE555/bistable-oscillo.png)
 
+Les deux changement d'états sont dus aux appuis du bouton Trigger puis Reset, qui produisent bien l'effet escompté.
+
 #### Mode monostable
+
+Ensuite, après le circuit bistable, voici le circuit monostable, appelé ainsi car il n'a qu'un seul état stable, ici l'état 0 comme nous allons le voir.
+
+Le bouton relié au Trigger est resté, mais maintenant nous avons une nouvelle branche qui relie le pin de décharge et le Threshold à un circuit RC. Mais que va t'il se passer donc ?
+
+[![Circuit mode monostable](/res/images/Electronique/Composants/NE555/monostable-circuit.png#center "Circuit mode monostable")](/res/images/Electronique/Composants/NE555/monostable-circuit.png)
+
+##### Etat initial
+
+Il nous faut nous rappeler d'une information importante là, dans le [diagramme plus haut](#fonctionnement-du-ne555), nous voyons que le pin discharge est relié à la masse lorsque la sortie est à 0 (il faut un 1 pour que le transistor soit passant, et la sortie est inversée).
+
+Maintenant que nous savons ça, nous pouvons réfléchir au circuit. Nous allons considérer l'état par défaut comme étant 0 (nous verrons pourquoi cette fois-ci, cet état est déterminé).
+
+Le pin discharge est donc relié à la masse. Si le condensateur était chargé, il se déchargerait par cette broche, on peut donc dire que le condensateur est déchargé. Threshold est donc à 0V, inférieur à 2/3 de Vcc et Trigger est à 5V, donc supérieure à 1/3 de Vcc. Il n'y a donc aucune condition de changement de valeur remplie. Voilà pour l'état initial du circuit.
+
+##### Appui sur le bouton
+
+Maintenant nous allons appuyer brièvement sur le bouton relié à Trigger, qui va relier le pin à la masse. Trigger sera donc inférieur à 1/3 de Vcc comme nous l'avons vu au dessus pour le [mode bistable](#mode-bistable), ce qui va mettre la sortie à 1. La sortie étant à 1, le pin Discharge va se déconnecter de la masse, il sera donc "en l'air". On a donc un parfait circuit RC !
+
+Dans un précédent article sur [le condensateur]({{< ref "post/Electronique/Composants/Composant_Condensateur" >}}), j'avais présenté le principe de **constante de temps** dans un circuit RC série. On voyais notament que une fois la constante de temps notée **τ** pouvait être obtenue par le produit $R * C$.
+
+Ici, le condensateur va se charger jusqu'à 2/3 de Vcc, **66%**. Une fois la constante de temps dans un circuit RC permettait une charge de 63% (se référer à l'article sur le condensateur), il faudra donc attendre un petit peu plus qu'une fois la constante de temps du circuit RC. Le calcul ne sera pas démontré ici mais le temps que ce condensateur mettra pour atteindre 2/3 de Vcc est de :
+
+$$\text{t} = 1.1 * R * C$$
+
+Soit environ 0.011s = 11ms avec les valeurs d'exemple.
+
+Une fois que la tension aux bornes du condensateur à atteint 2/3 de Vcc, Threshold > 2/3 de Vcc, donc la sortie du NE555 passe à 0. Le pin Discharge est donc de nouveau relié à la masse, ce qui permet au condensateur de s'y vider.
+
+Le condensateur sera donc une nouvelle fois vide, nous sommes retournés à l'état stable de départ. Il n'y a bien qu'un état stable, qui est l'état 0. C'est en vertu de cela que l'on pouvait dire au début que la "valeur par défaut" du NE555 dans ce mode était 0.
+
+[![Trame mode monostable](/res/images/Electronique/Composants/NE555/monostable-oscillo.png#center "Trame mode monostable")](/res/images/Electronique/Composants/NE555/monostable-oscillo.png)
+
+On peut voir ici 4 appuis successifs sur le bouton Trigger. On remarque également que si le bouton est appuyé plus longtemps, le condensateur se chargera à 100% et le NE555 restera à l'état 1. Le temps calculé par la formule du dessus est donc le temps minimum d'une impulsion et n'est valable que si l'on relâche le bouton avant que le condensateur n'ait atteint 2/3 de Vcc.
 
 #### Mode astable
 
