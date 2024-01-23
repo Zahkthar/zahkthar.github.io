@@ -1,7 +1,7 @@
 ---
 author: "Zahkthar"
 title: "Le NE555 : Une introduction aux oscillateurs"
-date: 2024-01-19
+date: 2024-01-22T20:00:00+02:00
 description: "Découvrez le NE555, un des circuits integrés les plus populaires"
 
 categories: [
@@ -18,7 +18,7 @@ series: [
     "Les bases de l'électronique"
 ]
 
-draft: true
+draft: false
 ---
 
 Le monde de l'électronique regorge de composants fascinants, et parmi eux, le NE555 se distingue comme un incontournable. Ce circuit intégré, souvent appelé simplement "555", a conquis le cœur de beaucoup de concepteurs grâce à sa polyvalence. Dans cet article, nous allons regarder en détail le NE555 et en voir quelques applications.
