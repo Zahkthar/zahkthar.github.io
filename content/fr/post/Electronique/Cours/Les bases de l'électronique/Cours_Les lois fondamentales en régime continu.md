@@ -65,17 +65,17 @@ $$\text{Ep} = \text{m} * \text{g} * \text{h}$$
 
 L'énergie potentielle dépend directement de la hauteur à laquelle se trouve l'objet de la formule. La hauteur maximale serait dans cet exemple la tension d'alimentation (par exemple 5 volts) qui diminue à chaque fois que l'on rencontre un conducteur.
 
-[![Pont diviseur de tension](https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg#center "Pont diviseur de tension")](upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg)
+[![Pont diviseur de tension](https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg#center "Pont diviseur de tension")](https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg)
 
 Dans ce circuit, que l'on appelle un "pont diviseur de tension" (nous y reviendrons plus tard), si on imagine que U est la tension d'alimentation du circuit, 5V par exemple, avant la première résistance la tension sera égale à U, soit 5V. Après la première résistance, la tension aura chuté. Après la deuxième résistance, la tension sera égale à 0.
 
-L'intérêt de ce circuit étant de convertir une tension en une tension plus basse en jouant sur le rapport entre les deux résistances
+L'intérêt de ce circuit étant de convertir une tension en une tension plus basse en jouant sur le rapport entre les deux résistances.
 
 #### La différence de potentiel
 
 La différence de potentiel (aussi appelée ddp à l'écrit) est une grandeur que l'on confond souvent avec la tension. La différence de potentiel, comme son nom l'indique, est une différence entre deux points d'un circuit. Elle demande donc un point de repère. 
 
-Si l'on reprend le circuit ci-dessus et que l'on admet que pour les 5V totaux, il y a une répartition égale de la tension entre les deux résistances, nous nous retrouvons donc avec U1 qui vaut 2.5V et U2 qui vaut aussi 2.5V. Mais d'où viennent ces 2.5V ? En réalité U1 est une **différence** de potentiel et représente donc le résultat de la soustraction entre la tension U et la tension après le passage dans la résistance. Nous avons donc bien 5V - 2.5V = **2.5V**. U2 suit exactement le même raisonnement. Nous n'avons plus que 2.5V après le passage du courant dans R1. La différence entre 2.5V et 0V est donc de 2.5 - 0 = **2.5V**
+Si l'on reprend le circuit ci-dessus et que l'on admet que pour les 5V totaux, il y a une répartition égale de la tension entre les deux résistances, nous nous retrouvons donc avec U1 qui vaut 2.5V et U2 qui vaut aussi 2.5V. Mais d'où viennent ces 2.5V ? En réalité U1 est une **différence** de potentiel et représente donc le résultat de la soustraction entre la tension U et la tension après le passage dans la résistance. Nous avons donc bien 5V - 2.5V = **2.5V**. U2 suit exactement le même raisonnement. Nous n'avons plus que 2.5V après le passage du courant dans R1. La différence entre 2.5V et 0V est donc de 2.5 - 0 = **2.5V**.
 
 On admet donc que lorsque l'on parle généralement de tension, on parle de la valeur de la tension à un point du circuit alors que si l'on parle de la tension **aux bornes** ou **autour** d'un composant, nous parlons bien de la différence entre le point avant et après ledit composant, de la tension qui le traverse en somme (si la tension est représentée par une flèche comme ci-dessus avec U, U1 et U2, on peut aussi appeler la ddp par son nom sur le schéma).
 
@@ -169,7 +169,7 @@ Avec les mêmes unités que la formule ci-dessus.
 
 **Note 2** : Avec la formule **W = P * t**, on déduit qu'un Joule correspond à une puissance d'un Watt pendant une durée d'une seconde, soit **1Ws**
 
-**Note 3** : 3.6 * 10^6 Joules = 1kWh
+**Note 3** : 1kWh = 1000Wh = 1000 * (3600 J) = 3.6 * 10^6 J = **3.6MJ**
 
 **Note 4** : 1 ch (cheval-vapeur) = 736W
 
