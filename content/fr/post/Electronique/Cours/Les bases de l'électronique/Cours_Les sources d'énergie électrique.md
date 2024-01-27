@@ -5,7 +5,7 @@ date: 2022-11-02T13:08:30+02:00
 description: "Qu'est-ce qu'une source d'énergie électrique ?"
 
 categories: [
-    "Electronique"
+    "Électronique"
 ]
 
 tags: [

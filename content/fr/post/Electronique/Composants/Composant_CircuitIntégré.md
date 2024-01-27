@@ -5,7 +5,7 @@ date: 2023-11-25T12:00:00+02:00
 description: "Description"
 
 categories: [
-    "Electronique"
+    "Électronique"
 ]
 
 tags: [

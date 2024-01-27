@@ -5,7 +5,7 @@ date: 2022-10-05T09:45:37+02:00
 description: "La résistance est un des composants de base de l'électronique, nous allons donc en faire un bref tour."
 
 categories: [
-    "Electronique"
+    "Électronique"
 ]
 
 tags: [

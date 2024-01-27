@@ -5,7 +5,7 @@ date: 2023-09-24T21:45:00+02:00
 description: "Démystifions le légendaire composant, le transistor !"
 
 categories: [
-    "Electronique"
+    "Électronique"
 ]
 
 tags: [

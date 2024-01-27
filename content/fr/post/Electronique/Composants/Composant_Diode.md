@@ -5,7 +5,7 @@ date: 2023-06-11T16:00:00+02:00
 description: "A quoi sert la diode ? Comment peut-on s'en servir ?"
 
 categories: [
-    "Electronique"
+    "Électronique"
 ]
 
 tags: [
