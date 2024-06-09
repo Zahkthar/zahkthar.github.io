@@ -24,6 +24,7 @@ draft: false
 Comment alimenter un circuit n'est pas forcément la première chose à laquelle on pense quand on le pense ou lorsqu'on le dessine. Mais au final, c'est ce qui va faire que le circuit marche ou pas ! Dans cet article, nous allons voir quelle est la différence entre une source de tension et de courant et la différence entre un générateur parfait et réel.
 
 Le programme sera donc le suivant :
+
 1. [La source d'énergie électrique](#la-source-dénergie-électrique)
 2. [La source de tension](#la-source-de-tension)
 3. [La source de courant](#la-source-de-courant)
@@ -33,6 +34,7 @@ Le programme sera donc le suivant :
 La définition d'une source d'énergie est assez simple et elle est partout autour de nous. Une source d'énergie doit est un circuit ou un composant dont le but est de fournir via ses deux bornes que l'on peut appeller A et B une tension U et une intensité I, soit une puissance P qui est le produit de U par I. Une puissance maximale notée généralement Pmax est donnée en raison de l'effet Joule dont nous reverrons l'implication dans les paragraphes sur les générateurs réels.
 
 La manière dont la source va fournir l'énergie peut donc être séparée en deux grandes catégories :
+
 - La tension est constante et l'intensité varie : C'est une [source de tension](#la-source-de-tension).
 - L'intensité est constante et la tension varie : C'est une [source de courant](#la-source-de-courant).
 
@@ -101,6 +103,7 @@ La tension aux bornes de R2 que l'on peut appeler UR2 se calcule donc avec la lo
 $$U_{R2} = \text{R2}*(\text{I} - I_{R1})$$
 
 Où :
+
 - I est l'intensité totale, ici 2A
 - IR1 est l'intensité qui passe dans la résistance interne
 

@@ -24,6 +24,7 @@ draft: false
 Vous voulez diviser une tension ou un courant par un facteur arbitraire et utiliser les [lois de Kirchhoff]({{< ref "post/Electronique/Les bases de l'électronique/Cours_Les lois fondamentales en régime continu.md" >}}) vous fait mal au crâne ? Que ce soit dans un contexte de création ou d'analyse de circuit, les diviseurs en électronique sont très courants. Je vais vous présenter ici deux d'entre eux très communs qui vont simplifieront la vie !
 
 Le sommaire de l'article :
+
 1. [Le diviseur de tension](#le-diviseur-de-tension)
 2. [Le diviseur de courant](#le-diviseur-de-courant)
 3. [Conclusion](#conclusion)

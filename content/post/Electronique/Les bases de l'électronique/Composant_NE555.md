@@ -22,6 +22,7 @@ draft: false
 Le monde de l'électronique regorge de composants fascinants, et parmi eux, le NE555 se distingue comme un incontournable. Ce circuit intégré, souvent appelé simplement "555", a conquis le cœur de beaucoup de concepteurs grâce à sa polyvalence. Dans cet article, nous allons regarder en détail le NE555 et en voir quelques applications.
 
 Voici donc le sommaire de l'article :
+
 1. [Bref historique](#bref-historique)
 2. [Fonctionnement du NE555](#fonctionnement-du-ne555)
 3. [Mode bistable](#mode-bistable)
@@ -42,6 +43,7 @@ Ici on remarque que ce NE555 est dans un boîtier de type DIP-8. DIP pour "Dual 
 [![Diagramme interne du NE555](https://upload.wikimedia.org/wikipedia/commons/2/2e/555_esquema.png#center "Diagramme interne du NE555")](https://upload.wikimedia.org/wikipedia/commons/2/2e/555_esquema.png)
 
 Il y a ici deux types de composants que l'on n'a pas encore abordés :
+
 - Les amplificateurs opérationnels (aussi appelés AOP), ce sont les deux triangles dans la partie gauche du schéma.
 - La bascule RS, nommée en raison du nom de ses pins, R et S.
 Nous les expliquerons un peu plus loin.
@@ -73,12 +75,14 @@ Ici nous allons survoler une application spécifique de l'amplificateur opérati
 Un amplificateur opérationnel est alimenté avec une tension dite symétrique, c'est-à-dire en +5V au "+" et -5V au "-".
 
 Le comparateur prend deux entrées et renvoie une tension. Il n'y a ici que deux cas possibles :
+
 - Si V+ > V- alors Vout = Vcc
 - Si V+ < V- alors Vout = -Vcc
 
 La sortie des deux comparateurs étant un circuit logique, ici une bascule RS, Vcc et -Vcc seront assimilés à 1 et à 0.
 
 D'ici on peut se rendre compte de plusieurs choses :
+
 - Quand Threshold > 2/3 de Vcc, le COMP1 s'active et envoie un 1 dans la patte R de la bascule
 - Quand Trigger < 1/3 de Vcc, le COMP2 s'active et envoie un 1 dans la patte S de la bascule
 
@@ -91,10 +95,12 @@ Là vous allez vous demander "mais c'est quoi cette bascule RS à la fin ?" et v
 [![Bascule RS avec portes NOR](https://upload.wikimedia.org/wikipedia/commons/3/3c/Flipflop_SR1.svg#center "Bascule RS avec portes NOR")](https://upload.wikimedia.org/wikipedia/commons/3/3c/Flipflop_SR1.svg)
 
 Une bascule RS nous offre deux moyens de changer sa valeur :
+
 - L'entrée S, set, stocke un 1 dans la bascule
 - L'entrée R, reset, stocke un 0 dans la bascule, R1 sur le schéma ici est simplement une inversion de R. Si l'on envoie un 0 dans la broche reset, on stockera un 0 dans la bascule.
 
 Elle nous donne aussi deux moyens de récupérer sa valeur :
+
 - La broche $\text{Q}$, qui donne le contenu de la bascule
 - La broche $\overline{\text{Q}}$, qui donne l'inverse du contenu de la bascule
 
@@ -109,6 +115,7 @@ La sortie **discharge** est une sortie dite à "collecteur ouvert". C'est-à-dir
 Le contenu de la bascule RS est envoyé en sortie. Ici le signal est inversé deux fois ($\overline{\text{Q}}$ puis porte NOT), c'est l'équivalent de la sortie $\text{Q}$
 
 Avec ce que l'on a vu tout à l'heure, nous avons donc ceci :
+
 - Quand Threshold > 2/3 de Vcc, la sortie du 555 est à 0
 - Quand Trigger < 1/3 de Vcc, la sortie du 555 est à 1
 
@@ -173,6 +180,7 @@ Dernier mode de fonctionnement du NE555, et probablement le plus utile, le mode 
 [![Circuit mode astable](/res/images/Electronique/Composants/NE555/astable-circuit.png#center "Circuit mode astable")](/res/images/Electronique/Composants/NE555/astable-circuit.png)
 
 Ici le fonctionnement du circuit peut être résumé comme ceci :
+
 1. État initial : condensateur déchargé, Trigger < 1/3 de Vcc car il est à 0V (un condensateur vide est assimilable à un fil) donc **sortie = 1** et Discharge en l'air
 2. Le condensateur va se charger jusqu'à 2/3 de Vcc.
 3. Threshold > 2/3 de Vcc donc **sortie = 0**, Discharge est donc relié à la masse, le condensateur s'y vide jusqu'à 1/3 de Vcc.

@@ -17,7 +17,7 @@ series: ["Aide aux lecteurs"]
 draft: false
 ---
 
-**Vous venez d'arriver pour la première fois sur le site ou vous cherchez un ordre de lecture conseillé ? C'est ce que je propose de faire ici en faisant une sorte de sommaire du site sur cet article**
+#### Vous venez d'arriver pour la première fois sur le site ou vous cherchez un ordre de lecture conseillé ? C'est ce que je propose de faire ici en faisant une sorte de sommaire du site sur cet article
 
 ---
 

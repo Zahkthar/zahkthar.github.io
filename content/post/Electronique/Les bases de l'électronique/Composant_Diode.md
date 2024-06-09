@@ -22,10 +22,11 @@ draft: false
 On la voit partout et dans toutes les applications. Pour redresser un signal, créer une IHM, protéger un circuit ou bien capter la lumière, les applications des diodes sont très étendues, et ça en fait un des composants les plus importants en électronique. Nous allons aujourd'hui voir comment se décrit une diode et comment l'utiliser.
 
 Le programme pour aujourd'hui :
+
 1. [Petit rattrapage sur les diodes et diode idéale](#petit-rattrapage-sur-les-diodes-et-diode-idéale)
 2. [La diode standard et ses dérivées](#la-diode-standard-et-ses-dérivées)
 3. [Capteur de lumière](#capteur-de-lumière)
-4. [Un condensateur ?](#un-condensateur)
+4. [Un condensateur ?](#un-condensateur-)
 5. [Interface Homme-Machine](#interface-homme-machine)
 6. [Conclusion](#conclusion)
 
@@ -54,6 +55,7 @@ En réalité, la courbe caractéristique d'une diode réelle est plus proche de 
 [![Courbe caractéristique idéale d'une réelle](https://upload.wikimedia.org/wikipedia/commons/a/a5/Diode-IV-Curve.svg#center "Courbe caractéristique idéale d'une réelle")](https://upload.wikimedia.org/wikipedia/commons/a/a5/Diode-IV-Curve.svg)
 
 En effet, même si on garde l'esprit de la diode idéale, la courbe est tout de même bien différente ! Les différences majeures sont :
+
 1. La tension de seuil, notée Vd
 2. La tension de claquage, notée Vbr
 3. La présence d'un courant inverse (courant de fuite ou leakage current)
@@ -73,6 +75,7 @@ Un montage assez courant dans les alimentation se nomme le "Pont de Graetz" (ou 
 [![Pont de Graetz](/res/images/Electronique/Composants/Diode/PontDeGraetz.png#center "Pont de Graetz")](/res/images/Electronique/Composants/Diode/PontDeGraetz.png)
 
 Le montage des diodes peut paraître au premier abord "cryptique" mais dites vous seulement que le courant ne peut passer que dans le sens de la flèche. Il n'y a que deux solutions possibles ici :
+
 - Le fil positif est celui du haut, il va donc monter par la diode D1, passer à travers R1 du haut vers le bas et retourner à la source par D4.
 - Le fil positif est celui du bas, il va donc monter par la diode D3, passer à travers R1 du haut vers le bas et retourner à la source par D2.
 
@@ -81,6 +84,7 @@ Et voilà les signaux vus par l'oscilloscope branché sur le circuit :
 [![Signaux pont de Graetz](/res/images/Electronique/Composants/Diode/PontDeGraetzSignal.png#center "Signaux pont de Graetz")](/res/images/Electronique/Composants/Diode/PontDeGraetzSignal.png)
 
 Avec :
+
 - En jaune le signal de 100V original
 - En bleu le signal de sortie du pont de Graetz
 - En rose la masse, soit un signal de 0V pour bien voir l'effet des diodes

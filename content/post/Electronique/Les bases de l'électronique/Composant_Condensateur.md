@@ -26,9 +26,10 @@ Voici quelles formes peut avoir un condensateur :
 [![Image condensateurs](https://upload.wikimedia.org/wikipedia/commons/b/b9/Capacitors_%287189597135%29.jpg#center "Condensateurs électrochimiques")](https://upload.wikimedia.org/wikipedia/commons/b/b9/Capacitors_%287189597135%29.jpg)
 
 Voici donc le programme pour aujourd'hui :
+
 1. [Présentation rapide du composant](#présentation-rapide-du-composant)
-3. [Capacité équivalente en dérivation](#capacité-équivalente-en-dérivation)
-2. [Capacité équivalente en série](#capacité-équivalente-en-série)
+2. [Capacité équivalente en dérivation](#capacité-équivalente-en-dérivation)
+3. [Capacité équivalente en série](#capacité-équivalente-en-série)
 4. [Exemples d'utilisations pratique](#exemples-dutilisations-pratique)
 
 ### Présentation rapide du composant
@@ -55,11 +56,12 @@ La tension aux bornes du condensateur n'évoluant pas de façon linéaire mais e
 
 Le but ici n'étant pas de rentrer dans la complexité d'un cours de physique, on va se contenter de voir les formules ! Dans les circuits de ce type (qu'on appelle circuit RC pour Résistance-Condensateur, mais il en existe d'autres comme LC ou RLC faisant intervenir une bobine), il intervient ce qu'on appelle une **constante de temps**.
 
-La constante de temps dans un circuit RC est donnée par la formule suivante : 
+La constante de temps dans un circuit RC est donnée par la formule suivante :
 
 $$τ = R*C$$
 
 où :
+
 - le τ est la lettre grecque tau et représente notre constante de temps en seconde.
 - R est la valeur de la résistance
 - C est la capacité du condensateur
@@ -77,7 +79,6 @@ On peut garder en mémoire ce tableau (ou cet article en favoris 👀) pour avoi
 | 5τ                 | 100%   | 0%       |
 
 La dernière ligne avec 5τ est fausse par définition car la tension n'atteint jamais 100% (elle monte de plus en plus lentement mais n'atteint jamais la tension d'alimentation) mais c'est généralement un repère qui est pris : 5τ = complètement chargé ou complètement vide.
-
 
 ### Capacité équivalente en dérivation
 

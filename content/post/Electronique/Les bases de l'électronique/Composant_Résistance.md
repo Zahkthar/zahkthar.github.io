@@ -22,8 +22,9 @@ draft: false
 La résistance est un des composants les plus courants des circuits électroniques. Nous en avons légèrement parlé dans "[Les lois fondamentales en régime continu]({{< ref "post/Electronique/Les bases de l'électronique/Cours_Les lois fondamentales en régime continu.md" >}})" mais dans cet article, je vais tenter de faire un résumé de tout ce qu'il y a à savoir pour pouvoir utiliser simplement ce composant.
 
 Voici donc le sommaire de l'article :
+
 1. [Les unités liées à la résistance](#les-unités-liées-à-la-résistance)
-2. [La loi d'Ohm](#rappel-de-la-loi-dohm)
+2. [La loi d'Ohm](#la-loi-dohm)
 3. [L'effet Joule](#leffet-joule)
 4. [Résistance équivalente en série](#résistance-équivalente-en-série)
 5. [Résistance équivalente en dérivation](#résistance-équivalente-en-dérivation)
@@ -43,6 +44,7 @@ La résistance électrique dans une résistance dépend directement de la résis
 $$R = \rho * \frac{\text{L}}{\text{S}}$$
 
 Où :
+
 - ρ (rho) est la résistivité du matériau en **omhs-mètre** (Ω⋅m)
 - L est la longueur en **mètres** (m)
 - S est la section du conducteur en **mètre carrés** (m²)
@@ -92,7 +94,7 @@ Nous pouvons donc mélanger les deux formules et donc remplacer le U présent da
 $$\text{P} = \text{R} * \text{I} * \text{I}$$
 $$\text{P} = \text{R} * \text{I}^{2}$$
 
-Grâce à cette formule, nous pouvons maintenant calculer la puissance consommée par une résistance ! 
+Grâce à cette formule, nous pouvons maintenant calculer la puissance consommée par une résistance !
 
 Mais l'effet Joule correspond à la quantité d'énergie dissipée dans la résistance et non la puissance. Mais nous savons que l'énergie se calcule via la formule suivante :
 
@@ -145,6 +147,7 @@ A noter que dans le cas particulier où il n'y aurait que deux résistances en p
 $$\text{Req} = \frac{\text{R1} * \text{R2}}{\text{R1} + \text{R2}}$$
 
 Nous pouvons en déduire plusieurs choses :
+
 1. La résistance équivalente de plusieurs résistances en dérivation sera toujours plus petite que la plus petite des résistances prises en compte dans le calcul, ce qui correspond à l'idée générale juste au dessus.
 2. Si deux résistances égales sont mises en dérivation, la résistance équivalente sera égale à une des résistance divisée par 2.
 

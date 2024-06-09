@@ -22,9 +22,10 @@ draft: false
 Pilier de l'électronique moderne, présent dans les circuits de puissance, de contrôle et surtout les circuits numériques, on a de cesse de le mettre absolument partout. Mais pourquoi ? Qu'a-t-il de si spécial ? Nous allons voir ça dans cet article, dans lequel je ferais un bref rappel de physique pour ceux que ça intéresse puis un guide pratique sur la façon dont on peut en tirer parti dans nos circuits.
 
 Le programme pour aujourd'hui :
+
 1. [Rappels physique](#rappels-physique)
 2. [Fonctionnement d'un transistor bipolaire](#fonctionnement-dun-transistor-bipolaire)
-4. [Conclusion](#conclusion)
+3. [Conclusion](#conclusion)
 
 ### Rappels physique
 
@@ -38,6 +39,7 @@ Le transistor est basé sur des jonctions qu'on appelle PN. Une jonction P est c
 Les jonctions N et P étant en contact direct, les électrons libres de la jonction N vont aller dans la jonction P et créer une zone dite de déplétion, une sorte de "barrière" empêchant les électrons de passer. Avec l'image, on peut se rendre compte que la jonction P (ou la base) est entourée de deux de ces zones, empêchant le courant de s'écouler du collecteur à l'émetteur.
 
 De là, nous avons deux façons d'impacter ces zones :
+
 - En appliquant une tension positive à la base, la barrière de potentiel diminue, ce qui aide les électrons à passer.
 - En appliquant une tension négative à la base, la barrière de potentiel augmente, limitant donc le passage des électrons.
 
@@ -93,6 +95,7 @@ $$I_C = \beta * I_B$$
 #### Utilisations d'un transistor bipolaire
 
 Après ceci, vous devriez pouvoir déduire deux utilités principales du transistor bipolaire :
+
 - Amplifier le courant
 - Servir d'interrupteur électriquement contrôlé
 - Par extension du 2ème, permet de créer des portes logiques
