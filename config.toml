@@ -1,0 +1,83 @@
+baseURL = "https://zahkthar.fr/"
+title = "Zahkthar"
+theme = "erblog"
+
+paginate = 3
+languageCode = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+
+GoogleAnalytics = "G-RNH1Y9WEBS"
+
+[params]
+    math = 1
+
+    author = "Zahkthar"
+    logo = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
+    favicon = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
+    portrait = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
+    bio = """
+    
+    Passionné de technologie bas-niveau, je publie ici "régulièrement" des articles traitant principalement d'électronique et de programmation, particulièrement embarquée. Un ordre de lecture est proposé <a href="post/informations/informations_vous-ne-savez-pas-par-ou-commencer/" style="text-decoration: underline;">ici</a>.
+    
+    """
+
+[menu]
+    [[menu.icon]]
+        url = "https://github.com/Zahkthar"
+        name = "chevron-right"
+        weight = 1
+    [[menu.icon]]
+        url = "https://github.com/Zahkthar"
+        name = "github"
+        weight = 2
+    [[menu.icon]]
+        url = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        name = "music"
+        weight = 3
+    [[menu.icon]]
+        url = "https://github.com/Zahkthar"
+        name = "chevron-left"
+        weight = 4
+
+    [[menu.main]]
+        identifier = "home"
+        name = "Accueil"
+        url = "/"
+        weight = 10
+    [[menu.main]]
+        identifier = "posts"
+        name = "Articles"
+        url = "/post/"
+        weight = 10
+    [[menu.main]]
+        identifier = "about"
+        name = "A propos"
+        url = "/about/"
+        weight = 20
+
+    [[menu.footer]]
+        identifier = "home"
+        name = "Accueil"
+        url = "/"
+        weight = 10
+    [[menu.footer]]
+        identifier = "fabriceSincere"
+        name = "Fabrice Sincère"
+        url = "http://fabrice.sincere.pagesperso-orange.fr/"
+        weight = 20
+    [[menu.footer]]
+        identifier = "sonelec"
+        name = "Sonelec"
+        url = "https://www.sonelec-musique.com/electronique.html"
+        weight = 30
+    [[menu.footer]]
+        identifier = "555TimeCircuits"
+        name = "555 Timer Circuits"
+        url = "https://www.555-timer-circuits.com/"
+        weight = 40
+
+[taxonomies]
+    category = "Categories"
+    series = "Series"
+    tag = "Tags"

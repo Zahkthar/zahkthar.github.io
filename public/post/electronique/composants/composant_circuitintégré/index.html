@@ -1,0 +1,676 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zahkthar - Les circuits intégrés </title>
+    
+    
+    <meta content="Composants, Alimentation, Montages, Électronique" name="keywords">
+    
+    <meta content="Zahkthar - Description" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+        <link rel="icon" href="https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png">
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNH1Y9WEBS"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'G-RNH1Y9WEBS');
+        </script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            "HTML-CSS": { availableFonts: ["TeX"] }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src=" /layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" integrity="sha256-PZEg+mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Zahkthar
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote  markdown-body single-title" >
+                    <h1>Les circuits intégrés</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-11-25</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/alimentation/">
+            <span class="layui-badge " style="vertical-align: 2px;">Alimentation</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+    
+</h3>
+
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <p>Ça ne viendrait plus à l&rsquo;idée de personne aujourd&rsquo;hui de concevoir un circuit uniquement avec les composants de base. Nous allons voir aujourd&rsquo;hui une révolution dans le monde de l&rsquo;électronique, le moyen de miniaturiser plusieurs composants en une seule puce, un seul <strong>circuit intégré</strong> !</p>
+<p>Au programme :</p>
+<ol>
+<li><a href="#introduction-aux-circuits-int%C3%A9gr%C3%A9s">Introduction aux circuits intégrés</a></li>
+<li><a href="#quelques-exemples">Quelques exemples</a></li>
+<li><a href="#le-futur-des-circuits-int%C3%A9gr%C3%A9s">Le futur des circuits intégrés</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+<h3 id="introduction-aux-circuits-intégrés">Introduction aux circuits intégrés</h3>
+<p>Les circuits intégrés (CI) ont révolutionné le domaine de l&rsquo;électronique en permettant la miniaturisation et l&rsquo;intégration de plusieurs composants sur une seule puce. Cette approche offre des avantages considérables en matière de gain d&rsquo;espace, de réduction des coûts de production, et d&rsquo;amélioration de la fiabilité ainsi que des performances globales des systèmes électroniques.</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/8/80/Three_IC_circuit_chips.JPG"><img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Three_IC_circuit_chips.JPG#center" alt="Trois CI dans un boîtier DIP" title="Trois CI dans un boîtier DIP"></a></p>
+<p>Les circuits intégrés peuvent être classés en deux catégories principales : les circuits analogiques et les circuits numériques. Les circuits analogiques traitent des signaux continus, tandis que les circuits numériques manipulent des signaux discrets. Cette dualité permet de répondre à une variété d&rsquo;applications, de l&rsquo;électronique de puissance aux dispositifs de traitement de l&rsquo;information.</p>
+<h3 id="quelques-exemples">Quelques exemples</h3>
+<h4 id="régulateur-de-tension">Régulateur de tension</h4>
+<p>Un exemple classique de circuit intégré est le LM7805, un régulateur de tension largement utilisé dans les applications électroniques. Il assure une tension de sortie stable de 5 volts, ce qui est très intéressant pour alimenter un circuit.</p>
+<h5 id="exemple-de-circuit-avec-un-lm7805">Exemple de circuit avec un LM7805</h5>
+<p><a href="/res/images/Electronique/Composants/CircuitIntegre/LM7805.png"><img src="/res/images/Electronique/Composants/CircuitIntegre/LM7805.png#center" alt="Ciruit type LM7805" title="Ciruit type LM7805"></a></p>
+<p>Le circuit vient du <a href="https://www.sparkfun.com/datasheets/Components/LM7805.pdf">datasheet</a> d&rsquo;un fabricant de LM7805, qui montre une certaine facilité d&rsquo;utilisation. Il faut cependant en entrée une tension un peu plus élevée qu&rsquo;en sortie, de l&rsquo;ordre d&rsquo;environ 2V. Si l&rsquo;entrée est en dessous de 7V (dans le cas d&rsquo;un régulateur 5V), la sortie ne sera pas stable.</p>
+<p>Ce petit composant peut débiter jusqu&rsquo;à 1.5A sans broncher, ce qui le rend idéal pour alimenter beaucoup de circuits !</p>
+<h5 id="petite-parenthèse-sur-les-noms-de-ci">Petite parenthèse sur les noms de CI</h5>
+<p>Dans beaucoup de cas, le nom des CI peut être bien cryptique et sans trop d&rsquo;explications, mais ici il y a une certaine logique !</p>
+<ul>
+<li>Le LM vient de &ldquo;linear monolithic&rdquo; -&gt; CI analogique (linéaire) en un seul composant (monolithique)</li>
+<li>Dans cette catégorie, &ldquo;78&rdquo; signifie &ldquo;régulateur de tension fixe positive&rdquo; (oui ça fait beaucoup), un autre cas que l&rsquo;on peut retrouver est le &ldquo;79&rdquo;, qui est une tension fixe négative.</li>
+<li>Le nombre qui vient après, ici &ldquo;05&rdquo; est la tension de sortie, donc 5V.</li>
+</ul>
+<p>Avec toutes ces informations, on peut deviner ce que fait un CI ayant pour nom &ldquo;LM7812&rdquo;, &ldquo;LM7824&rdquo; ou &ldquo;LM7905&rdquo;. Je vous laisse trouver, vous allez y arriver !</p>
+<h4 id="les-portes-logiques">Les portes logiques</h4>
+<p>Si vous n&rsquo;avez pas déjà lu <a href="https://zahkthar.fr/post/electronique/cours/la-logique-num%C3%A9rique/cours_les-portes_logiques/">l&rsquo;article qui leur est dédié</a>, allez le lire, ça ne donnera que plus de contexte à pourquoi les circuits intégrés sont pratiques ! Dans celui-ci, nous avions vu comment créer des portes logiques de toutes pièces, avec seulement des transistors et des résistances. C&rsquo;est possible de faire ça à la marge dans un circuit, mais dès l&rsquo;instant où l&rsquo;on a besoin de plusieurs portes logiques, voire de centaines, ça devient vite infernal&hellip;</p>
+<h5 id="la-porte-and">La porte AND</h5>
+<p>Pour créer une porte AND à la main, il nous aurait fallu 2 transistors et au moins une résistance. Pour 4 portes AND, 8 transistors et 4 résistances. Sans parler de coût de production, le schéma aurait été instantanément plus complexe. Pour cet usage, nous aurions pu utiliser un <strong>7408</strong>, soit un circuit possédant 4 portes AND à double entrée !</p>
+<p><a href="/res/images/Electronique/Composants/CircuitIntegre/7408CircuitDiagram.png"><img src="/res/images/Electronique/Composants/CircuitIntegre/7408CircuitDiagram.png#center" alt="Digramme circuit 7408" title="Digramme circuit 7408"></a></p>
+<p><a href="/res/images/Electronique/Composants/CircuitIntegre/7408LogicDiagram.png"><img src="/res/images/Electronique/Composants/CircuitIntegre/7408LogicDiagram.png#center" alt="Digramme logique 7408" title="Digramme logique 7408"></a></p>
+<p>Les deux schémas viennent du <a href="https://www.ti.com/lit/ds/symlink/sn54ls08-sp.pdf">datasheet juste ici</a> et nous montre assez simplement pourquoi ces composants sont utilisés presque partout ! Il s&rsquo;alimente en 5V par le pin VCC, et le pin GND doit être relié à la masse. Une fois cela fait, nous pouvons nous servir des portes logiques, les brancher en cascade ou bien les utiliser séparément, comme vous voulez !</p>
+<p>Ce CI fait parti d&rsquo;une famille bien connue de circuit intégrés. La famille des 74XY !</p>
+<h5 id="encore-une-parenthèse-sur-les-noms">Encore une parenthèse sur les noms</h5>
+<p>Encore un temps d&rsquo;explication pour décortiquer les noms de circuits logiques !</p>
+<p>Les noms des circuits de cette famille sont divisés en 3 parties :</p>
+<ul>
+<li>Le 74 vient de Texas Instrument. Les composants dits TTL (nous y reviendrons dans quelques lignes) chez TI sont séparés en 3 gammes de températures
+<ul>
+<li>54 supportant des températures comprises entre -55°C et 125°C (militaire)</li>
+<li>64 supportant des températures comprises entre -40°C et 85°C (industriel)</li>
+<li>74 supportant des températures comprises entre 0°C et 70°C (commercial) -&gt; Ce que nous avons ici</li>
+</ul>
+</li>
+<li>Un indicatif de la technologie employée
+<ul>
+<li>Rien : TTL standard (Transistor–transistor logic) -&gt; Utilisation de transistors bipolaires saturés. La première technologie, vitesse de commutation faible et haute consommation électrique.</li>
+<li>L -&gt; Réduit la consommation électrique en augmentant la valeur des résistances, mais au prix de la vitesse de commutation.</li>
+<li>S -&gt; Met une diode Schottky entre la base et le collecteur pour augmenter la vitesse de commutation, toujours une grosse consommation électrique.</li>
+<li>LS -&gt; Un mélange entre L et S, on réduit la vitesse et la consommation électrique tout en augmentant la vitesse avec la diode Schottky. On a donc une version améliorée du TTL standard !</li>
+<li>Et quelques autres dont on ne parlera pas ici.</li>
+</ul>
+</li>
+<li>Enfin, nous avons la fonction du circuit, voici quelques exemples :
+<ul>
+<li>00 -&gt; Quatre portes NAND à 2 entrées chacune</li>
+<li>04 -&gt; Six portes NOT</li>
+<li>08 -&gt; Quatre portes AND à 2 entrées chacune (cf. l&rsquo;image juste au-dessus)</li>
+<li>30 -&gt; Une porte NAND à huit entrées</li>
+<li>4075 -&gt; Trois portes OU à trois entrées chacune (et pourquoi pas ?)</li>
+</ul>
+</li>
+</ul>
+<p>Ça nous fait un sacré pavé, mais au moins ça vous permettra de comprendre pourquoi le datasheet du 7408 parle également de 74S08, de 74LS08 et de ses équivalents en 54 (Le SN devant est un préfixe spécifique à Texas Instruments, il ne fait pas partie du nom).</p>
+<p>Comme vous l&rsquo;auriez peut-être remarqué, la technologie TTL pure tend à disparaître avec le temps, les transistors saturés consommant plus que nécessaire. Des alternatives existent comme CMOS, nous serons amenés à en reparler ne vous inquiétez pas.</p>
+<h4 id="le-cerveau-électronique--le-cpu">Le cerveau électronique : Le CPU</h4>
+<p>Ah le CPU ! Que faire aujourd&rsquo;hui sans un CPU, il est partout, même quand on n&rsquo;a pas réellement besoin de lui tant le fait de l&rsquo;utiliser est pratique. Il aura bien sûr des articles sur ce blog, et même sûrement une série entière tant on ne peut voir le monde de l&rsquo;électronique qu&rsquo;à travers lui !</p>
+<p>Le <strong>CPU</strong>, ou Central Processing Unit, est un exemple emblématique de l&rsquo;évolution des circuits intégrés. Les processeurs modernes intègrent des milliards de transistors sur une seule puce, permettant des calculs complexes à une vitesse vertigineuse.</p>
+<p>De tous les CPU qui existent, du légendaire Zilog Z80 (ZX Spectrum pour les plus vieux, la Game Boy pour les moins vieux ou encore les calculatrices Texas Instruments pour les plus jeunes), jusqu&rsquo;aux AMD Ryzen conçus pour le jeu vidéo, il existe pléthore de CPU de toutes les puissances et de toutes les utilités.</p>
+<h5 id="mais-quest-ce-quun-cpu-au-juste-">Mais qu&rsquo;est-ce qu&rsquo;un CPU au juste ?</h5>
+<p>Nous reparlerons d&rsquo;architecture processeur ici, mais pour garder la chose simple, nous pouvons dire qu&rsquo;un CPU est une boîte noire exécutant des instructions et interagissant via ses pins d&rsquo;entrées/sorties. Nous pouvons quand même dépoussiérer un peu quelques une de ses parties :</p>
+<ul>
+<li>La mémoire (stockant le programme et ses valeurs intermédiaires) est souvent externe (une <strong>RAM</strong> si volatile, <strong>ROM</strong> si persistante) mais elle peut aussi être interne dans le cas d&rsquo;un microcontrôleur. Dans certains cas, lorsque l&rsquo;accès à la mémoire est complexe, on peut utiliser un composant appelé <strong>MMU</strong> (Memory Management Unit) permettant de servir d&rsquo;intermédiaire avec le CPU, lui permettant de déléguer la complexité d&rsquo;accès.</li>
+<li>La partie en charge des calculs est appelée l&rsquo;<strong>ALU</strong> (Arithmetic Logic Unit). Si les calculs peuvent être faits sur des nombres à virgules, il y aura également la présence d&rsquo;un <strong>FPU</strong> (Floating-Point Unit). Ils prennent deux valeurs en entrées et produisent un résultat.</li>
+<li>L&rsquo;unité de contrôle permet de décoder les instructions et de faire communiquer les bons modules ensemble. Par exemple, si l&rsquo;instruction est une addition entière, alors il enverra les données à l&rsquo;ALU et fera stocker le résultat à l&rsquo;emplacement mémoire demandé.</li>
+<li>L&rsquo;horloge est là pour donner le pas, c&rsquo;est le composant dont on parle quand on parle de la fréquence d&rsquo;un processeur (3GHz par exemple). Il doit générer un signal régulier que devront suivre toutes les parties du CPU.</li>
+<li>Les registres servent de mémoire interne au CPU, ils sont souvent très petits et en faible nombre, ce qui ne leur permet pas de stocker des gros volumes de données. En revanche, ils permettent de garder en mémoire des informations très importantes pour le bon fonctionnement des programmes qu&rsquo;ils exécutent, nous les reverrons bien assez tôt !</li>
+</ul>
+<h5 id="mais-à-quoi-sert-un-cpu-">Mais à quoi sert un CPU ?</h5>
+<p>Avant l&rsquo;invention du processeur (et encore aujourd&rsquo;hui sur les circuits n&rsquo;en utilisant pas), le cerveau du circuit doit être fait sur mesure, ce qui n&rsquo;aide pas à sa réutilisation sur un futur circuit&hellip; Un processeur est une réponse parfaite à ce besoin car c&rsquo;est littéralement le circuit intégré universel ! Il permet de répondre à un besoin, puis d&rsquo;être reprogrammé pour répondre à un autre besoin. Ainsi, le circuit imprimé d&rsquo;un radio-réveil pourra se transformer en micro-ondes sans trop changer le circuit mais seulement le programme ! Un bon exemple de cela serait les cartes Arduino qui peuvent servir à beaucoup d&rsquo;applications.</p>
+<h3 id="le-futur-des-circuits-intégrés">Le futur des circuits intégrés</h3>
+<p>Nous n&rsquo;avons pourtant à l&rsquo;heure actuelle pas tout découvert des circuits intégrés, il y a beaucoup de champs de recherches disponibles pour ces petits composants :</p>
+<ul>
+<li>Plus de miniaturisation, nous avons encore un peu de marge pour réduire la taille des transistors et ainsi en mettre toujours plus dans un même espace</li>
+<li>Utiliser la 3ème dimension. Même si la miniaturisation en 2D est encore pensable, il va être difficile de tenir la loi de Moore tant la finesse de gravure est faible (environ 10nm), il est cependant imaginable d&rsquo;empiler des puces de silicium verticalement, permettant de se jeter une nouvelle fois dans une course à la miniaturisation !</li>
+<li>Une meilleure utilisation de l&rsquo;énergie, l&rsquo;amélioration des IC est aujourd&rsquo;hui surtout concentrée sur la performance brute, avec un intérêt tout relatif pour l&rsquo;économie d&rsquo;énergie. Un PC gaming peut consommer autant qu&rsquo;un chauffage de salon, simplement pour faire tourner des jeux vidéo en haute résolution.</li>
+<li>Sans oublier les technologies quantiques, même si on semble encore avoir le temps de voir venir avant d&rsquo;en voir dans le commerce pour le grand public.</li>
+</ul>
+<h3 id="conclusion">Conclusion</h3>
+<p>Les circuits intégrés, sont au cœur de presque tous les circuits électroniques modernes. Ils offrent des solutions compactes tout en restant efficaces pour répondre au besoin croissant de miniaturisation et de complexité. Cette évolution a permis la création de dispositifs électroniques de plus en plus sophistiqués, simplifiant la conception tout en réduisant la complexité des montages électroniques. Dans les prochains articles, nous explorerons plus en détail certaines applications spécifiques des circuits intégrés, mettant en lumière leur utilisation pratique. À bientôt !</p>
+<p> </p>
+</div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+            <div class="layui-card single-card">
+                <h2 class="single-title">Relevant Topics</h2>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/cours/la-logique-num%C3%A9rique/cours_les-portes_logiques/">
+                                <h3 class="">Les portes logiques</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-30</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/cours/">
+            <span class="layui-badge " style="vertical-align: 2px;">Cours</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/logique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Logique</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/composants/composant_transistorbipolaire/">
+                                <h3 class="">Le transistor bipolaire</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-24</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/composants/composant_diode/">
+                                <h3 class="">La diode</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-06-11</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/cours/les-bases-de-l%C3%A9lectronique/cours_lois-des-diviseurs/">
+                                <h3 class="">Lois des diviseurs</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-04-23</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/cours/">
+            <span class="layui-badge " style="vertical-align: 2px;">Cours</span>
+        </a>
+    
+        <a href="/tags/lois/">
+            <span class="layui-badge " style="vertical-align: 2px;">Lois</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/composants/composant_condensateur/">
+                                <h3 class="">Le condensateur</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-01-31</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_ne555/">
+                        <h3 class="">Le NE555 : Une introduction aux oscillateurs</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2024-01-22</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/oscillateurs/">
+            <span class="layui-badge " style="vertical-align: 2px;">Oscillateurs</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_circuitint%C3%A9gr%C3%A9/">
+                        <h3 class="">Les circuits intégrés</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-11-25</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/alimentation/">
+            <span class="layui-badge " style="vertical-align: 2px;">Alimentation</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/cours/la-logique-num%C3%A9rique/cours_les-portes_logiques/">
+                        <h3 class="">Les portes logiques</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-30</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/cours/">
+            <span class="layui-badge " style="vertical-align: 2px;">Cours</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/logique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Logique</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_transistorbipolaire/">
+                        <h3 class="">Le transistor bipolaire</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-24</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_diode/">
+                        <h3 class="">La diode</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-06-11</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+
+</body>
+</html>

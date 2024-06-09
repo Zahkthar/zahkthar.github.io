@@ -1,0 +1,505 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zahkthar - Le condensateur </title>
+    
+    
+    <meta content="Composants, Électronique" name="keywords">
+    
+    <meta content="Zahkthar - Le condensateur se retrouve dans quasiment tous les circuits, pourquoi ? Rappels et formules au programme !" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+        <link rel="icon" href="https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png">
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNH1Y9WEBS"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'G-RNH1Y9WEBS');
+        </script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            "HTML-CSS": { availableFonts: ["TeX"] }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src=" /layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" integrity="sha256-PZEg+mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Zahkthar
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote  markdown-body single-title" >
+                    <h1>Le condensateur</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-01-31</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <p>Globalement, le condensateur est simplement une &ldquo;petite batterie&rdquo;, il permet de stocker de l&rsquo;énergie électrique et de la restituer.</p>
+<p>C&rsquo;est quand même un petit peu plus compliqué que ça malheuresement&hellip; Mais on peut déjà saisir l&rsquo;intérêt de ce composant dans un circuit.</p>
+<p>Voici quelles formes peut avoir un condensateur :</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/b/b9/Capacitors_%287189597135%29.jpg"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Capacitors_%287189597135%29.jpg#center" alt="Image condensateurs" title="Condensateurs électrochimiques"></a></p>
+<p>Voici donc le programme pour aujourd&rsquo;hui :</p>
+<ol>
+<li><a href="#pr%C3%A9sentation-rapide-du-composant">Présentation rapide du composant</a></li>
+<li><a href="#capacit%C3%A9-%C3%A9quivalente-en-d%C3%A9rivation">Capacité équivalente en dérivation</a></li>
+<li><a href="#capacit%C3%A9-%C3%A9quivalente-en-s%C3%A9rie">Capacité équivalente en série</a></li>
+<li><a href="#exemples-dutilisations-pratique">Exemples d&rsquo;utilisations pratique</a></li>
+</ol>
+<h3 id="présentation-rapide-du-composant">Présentation rapide du composant</h3>
+<p>Basiquement, un condensateur est constitué de deux armatures conductrices (qu&rsquo;on appelle généralement électrode) séparées par un isolant (ou diélectrique pour le nom technique). Le symbole du condensateur n&rsquo;a donc pas été choisi par hasard et l&rsquo;on reconnaît bien les deux électrodes séparées par un espace !</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/c/c5/Symbole_condensateur.png"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Symbole_condensateur.png#center" alt="Symbole condensateur" title="Condensateurs électrochimiques"></a></p>
+<p>Lorsque le condensateur est branché sur une source d&rsquo;alimentation continue (admettons une tension de 5V), les électrons vont aller du &ldquo;+&rdquo; vers le &ldquo;-&rdquo;, comme on pourrait s&rsquo;y attendre. Mais il n&rsquo;y a pas de contact dans un condensateur, comme on peut le deviner à son symbole. Les deux bornes étaient avant équilibrées, maintenant toute les électrons vont vers le &ldquo;-&rdquo;.</p>
+<p>Un électron ayant une quantité d&rsquo;énergie négative, la borne &ldquo;-&rdquo; va se charger en énergie négative alors que la borne &ldquo;+&rdquo; va &ldquo;perdre de l&rsquo;énergie négative&rdquo;, ce qui va rendre sa tension plus positive encore !</p>
+<p><a href="/res/images/Electronique/Composants/Condensateur/CondensateurEnCircuit.png#center"><img src="/res/images/Electronique/Composants/Condensateur/CondensateurEnCircuit.png#center" alt="Un condensateur en circuit" title="Condensateur en circuit"></a></p>
+<p>Une fois que le condensateur sera chargé, une tension de 5V sera présente sur sa borne &ldquo;+&rdquo; et de 0V sur sa borne &ldquo;-&rdquo;, soit la tension d&rsquo;alimentation. A partir de ce moment, il n&rsquo;y a plus de courant dans le circuit, le courant venant de la différence de tension.</p>
+<p>Ici, il n&rsquo;y a pas de résistance (R = 0, donc I est très élevé car I = U/R) donc le condensateur passe de 0V à la tension d&rsquo;alimentation globalement instantanément ! Ce qui n&rsquo;est pas forecément ce que l&rsquo;on veut. On peut donc mettre une résistance dans le circuit pour limiter le courant et donc changer le temps de charge du condensateur.</p>
+<p><a href="/res/images/Electronique/Composants/Condensateur/CondensateurResistanceCircuit.png#center"><img src="/res/images/Electronique/Composants/Condensateur/CondensateurResistanceCircuit.png#center" alt="Condensateur avec résistance" title="Condensateur et résistance en circuit"></a></p>
+<p>La tension aux bornes du condensateur n&rsquo;évoluant pas de façon linéaire mais exponentielle, comme on peut le voir sur la courbe d&rsquo;exemple suivante, la formule pour avoir le &ldquo;pourcentage de charge en fonction du temps&rdquo; ne sera pas aussi simple que la loi d&rsquo;Ohm.</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/3/36/Charge_et_d%C3%A9charge_d%27un_condensateur.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Charge_et_d%C3%A9charge_d%27un_condensateur.svg" alt="Graphique charge/décharge d&amp;rsquo;un condensateur" title="Graphique charge/décharge d'un condensateur"></a></p>
+<p>Le but ici n&rsquo;étant pas de rentrer dans la complexité d&rsquo;un cours de physique, on va se contenter de voir les formules ! Dans les circuits de ce type (qu&rsquo;on appelle circuit RC pour Résistance-Condensateur, mais il en existe d&rsquo;autres comme LC ou RLC faisant intervenir une bobine), il intervient ce qu&rsquo;on appelle une <strong>constante de temps</strong>.</p>
+<p>La constante de temps dans un circuit RC est donnée par la formule suivante :</p>
+<p>$$τ = R*C$$</p>
+<p>où :</p>
+<ul>
+<li>le τ est la lettre grecque tau et représente notre constante de temps en seconde.</li>
+<li>R est la valeur de la résistance</li>
+<li>C est la capacité du condensateur</li>
+</ul>
+<p>La constante de temps τ est le temps nécéssaire en seconde pour le condensateur pour monter à 63% de sa charge (où 37% s&rsquo;il se décharge) en fonction de la résistance.</p>
+<p>On peut garder en mémoire ce tableau (ou cet article en favoris 👀) pour avoir une équivalence simple :</p>
+<table>
+<thead>
+<tr>
+<th>Constante de temps</th>
+<th>Charge</th>
+<th>Décharge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0τ</td>
+<td>0%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>1τ</td>
+<td>63%</td>
+<td>37%</td>
+</tr>
+<tr>
+<td>2τ</td>
+<td>87%</td>
+<td>13%</td>
+</tr>
+<tr>
+<td>3τ</td>
+<td>95%</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>5τ</td>
+<td>100%</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table>
+<p>La dernière ligne avec 5τ est fausse par définition car la tension n&rsquo;atteint jamais 100% (elle monte de plus en plus lentement mais n&rsquo;atteint jamais la tension d&rsquo;alimentation) mais c&rsquo;est généralement un repère qui est pris : 5τ = complètement chargé ou complètement vide.</p>
+<h3 id="capacité-équivalente-en-dérivation">Capacité équivalente en dérivation</h3>
+<p>Cette partie et la suivante seront plus simple que la précédente car elle ressemble beaucoup à celle sur <a href="https://zahkthar.fr/post/electronique/composants/composant_r%C3%A9sistance/">la résistance</a>.</p>
+<p>En parrallèle, les capacité s&rsquo;additionnent.</p>
+<p><a href="/res/images/Electronique/Composants/Condensateur/CondensateursDerivation.png#center"><img src="/res/images/Electronique/Composants/Condensateur/CondensateursDerivation.png#center" alt="Condensateurs en dérivation" title="Condensateurs en dérivation"></a></p>
+<p>Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :</p>
+<p>$$\text{C} = \text{C1} + \text{C2} + \text{C3} = 300\text{µF}$$</p>
+<p>On peut remarquer que les capacités s&rsquo;additionnent en parralèle comme les résistances en série.</p>
+<h3 id="capacité-équivalente-en-série">Capacité équivalente en série</h3>
+<p>En série, les capacité se comportent comme les résistances en dérivation.</p>
+<p><a href="/res/images/Electronique/Composants/Condensateur/CondensateursSerie.png#center"><img src="/res/images/Electronique/Composants/Condensateur/CondensateursSerie.png#center" alt="Condensateurs en série" title="Condensateurs en série"></a></p>
+<p>Ici les trois condensateurs sont modélisables par un seul condensateur de capacité :</p>
+<p>$$\frac{1}{\text{C}} = \frac{1}{\text{C1}} + \frac{1}{\text{C2}} + \frac{1}{\text{C3}}$$
+$$\text{C} = \frac{1}{\frac{1}{\text{C1}} + \frac{1}{\text{C2}} + \frac{1}{\text{C3}}} = 33.3\text{µF}$$</p>
+<p>A noter que la formule quand il n&rsquo;y a que 2 condensateurs fonctionne toujours :</p>
+<p>$$\text{C} = \frac{\text{C1} * \text{C2}}{\text{C1} + \text{C2}}$$</p>
+<h3 id="exemples-dutilisations-pratique">Exemples d&rsquo;utilisations pratique</h3>
+<p>Il y a beaucoup d&rsquo;applications réelle aux condensateurs, ce qui en fait un des composants les plus présents des circuits électroniques. On peut simplement l&rsquo;utiliser pour ajouter du délai dans un circuit, mais on peut aussi utiliser sa capacité à absorber l&rsquo;énergie pour faire du traitement de signal (lisser une alimentation 5V qui serait un peu bruitée). On peut également l&rsquo;utiliser pour transformer une tension alternative en tension continue.</p>
+<p>Le condensateur peut aussi tout simplement être là pour stocker de l&rsquo;énergie (on parle plus de supercondensateur dans ce cas d&rsquo;utilisation précis).</p>
+<p>Un exemple pour la culture générale de cette utilisation serait le flash des anciens appareils photos qui était dans beaucoup de cas un condensateur avec une haute tension qui se chargait et qui relâchait tout d&rsquo;un coup pour produire le flash bien connu.</p>
+<p> </p>
+</div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+            <div class="layui-card single-card">
+                <h2 class="single-title">Relevant Topics</h2>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/composants/composant_r%C3%A9sistance/">
+                                <h3 class="">La résistance</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2022-10-05</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_ne555/">
+                        <h3 class="">Le NE555 : Une introduction aux oscillateurs</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2024-01-22</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/oscillateurs/">
+            <span class="layui-badge " style="vertical-align: 2px;">Oscillateurs</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_circuitint%C3%A9gr%C3%A9/">
+                        <h3 class="">Les circuits intégrés</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-11-25</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/alimentation/">
+            <span class="layui-badge " style="vertical-align: 2px;">Alimentation</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/cours/la-logique-num%C3%A9rique/cours_les-portes_logiques/">
+                        <h3 class="">Les portes logiques</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-30</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/cours/">
+            <span class="layui-badge " style="vertical-align: 2px;">Cours</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/logique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Logique</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_transistorbipolaire/">
+                        <h3 class="">Le transistor bipolaire</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-24</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_diode/">
+                        <h3 class="">La diode</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-06-11</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+
+</body>
+</html>

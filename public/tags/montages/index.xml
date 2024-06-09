@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Montages on Zahkthar</title>
+    <link>https://zahkthar.fr/tags/montages/</link>
+    <description>Recent content in Montages on Zahkthar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 22 Jan 2024 20:00:00 +0200</lastBuildDate><atom:link href="https://zahkthar.fr/tags/montages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Le NE555 : Une introduction aux oscillateurs</title>
+      <link>https://zahkthar.fr/post/electronique/composants/composant_ne555/</link>
+      <pubDate>Mon, 22 Jan 2024 20:00:00 +0200</pubDate>
+      
+      <guid>https://zahkthar.fr/post/electronique/composants/composant_ne555/</guid>
+      <description>Le monde de l&amp;rsquo;électronique regorge de composants fascinants, et parmi eux, le NE555 se distingue comme un incontournable. Ce circuit intégré, souvent appelé simplement &amp;ldquo;555&amp;rdquo;, a conquis le cœur de beaucoup de concepteurs grâce à sa polyvalence. Dans cet article, nous allons regarder en détail le NE555 et en voir quelques applications.
+Voici donc le sommaire de l&amp;rsquo;article :
+Bref historique Fonctionnement du NE555 Mode bistable Mode monostable Mode astable Conclusion Bref historique Le NE555 est un circuit intégré qui a été introduit sur le marché dans les années 1970 par la société Signetics.</description>
+    </item>
+    
+    <item>
+      <title>Les circuits intégrés</title>
+      <link>https://zahkthar.fr/post/electronique/composants/composant_circuitint%C3%A9gr%C3%A9/</link>
+      <pubDate>Sat, 25 Nov 2023 12:00:00 +0200</pubDate>
+      
+      <guid>https://zahkthar.fr/post/electronique/composants/composant_circuitint%C3%A9gr%C3%A9/</guid>
+      <description>Ça ne viendrait plus à l&amp;rsquo;idée de personne aujourd&amp;rsquo;hui de concevoir un circuit uniquement avec les composants de base. Nous allons voir aujourd&amp;rsquo;hui une révolution dans le monde de l&amp;rsquo;électronique, le moyen de miniaturiser plusieurs composants en une seule puce, un seul circuit intégré !
+Au programme :
+Introduction aux circuits intégrés Quelques exemples Le futur des circuits intégrés Conclusion Introduction aux circuits intégrés Les circuits intégrés (CI) ont révolutionné le domaine de l&amp;rsquo;électronique en permettant la miniaturisation et l&amp;rsquo;intégration de plusieurs composants sur une seule puce.</description>
+    </item>
+    
+    <item>
+      <title>Les portes logiques</title>
+      <link>https://zahkthar.fr/post/electronique/cours/la-logique-num%C3%A9rique/cours_les-portes_logiques/</link>
+      <pubDate>Sat, 30 Sep 2023 00:00:00 +0200</pubDate>
+      
+      <guid>https://zahkthar.fr/post/electronique/cours/la-logique-num%C3%A9rique/cours_les-portes_logiques/</guid>
+      <description>Empilons les transistors !
+Les portes logiques marquent une étape cruciale dans la compréhension de l&amp;rsquo;électronique moderne, en éclairant la distinction fondamentale entre deux branches essentielles : l&amp;rsquo;électronique numérique et l&amp;rsquo;électronique analogique. L&amp;rsquo;électronique numérique s&amp;rsquo;attèle aux signaux discrets, échantillonnés et segmentés, tandis que l&amp;rsquo;électronique analogique se plonge dans le domaine des signaux continus, traitant des filtres, du bruit et des opérations sur les tensions. Pour saisir pleinement cette distinction, imaginez un fleuve fluide par opposition à un fleuve divisé en sections discrètes.</description>
+    </item>
+    
+    <item>
+      <title>Lois des diviseurs</title>
+      <link>https://zahkthar.fr/post/electronique/cours/les-bases-de-l%C3%A9lectronique/cours_lois-des-diviseurs/</link>
+      <pubDate>Sun, 23 Apr 2023 16:00:00 +0200</pubDate>
+      
+      <guid>https://zahkthar.fr/post/electronique/cours/les-bases-de-l%C3%A9lectronique/cours_lois-des-diviseurs/</guid>
+      <description>Comment diviser une tension ? Un courant ?
+Vous voulez diviser une tension ou un courant par un facteur arbitraire et utiliser les lois de Kirchhoff vous fait mal au crâne ? Que ce soit dans un contexte de création ou d&amp;rsquo;analyse de circuit, les diviseurs en électronique sont très courants. Je vais vous présenter ici deux d&amp;rsquo;entre eux très communs qui vont simplifieront la vie !
+Le sommaire de l&amp;rsquo;article :</description>
+    </item>
+    
+  </channel>
+</rss>

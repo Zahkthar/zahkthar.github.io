@@ -1,0 +1,721 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Zahkthar - Le NE555 : Une introduction aux oscillateurs </title>
+    
+    
+    <meta content="Composants, Montages, Oscillateurs, Électronique" name="keywords">
+    
+    <meta content="Zahkthar - Découvrez le NE555, un des circuits integrés les plus populaires" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+        <link rel="icon" href="https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png">
+    
+
+    
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNH1Y9WEBS"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments)};
+          gtag('js', new Date());
+          gtag('config', 'G-RNH1Y9WEBS');
+        </script>
+    
+
+    
+    
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true
+            },
+            "HTML-CSS": { availableFonts: ["TeX"] }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js" integrity="sha256-HGLuEfFcsUJGhvB8cQ8nr0gai9EucOOaIxFw7qxmd+w=" crossorigin="anonymous"></script>
+    
+
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <link rel="stylesheet" href="/self/css/default.css">
+    <script src=" /layui/layui.js"></script>
+
+    <link rel="stylesheet" async href="/self/css/markdown.min.css">
+    <link rel="stylesheet" async href="/self/css/gallery.css">
+    
+    
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+    <script async src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js" integrity="sha256-PZEg+mIdptYTwWmLcBTsa99GIDZujyt7VHBZ9Lb2Jys=" crossorigin="anonymous"></script></head>
+
+<body>
+    
+    <header class="layui-header layui-bg-cyan">
+
+    
+        <a href=""><img src="https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png" class="layui-nav-img" style="margin-left:10px;margin-top:-10px"></a>
+    
+    
+    <a class="nav-self-logo" href="/">
+        Zahkthar
+    </a>
+
+    <ul class="layui-nav layui-layout-right layui-bg-cyan" lay-filter="">
+        
+        
+        <li class="layui-nav-item" id="nav_big"><a href="/post/">Posts</a></li>
+        
+
+        
+
+        
+        <li class="layui-nav-item" id="nav_small">
+            <a href="javascript:;">
+                <i class="layui-icon layui-icon-app" style="font-size: 24px;"></i>
+            </a>
+
+            <dl class="layui-nav-child">
+                
+                <dd><a href="/post/">Posts</a></dd>
+                
+
+                
+            </dl>
+        </li>
+    </ul>
+</header>
+
+<script>
+layui.use('element', function(){
+  var element = layui.element;
+});
+</script>
+
+        <div id="content" style="min-height:80%">
+<div class="layui-container" style="margin-bottom: 10px">
+    
+
+    <div class="layui-row layui-col-space10">
+        <div class="layui-col-md8 layui-col-sm12 layui-col-xs12">
+            <div class="layui-card single-card">
+                <br />
+                <blockquote class="self-elem-quote  markdown-body single-title" >
+                    <h1>Le NE555 : Une introduction aux oscillateurs</h1>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2024-01-22</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/oscillateurs/">
+            <span class="layui-badge " style="vertical-align: 2px;">Oscillateurs</span>
+        </a>
+    
+    
+</h3>
+
+                </blockquote>
+                <div class="layui-card-body markdown-body single-content">
+                    <p>Le monde de l&rsquo;électronique regorge de composants fascinants, et parmi eux, le NE555 se distingue comme un incontournable. Ce circuit intégré, souvent appelé simplement &ldquo;555&rdquo;, a conquis le cœur de beaucoup de concepteurs grâce à sa polyvalence. Dans cet article, nous allons regarder en détail le NE555 et en voir quelques applications.</p>
+<p>Voici donc le sommaire de l&rsquo;article :</p>
+<ol>
+<li><a href="#bref-historique">Bref historique</a></li>
+<li><a href="#fonctionnement-du-ne555">Fonctionnement du NE555</a></li>
+<li><a href="#mode-bistable">Mode bistable</a></li>
+<li><a href="#mode-monostable">Mode monostable</a></li>
+<li><a href="#mode-astable">Mode astable</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ol>
+<h3 id="bref-historique">Bref historique</h3>
+<p>Le NE555 est un circuit intégré qui a été introduit sur le marché dans les années 1970 par la société Signetics. Sa popularité persiste aujourd&rsquo;hui en raison de sa simplicité d&rsquo;utilisation et de sa capacité à remplir de multiples fonctions. Ce composant est couramment utilisé pour des tâches de temporisation, de génération de signaux, et bien plus encore.</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/2/21/Signetics_NE555N.JPG"><img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Signetics_NE555N.JPG#center" alt="Un NE555" title="Un NE555"></a></p>
+<p>Ici on remarque que ce NE555 est dans un boîtier de type DIP-8. DIP pour &ldquo;Dual In-line Package&rdquo; car c&rsquo;est un boîtier à deux rangées de pattes et 8 car il y a 8 pattes. Il existe également dans bien d&rsquo;autres formats.</p>
+<h3 id="fonctionnement-du-ne555">Fonctionnement du NE555</h3>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/2/2e/555_esquema.png"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/555_esquema.png#center" alt="Diagramme interne du NE555" title="Diagramme interne du NE555"></a></p>
+<p>Il y a ici deux types de composants que l&rsquo;on n&rsquo;a pas encore abordés :</p>
+<ul>
+<li>Les amplificateurs opérationnels (aussi appelés AOP), ce sont les deux triangles dans la partie gauche du schéma.</li>
+<li>La bascule RS, nommée en raison du nom de ses pins, R et S.
+Nous les expliquerons un peu plus loin.</li>
+</ul>
+<p>Les autres composants ont déjà été traités. Trois résistances sur la partie gauche du schéma, un transistor en haut et une porte NOT reliée à la sortie.</p>
+<h4 id="les-résistances">Les résistances</h4>
+<p>Entre la tension d&rsquo;alimentation (Vcc) et la masse (GND), on retrouve trois résistances d&rsquo;une valeur R (les trois sont identiques).
+Si vous vous souvenez bien de l&rsquo;article sur <a href="https://zahkthar.fr/post/electronique/cours/les-bases-de-l%C3%A9lectronique/cours_lois-des-diviseurs/">les diviseurs</a>, vous devriez vous souvenir que la tension aux bornes d&rsquo;une résistance dans une série de résistances est obtenue en multipliant la tension d&rsquo;alimentation par le pourcentage de la résistance sur la résistance totale. Si une résistance prend 45% de la résistance totale, la tension à ses bornes sera naturellement de 45%.</p>
+<p>$$U_{Rx} = \text{U} * \frac{\text{Rx}}{\sum_{i = 1}^{n} \text{Ri}}$$</p>
+<p>Ici, nous savons que U = Vcc, soit la tension d&rsquo;alimentation, que Rx est égal à R dans la mesure ou les trois résistances sont identiques et que la somme des résistances en série ici est de 3R.
+Nous pouvons donc réarranger la formule comme ceci :</p>
+<p>$$U_{R} = \text{Vcc} * \frac{\text{R}}{3\text{R}}$$
+$$U_{R} = \text{Vcc} * \frac{1}{3}$$
+$$U_{R} = \frac{\text{Vcc}}{3}$$</p>
+<p>Nous avons donc <strong>1/3</strong> de la tension à l&rsquo;entrée de <strong>COMP2</strong> et <strong>2/3</strong> de la tension à l&rsquo;entrée de <strong>COMP1</strong> ainsi que dans la sortie <strong>Control Voltage</strong>.</p>
+<p>Si vous vous êtes dits : &ldquo;les trois résistances ne sont pas réellement en série car elles sont branchées aux comparateurs. Du courant est donc censé partir par là&rdquo;. Vous avez eu une bonne intuition, en temps normal, un pont diviseur de tension ne peut pas être chargé. Cela fausserait le calcul. Ici nous pouvons faire cela car la quantité de courant entrant dans un amplificateur opérationnel est négligeable, nous pouvons considérer que c&rsquo;est 0A.</p>
+<h4 id="les-comparateurs">Les comparateurs</h4>
+<p>Ici nous allons survoler une application spécifique de l&rsquo;amplificateur opérationnel, le comparateur. C&rsquo;est le montage le plus simple que l&rsquo;on puisse faire avec un AOP, nous n&rsquo;avons donc pas besoin de trop rentrer dans les détails techniques ici.</p>
+<p>Un amplificateur opérationnel est alimenté avec une tension dite symétrique, c&rsquo;est-à-dire en +5V au &ldquo;+&rdquo; et -5V au &ldquo;-&rdquo;.</p>
+<p>Le comparateur prend deux entrées et renvoie une tension. Il n&rsquo;y a ici que deux cas possibles :</p>
+<ul>
+<li>Si V+ &gt; V- alors Vout = Vcc</li>
+<li>Si V+ &lt; V- alors Vout = -Vcc</li>
+</ul>
+<p>La sortie des deux comparateurs étant un circuit logique, ici une bascule RS, Vcc et -Vcc seront assimilés à 1 et à 0.</p>
+<p>D&rsquo;ici on peut se rendre compte de plusieurs choses :</p>
+<ul>
+<li>Quand Threshold &gt; 2/3 de Vcc, le COMP1 s&rsquo;active et envoie un 1 dans la patte R de la bascule</li>
+<li>Quand Trigger &lt; 1/3 de Vcc, le COMP2 s&rsquo;active et envoie un 1 dans la patte S de la bascule</li>
+</ul>
+<h4 id="la-bascule-rs">La bascule RS</h4>
+<p>Là vous allez vous demander &ldquo;mais c&rsquo;est quoi cette bascule RS à la fin ?&rdquo; et vous aurez bien raison. Une bascule RS est en réalité une mémoire numérique. On peut y stocker un bit de données (oui c&rsquo;est peu). Ce n&rsquo;est certes pas assez pour stocker quoi que ce soit de sensible, mais c&rsquo;est assez pour stocker une valeur binaire (0 ou 1).</p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flipflop_SR0.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Flipflop_SR0.svg#center" alt="Bascule RS" title="Bascule RS"></a></p>
+<p><a href="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flipflop_SR1.svg"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flipflop_SR1.svg#center" alt="Bascule RS avec portes NOR" title="Bascule RS avec portes NOR"></a></p>
+<p>Une bascule RS nous offre deux moyens de changer sa valeur :</p>
+<ul>
+<li>L&rsquo;entrée S, set, stocke un 1 dans la bascule</li>
+<li>L&rsquo;entrée R, reset, stocke un 0 dans la bascule, R1 sur le schéma ici est simplement une inversion de R. Si l&rsquo;on envoie un 0 dans la broche reset, on stockera un 0 dans la bascule.</li>
+</ul>
+<p>Elle nous donne aussi deux moyens de récupérer sa valeur :</p>
+<ul>
+<li>La broche $\text{Q}$, qui donne le contenu de la bascule</li>
+<li>La broche $\overline{\text{Q}}$, qui donne l&rsquo;inverse du contenu de la bascule</li>
+</ul>
+<p>On se sert en général de l&rsquo;un ou de l&rsquo;autre, ici on se sert de $\overline{\text{Q}}$ comme on peut le voir avec le cercle sur le <a href="#fonctionnement-du-ne555">diagramme plus haut</a></p>
+<h4 id="la-broche-discharge">La broche discharge</h4>
+<p>La sortie <strong>discharge</strong> est une sortie dite à &ldquo;collecteur ouvert&rdquo;. C&rsquo;est-à-dire que le collecteur du transistor derrière la sortie logique a le collecteur &ldquo;en l&rsquo;air&rdquo;. Cette broche peut servir à décharger un condensateur quand le bit stocké dans la bascule est à 0.</p>
+<h4 id="la-sortie">La sortie</h4>
+<p>Le contenu de la bascule RS est envoyé en sortie. Ici le signal est inversé deux fois ($\overline{\text{Q}}$ puis porte NOT), c&rsquo;est l&rsquo;équivalent de la sortie $\text{Q}$</p>
+<p>Avec ce que l&rsquo;on a vu tout à l&rsquo;heure, nous avons donc ceci :</p>
+<ul>
+<li>Quand Threshold &gt; 2/3 de Vcc, la sortie du 555 est à 0</li>
+<li>Quand Trigger &lt; 1/3 de Vcc, la sortie du 555 est à 1</li>
+</ul>
+<h4 id="mode-bistable">Mode bistable</h4>
+<p>On peut en déduire basiquement trois modes de fonctionnement pour le NE555. Le mode bistable est le mode dans lequel l&rsquo;état haut et l&rsquo;état bas sont stables, d&rsquo;où son nom.</p>
+<p><a href="/res/images/Electronique/Composants/NE555/bistable-circuit.png"><img src="/res/images/Electronique/Composants/NE555/bistable-circuit.png#center" alt="Circuit mode bistable" title="Circuit mode bistable"></a></p>
+<p>Partons du principe que la valeur de départ est 0. Ce n&rsquo;est pas très important de toutes façon mais Trigger est relié à 5V et Threshold est en l&rsquo;air. Il n&rsquo;y a donc pas de contrainte sur la valeur de sortie du 555. La valeur de sortie par défaut sera la valeur par défaut de la bascule RS, qui est indéterminée, pas de bol. On reverra ça plus en détail dans un prochain article sur les mémoires électroniques.</p>
+<p>Tant que l&rsquo;on ne fait rien, la sortie reste à 0, nous avons un premier état stable. Lorsque nous appuyons sur le bouton de droite, relié à trigger, nous allons relier la broche Trigger à la masse. Or on l&rsquo;avait vu juste au-dessus, Si Trigger &lt; 1/3 de Vcc (Vcc = 5V dans ce schéma), la sortie du 555 monte à 1.</p>
+<p>Maintenant on peut appuyer autant de fois que l&rsquo;on veut sur ce bouton, l&rsquo;état est stable et restera à 1.</p>
+<p>Si en revanche on appuye sur le bouton relié à reset, on envoie un 0 dans la broche reset, qui est inversée (on voit le petit cercle) et donc envoie un 1 dans le R (reset) de la bascule. La sortie du 555 retombe donc à 0, dans le même état qu&rsquo;au démarrage du circuit.</p>
+<p><a href="/res/images/Electronique/Composants/NE555/bistable-oscillo.png"><img src="/res/images/Electronique/Composants/NE555/bistable-oscillo.png#center" alt="Trame mode bistable" title="Trame mode bistable"></a></p>
+<p>Les deux changements d&rsquo;états sont dus aux appuis du bouton Trigger puis Reset, qui produisent bien l&rsquo;effet escompté.</p>
+<h4 id="mode-monostable">Mode monostable</h4>
+<p>Ensuite, après le circuit bistable, voici le circuit monostable, appelé ainsi car il n&rsquo;a qu&rsquo;un seul état stable, ici l&rsquo;état 0 comme nous allons le voir.</p>
+<p>Le bouton relié au Trigger est resté, mais maintenant nous avons une nouvelle branche qui relie le pin de décharge et le Threshold à un circuit RC. Mais que va-t-il se passer donc ?</p>
+<p><a href="/res/images/Electronique/Composants/NE555/monostable-circuit.png"><img src="/res/images/Electronique/Composants/NE555/monostable-circuit.png#center" alt="Circuit mode monostable" title="Circuit mode monostable"></a></p>
+<h5 id="état-initial">État initial</h5>
+<p>Il nous faut nous rappeler d&rsquo;une information importante là, dans le <a href="#fonctionnement-du-ne555">diagramme plus haut</a>, nous voyons que le pin discharge est relié à la masse lorsque la sortie est à 0 (il faut un 1 pour que le transistor soit passant, et la sortie est inversée).</p>
+<p>Maintenant que nous savons ça, nous pouvons réfléchir au circuit. Nous allons considérer l&rsquo;état par défaut comme étant 0 (nous verrons pourquoi cette fois-ci, cet état est déterminé).</p>
+<p>Le pin discharge est donc relié à la masse. Si le condensateur était chargé, il se déchargerait par cette broche, on peut donc dire que le condensateur est déchargé. Threshold est donc à 0V, inférieur à 2/3 de Vcc et Trigger est à 5V, donc supérieure à 1/3 de Vcc. Il n&rsquo;y a donc aucune condition de changement de valeur remplie. Voilà pour l&rsquo;état initial du circuit.</p>
+<h5 id="appui-sur-le-bouton">Appui sur le bouton</h5>
+<p>Maintenant nous allons appuyer brièvement sur le bouton relié à Trigger, qui va relier le pin à la masse. Trigger sera donc inférieur à 1/3 de Vcc comme nous l&rsquo;avons vu au-dessus pour le <a href="#mode-bistable">mode bistable</a>, ce qui va mettre la sortie à 1. La sortie étant à 1, le pin Discharge va se déconnecter de la masse, il sera donc &ldquo;en l&rsquo;air&rdquo;. Nous avons donc un parfait circuit RC !</p>
+<p>Dans un précédent article sur <a href="https://zahkthar.fr/post/electronique/composants/composant_condensateur/">le condensateur</a>, j&rsquo;avais présenté le principe de <strong>constante de temps</strong> dans un circuit RC série. On voyait notamment qu&rsquo;une fois la constante de temps notée <strong>τ</strong> pouvait être obtenue par le produit $R * C$.</p>
+<p>Ici, le condensateur va se charger jusqu&rsquo;à 2/3 de Vcc, <strong>66%</strong>. Une fois la constante de temps dans un circuit RC permettait une charge de 63% (se référer à l&rsquo;article sur le condensateur), il faudra donc attendre un petit peu plus qu&rsquo;une fois la constante de temps du circuit RC. Le calcul ne sera pas démontré ici mais le temps que ce condensateur mettra pour atteindre 2/3 de Vcc est de :</p>
+<p>$$\text{t} = 1.1 * R * C$$</p>
+<p>Soit environ 0.011s = 11ms avec les valeurs d&rsquo;exemple.</p>
+<p>Une fois que la tension aux bornes du condensateur a atteint 2/3 de Vcc, Threshold &gt; 2/3 de Vcc, donc la sortie du NE555 passe à 0. Le pin Discharge est donc de nouveau relié à la masse, ce qui permet au condensateur de s&rsquo;y vider.</p>
+<p>Le condensateur sera donc une nouvelle fois vide, nous sommes retournés à l&rsquo;état stable de départ. Il n&rsquo;y a bien qu&rsquo;un état stable, qui est l&rsquo;état 0. C&rsquo;est en vertu de cela que l&rsquo;on pouvait dire au début que la &ldquo;valeur par défaut&rdquo; du NE555 dans ce mode était 0.</p>
+<p><a href="/res/images/Electronique/Composants/NE555/monostable-oscillo.png"><img src="/res/images/Electronique/Composants/NE555/monostable-oscillo.png#center" alt="Trame mode monostable" title="Trame mode monostable"></a></p>
+<p>On peut voir ici 4 appuis successifs sur le bouton Trigger. On remarque également que si le bouton est appuyé plus longtemps, le condensateur se chargera à 100% et le NE555 restera à l&rsquo;état 1. Le temps calculé par la formule du dessus est donc le temps minimum d&rsquo;une impulsion et n&rsquo;est valable que si l&rsquo;on relâche le bouton avant que le condensateur n&rsquo;ait atteint 2/3 de Vcc.</p>
+<h4 id="mode-astable">Mode astable</h4>
+<p>Dernier mode de fonctionnement du NE555, et probablement le plus utile, le mode astable. Il ne possède aucun état stable et permet donc de construire un oscillateur.</p>
+<p><a href="/res/images/Electronique/Composants/NE555/astable-circuit.png"><img src="/res/images/Electronique/Composants/NE555/astable-circuit.png#center" alt="Circuit mode astable" title="Circuit mode astable"></a></p>
+<p>Ici le fonctionnement du circuit peut être résumé comme ceci :</p>
+<ol>
+<li>État initial : condensateur déchargé, Trigger &lt; 1/3 de Vcc car il est à 0V (un condensateur vide est assimilable à un fil) donc <strong>sortie = 1</strong> et Discharge en l&rsquo;air</li>
+<li>Le condensateur va se charger jusqu&rsquo;à 2/3 de Vcc.</li>
+<li>Threshold &gt; 2/3 de Vcc donc <strong>sortie = 0</strong>, Discharge est donc relié à la masse, le condensateur s&rsquo;y vide jusqu&rsquo;à 1/3 de Vcc.</li>
+<li>Trigger &lt; 1/3 de Vcc donc <strong>sortie = 1</strong>, Discharge est de nouveau en l&rsquo;air, le condensateur va pouvoir reprendre sa charge jusqu&rsquo;à 2/3 de Vcc.</li>
+<li>Revenir à l&rsquo;étape 3.</li>
+</ol>
+<p><a href="/res/images/Electronique/Composants/NE555/astable-oscillo.png"><img src="/res/images/Electronique/Composants/NE555/astable-oscillo.png#center" alt="Trame mode astable" title="Trame mode astable"></a></p>
+<p>Ici on observe bien notre signal carré en sortie, exactement comme nous l&rsquo;avions prévu.</p>
+<h5 id="les-formules">Les formules</h5>
+<p>Elles ne seront pas démontrées ici mais voici la formule pour calculer la fréquence d&rsquo;oscillation ainsi que le rapport cyclique de ce circuit :</p>
+<p>$$f = \frac{1.44}{(\text{R1} + 2 * \text{R2}) * \text{C1}}$$</p>
+<p>$$\alpha = \frac{\text{R2}}{(\text{R1} + 2 * \text{R2})}$$</p>
+<p>Le circuit du dessus avec R1 = 1k, R2 = 68k et C1 = 10uF oscille donc à une fréquence de 1.0511Hz, soit environ <strong>1Hz</strong> et a un rapport cyclique d&rsquo;environ 0.4963%, soit environ <strong>50%</strong> !</p>
+<h5 id="très-court-rappel">Très court rappel</h5>
+<p>La fréquence est, pour un signal périodique le nombre de fois que sa période se répète à chaque seconde. La période est l&rsquo;intervalle de temps nécessaire à une partie du signal pour se répéter (d&rsquo;où le terme périodique donc, qui revient toutes les périodes). Ces deux grandeurs sont l&rsquo;inverse l&rsquo;une de l&rsquo;autre. $f = 1/T$ et $T = 1/f$ avec f la fréquence en Hz (équivalant à $s^{-1}$ ou &ldquo;par seconde&rdquo;) et T la période en seconde.</p>
+<p>Le rapport cyclique est le pourcentage à l&rsquo;état haut par rapport à la période. Si un oscillateur 1Hz a un rapport cyclique de 75%, il passera 750ms à l&rsquo;état haut, et donc naturellement 250ms à l&rsquo;état bas.</p>
+<p><a href="/res/images/Electronique/Composants/NE555/astable-frequency-values.png"><img src="/res/images/Electronique/Composants/NE555/astable-frequency-values.png#center" alt="Valeurs d&amp;rsquo;exemple astable" title="Valeurs d'exemple astable"></a></p>
+<p>J&rsquo;aimerais vous donner ce petit tableau que j&rsquo;ai pris sur <a href="https://electronicsclub.info/555astable.htm">ce site</a>, dont j&rsquo;ai tiré les valeurs de composants pour l&rsquo;oscillateur 1Hz juste au-dessus. C&rsquo;est toujours bien pratique d&rsquo;avoir ce genre de tableaux quelque part quand on souhaite rapidement créer un oscillateur avec une fréquence commune.</p>
+<h5 id="disclaimer">Disclaimer</h5>
+<p>Comme vous avez pu le voir avec les valeurs de fréquences et de rapport cyclique de notre oscillateur, ce n&rsquo;est pas très précis tout ça&hellip; Et bien c&rsquo;est tout à fait vrai ! Mais ce composant n&rsquo;est pas à jeter pour autant, très loin de là. Il n&rsquo;y a pas de réelles solutions à ce problème de précision, si ce n&rsquo;est changer de méthode lorsqu&rsquo;il nous faut un oscillateur à haute précision. L&rsquo;exemple du 1Hz était là pour montrer ce problème. Dans une montre électrique par exemple, on voudrait un 1Hz très précis qui dérive peu. Là on a un 1.05Hz (soit 1.05 secondes par seconde), ce qui n&rsquo;est pas très bon, voire même carrément mauvais.</p>
+<p>Pour générer une fréquence dont la précision n&rsquo;est pas très importante en revanche, comme un son d&rsquo;alarme pour un buzzer ou pour des applications en beaucoup plus haute fréquence (la fréquence max étant de l&rsquo;ordre du MHz selon les constructeurs), le NE555 reste quasiment le choix par défaut tellement il est simple d&rsquo;utilisation (du moins comparé aux autres types d&rsquo;oscillateurs que nous verrons bien un jour).</p>
+<h3 id="conclusion">Conclusion</h3>
+<p>En conclusion, le NE555 demeure un composant électronique incontournable, apprécié pour sa polyvalence et sa simplicité d&rsquo;utilisation. Depuis son introduction sur le marché dans les années 1970, le NE555 a conquis le cœur des concepteurs électroniques en offrant un panel d&rsquo;applications extrêmement varié, allant de la temporisation à la génération de signaux.</p>
+<p>Bien que le NE555 puisse présenter des limitations en matière de précision dans certaines applications, son caractère pratique et sa facilité d&rsquo;utilisation en font un choix populaire encore aujourd&rsquo;hui.</p>
+<p>Nous n&rsquo;avons cependant pas tout vu du NE555 et il resterait encore de quoi observer des circuits aussi atypiques les uns que les autres, que ce soit pour générer des signaux en dents de scie ou bien d&rsquo;autres choses très intéressantes. Nous aurons l&rsquo;occasion de revoir ce circuit intégré dans bien des prochains articles, tant il va nous être utile !</p>
+<p> </p>
+</div>
+            </div>
+        </div>
+
+        <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+            
+            <div class="layui-card single-card">
+                <h2 class="single-title">Relevant Topics</h2>
+                
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/composants/composant_circuitint%C3%A9gr%C3%A9/">
+                                <h3 class="">Les circuits intégrés</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-11-25</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/alimentation/">
+            <span class="layui-badge " style="vertical-align: 2px;">Alimentation</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/cours/la-logique-num%C3%A9rique/cours_les-portes_logiques/">
+                                <h3 class="">Les portes logiques</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-30</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/cours/">
+            <span class="layui-badge " style="vertical-align: 2px;">Cours</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/logique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Logique</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/composants/composant_transistorbipolaire/">
+                                <h3 class="">Le transistor bipolaire</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-24</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/composants/composant_diode/">
+                                <h3 class="">La diode</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-06-11</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                    <div style="margin-left: 10px;">
+                        <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                            <a href="/post/electronique/cours/les-bases-de-l%C3%A9lectronique/cours_lois-des-diviseurs/">
+                                <h3 class="">Lois des diviseurs</h3>
+                            </a>
+                            
+                            <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-04-23</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/cours/">
+            <span class="layui-badge " style="vertical-align: 2px;">Cours</span>
+        </a>
+    
+        <a href="/tags/lois/">
+            <span class="layui-badge " style="vertical-align: 2px;">Lois</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+    
+</h3>
+
+                        </blockquote>
+                    </div>
+                	
+                
+                <br />
+            </div>
+            
+
+            <div class="layui-card single-card">
+                <h2 class="single-title">Recent Posts</h2>
+            
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_ne555/">
+                        <h3 class="">Le NE555 : Une introduction aux oscillateurs</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2024-01-22</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/oscillateurs/">
+            <span class="layui-badge " style="vertical-align: 2px;">Oscillateurs</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_circuitint%C3%A9gr%C3%A9/">
+                        <h3 class="">Les circuits intégrés</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-11-25</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+        <a href="/tags/alimentation/">
+            <span class="layui-badge " style="vertical-align: 2px;">Alimentation</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/cours/la-logique-num%C3%A9rique/cours_les-portes_logiques/">
+                        <h3 class="">Les portes logiques</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-30</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/cours/">
+            <span class="layui-badge " style="vertical-align: 2px;">Cours</span>
+        </a>
+    
+        <a href="/tags/montages/">
+            <span class="layui-badge " style="vertical-align: 2px;">Montages</span>
+        </a>
+    
+        <a href="/tags/logique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Logique</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_transistorbipolaire/">
+                        <h3 class="">Le transistor bipolaire</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-09-24</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+                <div style="margin-left: 10px;">
+                    <blockquote class="self-elem-quote " style="background-color:#FFFFFF;margin-top: 10px;">
+                    <a href="/post/electronique/composants/composant_diode/">
+                        <h3 class="">La diode</h3>
+                    </a>
+                    <h3 style="margin-top:10px; margin-bottom:10px"> 
+    <i class="layui-icon layui-icon-date" style="font-size: 28px; vertical-align: -2px;"></i>
+    <span>2023-06-11</span>
+
+    
+     
+    <i class="layui-icon layui-icon-list" style="font-size: 32px; vertical-align: -3px;"></i>
+    
+
+    
+        <a href="/categories/%c3%a9lectronique/">
+            <span class="layui-badge " style="vertical-align: 2px;">Électronique</span>
+        </a>
+    
+
+    
+    <i class="layui-icon layui-icon-tabs" style="font-size: 22px; vertical-align: 1px;margin-right:2px;"></i>
+    
+
+    
+        <a href="/tags/composants/">
+            <span class="layui-badge " style="vertical-align: 2px;">Composants</span>
+        </a>
+    
+    
+</h3>
+
+                    </blockquote>
+                </div>
+                
+            
+            <br />
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+        </div><footer>
+    
+    
+    <div class="layui-container">
+        <p class="copyright">&copy; All rights reserved. Powered by <a href='https://gohugo.io' style='color:#FFFFFF'>Hugo</a> and <a href='https://github.com/ertuil/erblog' style='color:#FFFFFF'>Erblog</a>.</p>
+    </div>
+</footer>
+
+</body>
+</html>
