@@ -1,5 +1,6 @@
 baseURL = "https://zahkthar.fr/"
 title = "Zahkthar"
+
 theme = "erblog"
 
 paginate = 3
@@ -12,7 +13,10 @@ GoogleAnalytics = "G-RNH1Y9WEBS"
 [params]
     math = 1
 
+    metaDescription = "Zahkthar - Blog Électronique & Informatique"
+
     author = "Zahkthar"
+    description = "Auteur"
     logo = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
     favicon = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"
     portrait = "https://i.ibb.co/kG74Q7F/Logo-Zahkthar.png"

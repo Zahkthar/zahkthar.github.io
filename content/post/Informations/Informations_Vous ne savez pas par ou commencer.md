@@ -21,7 +21,10 @@ draft: false
 
 ---
 
-| Ordre conseillé de lecture des séries                                              |
-|------------------------------------------------------------------------------------|
+| Ordre conseillé de lecture des séries                                         |
+|-------------------------------------------------------------------------------|
+| [Informations](/post/informations/)                                           |
+| [Les bases de l'électronique](/post/electronique/les-bases-de-lélectronique/) |
+| [La logique numérique](/post/electronique/la-logique-numérique//)             |
 
 &nbsp;

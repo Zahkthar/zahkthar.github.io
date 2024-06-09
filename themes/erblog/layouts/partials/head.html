@@ -17,7 +17,7 @@
     {{else}}
     <meta content="{{.Site.Title}}" name="keywords">
     {{end}}
-    <meta content="{{ .Site.Title }} - {{ or .Description .Summary (printf "A website called %s" .Site.Title)}}" name="description">
+    <meta content="{{ .Site.Params.MetaDescription }}" name="description">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     {{ if .Site.Params.favicon }}
