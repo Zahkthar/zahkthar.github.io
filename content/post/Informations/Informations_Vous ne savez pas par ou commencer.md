@@ -23,8 +23,5 @@ draft: false
 
 | Ordre conseillé de lecture des séries                                              |
 |------------------------------------------------------------------------------------|
-| [Aide au lecteur]( {{< ref "/series/aide-aux-lecteurs/" >}} )                      |
-| [Les bases de l'électronique]( {{< ref "/series/les-bases-de-lélectronique/" >}} ) |
-| [La logique numérique]( {{< ref "/series/la-logique-numérique/" >}} )              |
 
 &nbsp;
