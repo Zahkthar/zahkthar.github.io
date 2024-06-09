@@ -26,6 +26,7 @@ Les portes logiques marquent une étape cruciale dans la compréhension de l'él
 Le transistor, par sa capacité à servir d'interrupteur électriquement contrôlé, brille dans le monde de l'électronique numérique. Nous allons voir ici comment l'utiliser afin de créer le fondement de la logique numérique, les portes logiques.
 
 Le programme d'aujourd'hui :
+
 1. [Qu'est-ce qu'une porte logique](#quest-ce-quune-porte-logique)
 2. [Les portes principales](#les-portes-principales)
 3. [Représentation mathématique](#représentation-mathématique)
@@ -210,7 +211,7 @@ Ce théorème est facilement démontrable, vous pouvez le faire chez vous. Je ne
 
 ### Les portes universelles
 
-Que se passerait-il si l'on branche une seule entrée à un NOR ou un NAND ? 
+Que se passerait-il si l'on branche une seule entrée à un NOR ou un NAND ?
 
 [![NOT avec un NAND et NOR](/res/images/Electronique/Cours/LesPortesLogiques/UniversalGates.png#center "NOT avec un NAND et NOR")](/res/images/Electronique/Cours/LesPortesLogiques/UniversalGates.png)
 
@@ -243,7 +244,8 @@ Voici la table de vérité de la porte XOR :
 | 1 | 1 | 0      |
 
 Il y a trois méthodes principales pour créer la formule qu'il nous faudrait avec une table de vérité :
-- Prendre chaque ligne donannt une par une et simplement la retranscrire. ici ça donnerait : 
+
+- Prendre chaque ligne donannt une par une et simplement la retranscrire. ici ça donnerait :
 
 $$A \oplus B = (\overline{A} . B) + (A . \overline{B})$$
 
@@ -298,7 +300,7 @@ La porte XNOR est l'inverse de la porte XOR, voici sa table de vérité :
 | 1 | 0 | 0      |
 | 1 | 1 | 1      |
 
-Ainsi que sa représentation symbolique : 
+Ainsi que sa représentation symbolique :
 
 [![Symbole de la porte XNOR](https://upload.wikimedia.org/wikipedia/commons/d/d6/XNOR_ANSI.svg#center "Symbole de la porte XNOR")](https://upload.wikimedia.org/wikipedia/commons/d/d6/XNOR_ANSI.svg)
 
