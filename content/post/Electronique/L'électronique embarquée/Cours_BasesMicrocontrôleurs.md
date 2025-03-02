@@ -1,7 +1,7 @@
 ---
 author: "Zahkthar"
-title: "Les microcontrôleurs"
-date: 2025-02-03T18:00:00+02:00
+title: "Introduction aux microcontrôleurs"
+date: 2025-03-02T18:00:00+02:00
 description: "Comment définir l'électronique moderne avec un seul composant ?"
 
 categories: [
