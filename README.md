@@ -4,7 +4,6 @@ Articles à venir (pas d'ordre) :
 
 | Théorie - Numérique                                     |
 | :-----------------------------------------------------: |
-| Les bases des microcontrôleurs                          |
 | Les circuits logiques programmables : FPGA/CPLD         |
 | Le multiplexage                                         |
 | Les mémoires numériques : RAM, ROM, EEPROM, Flash...    |
