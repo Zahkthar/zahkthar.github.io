@@ -3,6 +3,8 @@ import starlight from '@astrojs/starlight';
 
 import { starlightKatex } from 'starlight-katex';
 
+const googleAnalyticsId = 'GTM-K85GLNJ6'
+
 export default defineConfig({
   site: 'https://zahkthar.fr',
   integrations: [
@@ -36,6 +38,25 @@ export default defineConfig({
             }
           ]
         }
+      ],
+
+      head: [
+        {
+          tag: 'script',
+          attrs: {
+            src: `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`,
+          },
+        },
+        {
+          tag: 'script',
+          content: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', '${googleAnalyticsId}');
+          `,
+        },
       ],
 
       plugins: [starlightKatex()],
