@@ -3,6 +3,8 @@ import starlight from '@astrojs/starlight';
 import { starlightKatex } from 'starlight-katex';
 import rehypeInvertable from './src/plugins/rehype-invertable.mjs';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 export default defineConfig({
   site: 'https://zahkthar.fr',
   markdown: {
@@ -49,14 +51,19 @@ export default defineConfig({
             content: 'https://zahkthar.fr/og-image.png',
           },
         },
-        {
-          tag: 'script',
-          attrs: {
-            defer: true,
-            src: 'https://cloud.umami.is/script.js',
-            'data-website-id': '3a2e9441-4b4d-41a3-9f79-1dbfad336c77',
-          },
-        },
+        ...(isProd
+          ? [
+              {
+                tag: 'script',
+                attrs: {
+                  defer: true,
+                  src: 'https://cloud.umami.is/script.js',
+                  'data-website-id': '3a2e9441-4b4d-41a3-9f79-1dbfad336c77',
+                  'data-domains': 'zahkthar.fr',
+                },
+              },
+            ]
+          : []),
       ],
 
       plugins: [starlightKatex()],
