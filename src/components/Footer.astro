@@ -4,6 +4,12 @@ import Default from '@astrojs/starlight/components/Footer.astro';
 
 <Default {...Astro.props} />
 
+<nav class="site-legal-footer" aria-label="Informations légales">
+  <span>© {new Date().getFullYear()} Zahkthar</span>
+  <span aria-hidden="true">·</span>
+  <a href="/mentions-legales/">Mentions légales &amp; confidentialité</a>
+</nav>
+
 <dialog id="image-lightbox" aria-label="Aperçu de l'image">
   <div class="lightbox-inner">
     <button type="button" class="lightbox-close" aria-label="Fermer l'aperçu">&times;</button>

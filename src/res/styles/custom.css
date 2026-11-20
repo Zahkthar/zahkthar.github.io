@@ -77,3 +77,26 @@
 #image-lightbox .lightbox-close:hover {
   background: var(--sl-color-gray-6);
 }
+
+.site-legal-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--sl-color-hairline-light);
+  font-size: var(--sl-text-xs);
+  color: var(--sl-color-gray-3);
+}
+
+.site-legal-footer a {
+  color: var(--sl-color-gray-2);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.site-legal-footer a:hover {
+  color: var(--sl-color-white);
+}

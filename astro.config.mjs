@@ -3,8 +3,6 @@ import starlight from '@astrojs/starlight';
 import { starlightKatex } from 'starlight-katex';
 import rehypeInvertable from './src/plugins/rehype-invertable.mjs';
 
-const googleAnalyticsId = 'G-RNH1Y9WEBS';
-
 export default defineConfig({
   site: 'https://zahkthar.fr',
   markdown: {
@@ -54,18 +52,10 @@ export default defineConfig({
         {
           tag: 'script',
           attrs: {
-            src: `https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`,
+            defer: true,
+            src: 'https://cloud.umami.is/script.js',
+            'data-website-id': '3a2e9441-4b4d-41a3-9f79-1dbfad336c77',
           },
-        },
-        {
-          tag: 'script',
-          content: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', '${googleAnalyticsId}');
-          `,
         },
       ],
 
