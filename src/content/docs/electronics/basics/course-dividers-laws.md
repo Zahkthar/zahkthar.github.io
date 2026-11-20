@@ -8,25 +8,15 @@ sidebar:
 draft: false
 ---
 
-**Comment diviser une tension ? Un courant ?**
-
 Vous voulez diviser une tension ou un courant par un facteur arbitraire et utiliser les [lois de Kirchhoff](/electronics/basics/course-basics-fundamental-laws-of-steady-state/) vous fait mal au crâne ? Que ce soit dans un contexte de création ou d'analyse de circuit, les diviseurs en électronique sont très courants. Je vais vous présenter ici deux d'entre eux très communs qui vont simplifieront la vie !
 
-Le sommaire de l'article :
+## Le diviseur de tension
 
-1. [Le diviseur de tension](#le-diviseur-de-tension)
-2. [Le diviseur de courant](#le-diviseur-de-courant)
-3. [Conclusion](#conclusion)
-
-### Le diviseur de tension
-
-#### Le diviseur de tension non chargé
+### Le diviseur de tension non chargé
 
 Reprenons circuit rapidement présenté dans l'article "[Les lois fondamentales en régime continu](/electronics/basics/course-basics-fundamental-laws-of-steady-state/)".
 
-<a href="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg" alt="Pont diviseur de tension non chargé" class="invertable" />
-</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg" alt="Pont diviseur de tension non chargé" class="invertable" />
 
 Avec la loi des mailles (je prends ici le sens horaire), on peut dire que :
 $$\text{U} - \text{U1} - \text{U2} = 0$$
@@ -53,8 +43,6 @@ En gardant la même idée (que la tension se sépare équitablement entre les r�
 $$U_{Rx} = \text{U} * \frac{\text{Rx}}{\sum_{i = 1}^{n} \text{Ri}}$$
 En français : dans une branche de **n résistances distinctes**, la tension aux bornes de **la résistance x** est égale à la tension totale de la branche multipliée par **le pourcentage que représente la résistance x par rapport à la somme des n résistances de la branche**.
 
-&nbsp;
-
 Maintenant vous vous dites : "Mais ok très bien je viens d'apprendre une nouvelle formule un poil cryptique mais ça sert à quoi ?"
 
 Imaginez que vous ayez un capteur qui vous envoie une plage de 0 à 50V, et que votre microcontrôleur n'accepte que 5V max dans ses entrées. (ce qui arrive occasionnellement). Là vous vous dites évidemment :
@@ -67,7 +55,7 @@ Vous devez donc faire votre circuit avec R2 qui vaut 1/10ème de la résistance 
 
 Vous pourrez donc relier R2 à l'entrée de votre microcontrôleur plutôt que la sortie du capteur. Étant donné que vous avez divisé la tension par 10, il faudra bien sûr que le microcontrôleur multiplie dans son programme la tension captée par 10 pour avoir la bonne valeur.
 
-#### Le diviseur de tension chargé
+### Le diviseur de tension chargé
 
 Si vous avez essayé juste après avoir lu la première partie de cet article de construire un pont diviseur de tension pour **alimenter** quelque chose (ce que je vous recommande évidemment de faire, bien que peu réaliste), vous avez dû vous rendre compte d'un **problème majeur**.
 
@@ -75,9 +63,7 @@ En effet, même si le pont diviseur de tension est **très utile pour conditionn
 
 Vous vous êtes peut-être également demandé ce que signifiait l'adjectif "chargé" dans le contexte des diviseurs de tension, je vais vous le dire tout de suite. Nous avons vu dans l'article présentant [la résistance](/electronics/basics/component-resistance/), lorsque l'on met en **parallèle** deux résistances, elles peuvent être représentées par **une seule résistance équivalente** d'une valeur différente.
 
-<a href="https://upload.wikimedia.org/wikipedia/commons/5/56/Pont_divisuer_tension_charge.svg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Pont_divisuer_tension_charge.svg" alt="Pont diviseur de tension chargé" class="invertable" />
-</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Pont_divisuer_tension_charge.svg" alt="Pont diviseur de tension chargé" class="invertable" />
 
 $$\text{(On remercie chaleureusement wikipedia pour ces images)}$$
 
@@ -95,17 +81,15 @@ Quelle est donc la bonne solution pour abaisser une tension dans le but d'alimen
 
 La bonne solution serait d'utiliser un circuit (que l'on peut aussi trouver intégré dans un seul composant) qu'on appelle un convertisseur DC-DC. C'est un composant dont l'objectif est d'élever ou d'abaisser une tension continue d'un niveau à un autre. Les convertisseurs de tension feront l'objet d'articles, le besoin de convertir des tensions étant important. Je tenais à les citer ici à titre informatif pour expliquer pourquoi il ne faut généralement pas charger un pont diviseur. Voici [un lien](https://fr.wikipedia.org/wiki/Convertisseur_DC-DC "Pont diviseur de tension chargé") si vous voulez survoler plus en profondeur ce sujet.
 
-### Le diviseur de courant
+## Le diviseur de courant
 
-#### Le diviseur de courant non chargé
+### Le diviseur de courant non chargé
 
 Cette partie sera beaucoup plus courte que la première car nous avons déjà quasiment tout vu. Nous savons maintenant que pour diviser une tension, il fallait mettre plusieurs résistances **en série**. Et bien pour diviser un courant, il suffit de mettre plusieurs résistances **en parallèle** !
 
 Pour exactement la même raison que dans l'article sur [la résistance](/electronics/basics/component-resistance/), les résistances s'additionnaient en série et les conductances (l'inverse de la résistance) s'additionnaient en parallèle, ici nous pouvons adapter notre formule précédemment trouvée.
 
-<a href="https://upload.wikimedia.org/wikipedia/commons/2/2e/Diviseur_de_courant.svg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Diviseur_de_courant.svg" alt="Pont diviseur de courant non chargé" class="invertable" />
-</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Diviseur_de_courant.svg" alt="Pont diviseur de courant non chargé" class="invertable" />
 
 Dans ce pont diviseur de courant, nous affirmons que l'intensité dans la branche I2 est à égale à :
 
@@ -118,14 +102,12 @@ Exactement comme pour le pont diviseur de tension, nous pouvons généraliser un
 $$I_{Rx} = \text{I} * \frac{\text{Gx}}{\sum_{i = 1}^{n} \text{Gi}}$$
 Ce qui en français donne : à un nœud du circuit où il y a **n branches distinctes** contenant des résistances, **le courant partant dans la branche x** est égal à l'intensité totale à ce nœud multipliée par **le pourcentage** que représente **la conductance de la branche x** par rapport à la **somme de toutes les conductances**.
 
-#### Le diviseur de courant chargé
+### Le diviseur de courant chargé
 
 Exactement pour la même raison qui faisait que l'on ne chargeait que rarement les ponts diviseurs de tension, le même comportement est présent quand on essaye de charger notre diviseur de courant. La conductance d'une branche dépendant directement de la charge, si on essaye de tirer du courant depuis une branche présice du diviseur, le facteur de division va s'en retrouver déséquilibré.
 
-### Conclusion
+## Conclusion
 
 Nous avons donc vu comment diviser une tension et un courant. Il y a beaucoup de cas réels qui poussent à utiliser ces circuits dans des projets en tous genres. On peut diviser une tension pour la rendre compatible avec un microcontrôleur, pour créer une tension de référence, etc... Le diviseur de courant est quant à lui un peu plus rare, l'utilité majeure étant dans un circuit débittant beaucoup d'intensité et donc fatalement qui chauffe beaucoup, de séparer la perte thermique à travers plusieurs résistances, pour éviter qu'une seule résistance ne chauffe trop.
 
 Dans le contexte de l'analyse de circuit, ces formules peuvent se montrer très utiles pour ne pas vous arracher les cheveux avec les lois de Kirchhoff et d'Ohm.
-
-&nbsp;

@@ -1,0 +1,56 @@
+---
+import Default from '@astrojs/starlight/components/Footer.astro';
+---
+
+<Default {...Astro.props} />
+
+<dialog id="image-lightbox" aria-label="Aperçu de l'image">
+  <div class="lightbox-inner">
+    <button type="button" class="lightbox-close" aria-label="Fermer l'aperçu">&times;</button>
+    <img src="" alt="" />
+    <p class="lightbox-caption"></p>
+  </div>
+</dialog>
+
+<script>
+  function initLightbox() {
+    const dialog = document.getElementById('image-lightbox');
+    if (!(dialog instanceof HTMLDialogElement)) return;
+
+    const modalImg = dialog.querySelector('img');
+    const caption = dialog.querySelector('.lightbox-caption');
+    const closeBtn = dialog.querySelector('.lightbox-close');
+    if (!modalImg || !caption || !closeBtn) return;
+
+    const images = document.querySelectorAll('.sl-markdown-content img');
+    images.forEach((img) => {
+      if (!(img instanceof HTMLImageElement)) return;
+      if (img.dataset.lightboxBound === 'true') return;
+      img.dataset.lightboxBound = 'true';
+
+      img.addEventListener('click', (event) => {
+        if (img.closest('a')) return;
+        event.preventDefault();
+        modalImg.src = img.currentSrc || img.src;
+        modalImg.alt = img.alt || '';
+        modalImg.className = img.classList.contains('invertable') ? 'invertable' : '';
+        caption.textContent = img.title || img.alt || '';
+        caption.hidden = !caption.textContent;
+        dialog.showModal();
+      });
+    });
+
+    if (dialog.dataset.bound !== 'true') {
+      dialog.dataset.bound = 'true';
+      closeBtn.addEventListener('click', () => dialog.close());
+      dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) {
+          dialog.close();
+        }
+      });
+    }
+  }
+
+  initLightbox();
+  document.addEventListener('astro:page-load', initLightbox);
+</script>

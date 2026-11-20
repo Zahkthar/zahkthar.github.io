@@ -8,20 +8,13 @@ sidebar:
 draft: false
 ---
 
-**Les principales lois à connaître pour pouvoir aller plus loin dans l'électronique.**
-
 Avant de pouvoir réellement faire de l'électronique, c'est-à-dire lire des schémas, programmer des microcontrôleurs, découvrir des nouveaux composants ou même designer/construire ses propres circuits, il faut avoir un minimum de bases ! C'est donc ce que je propose de faire dans cette série d'articles : récapituler les bases vitales à la poursuite de l'électronique. Je recommande donc de lire cette série en premier si vous débutez l'électronique, ce qui vous amènera ensuite à pouvoir vous spécialiser un peu plus vers le sujet qui vous intéresse.
 
-Nous allons donc commencer par quelques définitions peut-être évidentes pour certains, mais qui permettront de mieux comprendre la suite :
+Nous allons donc commencer par quelques définitions peut-être évidentes pour certains, mais qui permettront de mieux comprendre la suite.
 
-1. [La charge électrique, l'intensité et la loi des nœuds](#la-charge-électrique-lintensité-et-la-loi-des-nœuds)
-2. [La tension et la loi des mailles](#la-tension-et-la-loi-des-mailles)
-3. [La résistance et la loi d'Ohm](#la-résistance-et-la-loi-dohm)
-4. [La notion de puissance et d'énergie](#la-notion-de-puissancee-et-dénergie)
+## La charge électrique, l'intensité et la loi des nœuds
 
-### La charge électrique, l'intensité et la loi des nœuds
-
-#### La charge électrique et l'intensité
+### La charge électrique et l'intensité
 
 N'importe quel matériau conducteur dans un circuit fermé contenant un électromoteur (ça peut être un générateur, une batterie, une pile, un panneau solaire, etc...) est traversé par un courant électrique. Le courant électrique est en réalité un flux d'électrons qui traverse le circuit depuis une borne du générateur dans l'objectif d'y retourner par son autre borne.
 
@@ -37,21 +30,19 @@ Où :
 - dq est en **Coulombs** (C)
 - dt est en **secondes** (s)
 
-#### La loi des nœuds
+### La loi des nœuds
 
 La loi des nœuds peut se résumer simplement par une seule phrase :
 
 "La somme des intensités des courants **qui entrent par un nœud** est égale à la somme des intensités des courants **qui sortent du même nœud.**"
 
-<a href="https://fr.wikipedia.org/wiki/Lois_de_Kirchhoff#/media/Fichier:Kirchhoff's_Current_Law.svg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Kirchhoff%27s_Current_Law.svg" alt="Image représentant la loi des nœuds" class="invertable" />
-</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Kirchhoff%27s_Current_Law.svg" alt="Image représentant la loi des nœuds" class="invertable" />
 
 Ici, la somme des courants i1 et i2 qui rentrent dans le nœud est égale à la somme des courants i3 et i4 qui sortent du nœud.
 
-### La tension et la loi des mailles
+## La tension et la loi des mailles
 
-#### La tension électrique
+### La tension électrique
 
 La tension n'est pas une grandeur qu'il est facile de définir sans entrer dans la théorie. Mais par analogie, on arrive à s'approcher du sens de cette grandeur. On peut faire l'analogie entre la tension électrique à un point donnée du circuit et l'énergie potentielle en mécanique.
 
@@ -59,15 +50,13 @@ $$\text{Ep} = \text{m} * \text{g} * \text{h}$$
 
 L'énergie potentielle dépend directement de la hauteur à laquelle se trouve l'objet de la formule. La hauteur maximale serait dans cet exemple la tension d'alimentation (par exemple 5 volts) qui diminue à chaque fois que l'on rencontre un conducteur.
 
-<a href="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg" alt="Pont diviseur de tension" class="invertable" />
-</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg" alt="Pont diviseur de tension" class="invertable" />
 
 Dans ce circuit, que l'on appelle un "pont diviseur de tension" (nous y reviendrons plus tard), si on imagine que U est la tension d'alimentation du circuit, 5V par exemple, avant la première résistance la tension sera égale à U, soit 5V. Après la première résistance, la tension aura chuté. Après la deuxième résistance, la tension sera égale à 0.
 
 L'intérêt de ce circuit étant de convertir une tension en une tension plus basse en jouant sur le rapport entre les deux résistances.
 
-#### La différence de potentiel
+### La différence de potentiel
 
 La différence de potentiel (aussi appelée ddp à l'écrit) est une grandeur que l'on confond souvent avec la tension. La différence de potentiel, comme son nom l'indique, est une différence entre deux points d'un circuit. Elle demande donc un point de repère.
 
@@ -75,15 +64,13 @@ Si l'on reprend le circuit ci-dessus et que l'on admet que pour les 5V totaux, i
 
 On admet donc que lorsque l'on parle généralement de tension, on parle de la valeur de la tension à un point du circuit alors que si l'on parle de la tension **aux bornes** ou **autour** d'un composant, nous parlons bien de la différence entre le point avant et après ledit composant, de la tension qui le traverse en somme (si la tension est représentée par une flèche comme ci-dessus avec U, U1 et U2, on peut aussi appeler la ddp par son nom sur le schéma).
 
-#### La loi des mailles
+### La loi des mailles
 
 La loi des mailles est la deuxième des [lois de Kirchhoff](https://fr.wikipedia.org/wiki/Lois_de_Kirchhoff) dont la première était la [loi des nœuds](#la-loi-des-nœuds).
 
 La loi des mailles nous dit que lorsque l'on traverse une maille (c'est-à-dire une portion de circuit fermé) et partant d'un point N pour revenir au même point N, la somme des différences de potentiel rencontrées est égale à **zéro**.
 
-<a href="https://upload.wikimedia.org/wikipedia/commons/4/40/Kirchhoff_voltage_law.svg">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Kirchhoff_voltage_law.svg" alt="Loi des mailles" class="invertable" />
-</a>
+<img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Kirchhoff_voltage_law.svg" alt="Loi des mailles" class="invertable" />
 
 Dans cette image, nous pouvons voir une maille d'un circuit plus grand. Selon cette loi, la somme des tensions présentes maille présente sur cette image est égale à zéro. Ici :
 
@@ -105,15 +92,15 @@ Ce qui correspond bien à ce que nous attendions.
 
 **Note 3** : La loi des mailles peut être vérifiée dans les deux sens de rotation. Choisissez celui qui vont convient le mieux. Pensez simplement à mettre toutes les tensions dans le bon sens.
 
-### La résistance et la loi d'Ohm
+## La résistance et la loi d'Ohm
 
-#### La résistance électrique
+### La résistance électrique
 
 Je l'ai beaucoup utilisée en exemple au-dessus dans cet article et il est venu le temps de clarifier la définition de **la résistance électrique**.
 
 La résistance électrique est la propriété d'un conducteur à s'opposer au passage du courant. Dit plus simplement, plus la résistance d'un conducteur sera grande, et plus l'intensité du courant sera faible pour une tension donnée. À l'inverse, si la résistance du conducteur est plus faible, l'intensité sera plus forte.
 
-#### La loi d'Ohm
+### La loi d'Ohm
 
 La loi d'Ohm est la loi empirique nommée en référence à **Georg Simon Ohm** qui l'a publiée en 1827 qui relie l'intensité du courant électrique traversant un conducteur à la tension à ses bornes. Elle énonce que :
 
@@ -129,14 +116,14 @@ On appelle un conducteur **ohmique** un composant qui respecte la loi d'Ohm (nou
 
 La principale caractéristique principale d'une résistance étant d'opposer une plus ou moins grande résistance (mesurée en ohms donc) à la circulation du courant électrique, on l'appelle par convention de langage une résistance. En anglais, son nom est "resistor", qui serait traduisible en "résisteur" en français qui correspondrait plus à l'idée d'un "composant qui résiste" mais l'appellation "résistance" est complètement majoritaire.
 
-#### Implications de la loi d'Ohm
+### Implications de la loi d'Ohm
 
 - La loi d'Ohm permet de retrouver la troisième donnée lorsque l'on n'en a que deux. "I = U/R" permet de trouver l'intensité, "R = U/I" permet de trouver la résistance et "U = R*I" permet de trouver la tension.
 - On peut considérer la valeur de la résistance comme étant un coefficient de proportionnalité entre la valeur de la tension et l'intensité. Si l'on trace la caractéristique d'une résistance (c'est-à-dire la courbe de la tension en fonction de l'intensité) nous obtiendrons une droite passant par l'origine et donc la pente sera la valeur de la résistance.
 
-### La notion de puissancee et d'énergie
+## La notion de puissancee et d'énergie
 
-#### La puissance
+### La puissance
 
 La puissance traversant un conducteur se calcule avec la formule suivante :
 
@@ -158,7 +145,7 @@ Où :
 - W est la quantité d'énergie en **Joules** (J)
 - t est le temps en **secondes** (A)
 
-#### L'énergie
+### L'énergie
 
 La quantité d'énergie électrique consommée par un conducteur pendant un temps donné est donnée par la formule suivante :
 
@@ -173,5 +160,3 @@ Avec les mêmes unités que la formule ci-dessus.
 **Note 3** : $1\text{kWh} = 1000\text{Wh} = 1000 * (3600 \text{J}) = 3.6 * 10^6 \text{J} = 3.6\text{MJ}$
 
 **Note 4** : $1 \text{ch (cheval-vapeur)} = 736\text{W}$
-
-&nbsp;

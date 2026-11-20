@@ -8,23 +8,11 @@ sidebar:
 draft: false
 ---
 
-#### Le cerveau du circuit
+**Le cerveau du circuit**
 
 Les microcontrôleurs sont l'une des raisons pour lesquelles l'électronique moderne est aussi pratique et puissante. Très rapidement, c'est un savant mélange entre **le transistor**, composant phare de la logique numérique, **les circuits intégrés** permettant la miniaturisation et une **ingénierie défiant l'entendement**. C'est bon ? La phrase d'accroche a fonctionné ? C'est parti pour cet article qui va d'abord explorer rapidement ce qu'est un microcontrôleur, puis on verra un petit projet que l'on pourra faire sans puis avec un microcontrôleur.
 
-Voici donc le sommaire du jour :
-
-- [Qu'est-ce qu'un microcontrôleur ?](#quest-ce-quun-microcontrôleur-)
-- [Quel avantage à utiliser un microcontrôleur dans son circuit ?](#quel-avantage-à-utiliser-un-microcontrôleur-dans-son-circuit-)
-  - [Contexte de départ](#contexte-de-départ)
-  - [Sans microcontrôleur](#sans-microcontrôleur)
-  - [Avec un microcontrôleur](#avec-un-microcontrôleur)
-- [Un exemple, l'ESP32](#un-exemple-lesp32)
-  - [Le projet](#le-projet)
-  - [Le résultat](#le-résultat)
-- [Conclusion](#conclusion)
-
-### Qu'est-ce qu'un microcontrôleur ?
+## Qu'est-ce qu'un microcontrôleur ?
 
 Dans un précédent article sur les [circuits intégrés](/electronics/basics/component-integrated-circuit/), nous avions brièvement vu ce qu'était un processeur et ce qu'il permettait, je vais quand même rapidement le rappeler ici.
 
@@ -40,13 +28,13 @@ Malgré des différences toutes relatives, leurs utilisations sont très différ
 
 Il est beaucoup moins puissant et donc moins cher que le processeur. Il a quand même de nombreux avantages. Il est beaucoup plus efficace énergétiquement, prend moins de place et coûte moins cher. Il sert souvent dès que l'on parle d'informatique embarquée, à savoir d'informatique autonome imposant de facto une limite spatiale et énergétique.
 
-### Quel avantage à utiliser un microcontrôleur dans son circuit ?
+## Quel avantage à utiliser un microcontrôleur dans son circuit ?
 
-#### Contexte de départ
+### Contexte de départ
 
 Imaginez que vous vouliez faire un système de domotique simple dans votre maison. Disons que vous vouliez une température stable dans votre logement et que vous décidiez d'installer un chauffage et un thermomètre dans chaque pièce pour bien réguler tout ça efficacement. Essayez d'imaginer un circuit pour remplir ce besoin.
 
-#### Sans microcontrôleur
+### Sans microcontrôleur
 
 Sans microcontrôleur, le projet est assez complexe. Pour le simplifier, on va dire qu'on fait une carte spécifique par couple chauffage-capteur. Dans ce cas, on retrouve une complexité modérée. Nous allons ici avoir besoin d'un amplificateur opérationnel. C'est un composant que l'on verra plus tard, mais qui peut faire tout un tas de traitements analogiques sur les signaux et les tensions. Nous allons l'utiliser pour comparer la tension de notre capteur avec une tension représentant notre température de consigne (la consigne peut être fixe ou être réglée avec un potentiomètre). Maintenant, en sortie du comparateur, nous avons un signal qui peut nous dire si oui ou non, la température est :
 
@@ -69,7 +57,7 @@ Nous n'entrerons pas dans les détails d'une meilleure solution de régulation i
 
 Ici, on peut comprendre une chose. Ce système sans microcontrôleur est encore tout à fait viable pour un couple chauffage-capteur, mais le circuit devient vite infernal lorsque l'on va essayer de relier 10 ou 20 couples chauffage-capteur. D'autant que beaucoup d'applications ne sont pas aussi simples qu'une régulation de température autour d'une consigne.
 
-#### Avec un microcontrôleur
+### Avec un microcontrôleur
 
 Avec un microcontrôleur, le principe est tout de suite beaucoup plus simple. Peu importe les capteurs et les actionneurs (ici thermomètre et chauffage), il suffit de les relier au microcontrôleur.
 
@@ -90,13 +78,13 @@ Les intérêts principaux sont ici :
 
 On comprend mieux pourquoi les microcontrôleurs sont utilisés partout dans les circuits modernes. Une application, une calculatrice possède des dizaines de boutons, un écran, permet de faire des calculs, voire de faire tourner des programmes ! La complexité pour faire un tel circuit uniquement avec des transistors et des amplificateurs opérationnels serait démentielle, mais reste mesurée avec un microcontrôleur.
 
-### Un exemple, l'ESP32
+## Un exemple, l'ESP32
 
-#### Le projet
+### Le projet
 
 L'exemple que je ferai ici sera celui avec le microcontrôleur, qui sera un ESP32, voici donc les deux documents principaux, je commenterais par la suite.
 
-[![Circuit thermomètre + chauffage ESP32](/res/images/Electronique/Cours/BasesMicrocontroleurs/Circuit_ESP32.png "Circuit thermomètre + chauffage ESP32")](/res/images/Electronique/Cours/BasesMicrocontroleurs/Circuit_ESP32.png)
+![Circuit thermomètre + chauffage ESP32](../../../../assets/images/Electronique/Cours/BasesMicrocontroleurs/Circuit_ESP32.png "Circuit thermomètre + chauffage ESP32")
 
 ```cpp
 #include <Arduino.h> // La librarie Arduino
@@ -172,20 +160,18 @@ Maintenant, sans entrer dans les détails (des articles traitant spécifiquement
 - Ensuite, le contenu de la fonction loop() va se répéter aussi vite que le microcontrôleur le peut et fait une tâche très simple ici. On lit la température et on regarde si elle est valide. On compare à la consigne et on ouvre ou ferme le relais en conséquence (si on le referme deux fois d'affilée, ça n'a pas d'importance, le relais ne bougera pas, étant déjà fermé). Il y a aussi quelques informations qui sont écrites sur la liaison série si jamais un ordinateur était branché.
 - À chaque fin de cycle, on attend 2 secondes via un appel à la fonction delay() qui prend entre parenthèses un nombre de millisecondes à attendre. Cela permet d'éviter un potentiel phénomène de clignotement au niveau du relais si la température oscillait au niveau du capteur autour de la consigne. L'imprécision du capteur pourrait suffire à créer ce genre de soucis sinon.
 
-#### Le résultat
+### Le résultat
 
 Sur le simulateur que j'ai utilisé (ici [Wokwi](https://wokwi.com/)), on peut voir en direct une simulation de notre circuit en fonctionnement. On peut également voir les informations diffusées sur la liaison série, ce qui est bien pratique dans notre cas.
 
 En jouant un peu avec la température du capteur, on peut voir ceci :
 
-[![Messages liaison série.png](/res/images/Electronique/Cours/BasesMicrocontroleurs/Messages_LiaisonSerie.png "Messages liaison série")](/res/images/Electronique/Cours/BasesMicrocontroleurs/Messages_LiaisonSerie.png)
+![Messages liaison série](../../../../assets/images/Electronique/Cours/BasesMicrocontroleurs/Messages_LiaisonSerie.png "Messages liaison série [invertable]")
 
 - Dans la première mesure, il faisait 24°C, donc le chauffage était éteint, ce qui est bien l'attendu.
 - À la mesure suivante, on imagine un énorme coup de froid (ou un rapide coup de souris dans le simulateur en l’occurrence), 5.3°C, le chauffage s'allume donc.
 - Dans les mesures suivantes, la température remonte (très vite quand on sait qu'il n'y a que 2 secondes entre les mesures, mais c'est pour l'exemple) et dépasse la consigne. Le chauffage se reteint donc. Ce qui est bien conforme à l'attendu. On se retrouve donc dans le même cas de figure qu'à la première mesure.
 
-### Conclusion
+## Conclusion
 
 On a pu l'entrevoir, les microcontrôleurs sont vraiment très adaptés pour implémenter ce qui nécessite de la logique et du traitement de données. Dans notre petit exemple, il n'y avait qu'un seul couple capteur/actionneur, mais là, on se rend compte que pour en ajouter un deuxième, il suffirait de préciser une nouvelle ligne tout en haut pour les fils du relais et du capteur et de copier-coller la condition d'ouverture/fermeture du relais. La seule limite de ce fonctionnement très simpliste serait si l'on utilise réellement beaucoup de couple capteur/actionneur, auquel cas, on manquerait de broches sur l'ESP32. Des solutions existent pour régler ce problème tout en simplifiant encore plus le circuit, comme les liaisons séries (SPI/I2C/CAN ...) qui sont une solution plutôt logicielle ou même des multiplexeurs et démultiplexeurs pour une solution plus matérielle.
-
-&nbsp;

@@ -1,12 +1,15 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-
 import { starlightKatex } from 'starlight-katex';
+import rehypeInvertable from './src/plugins/rehype-invertable.mjs';
 
-const googleAnalyticsId = 'GTM-K85GLNJ6'
+const googleAnalyticsId = 'G-RNH1Y9WEBS';
 
 export default defineConfig({
   site: 'https://zahkthar.fr',
+  markdown: {
+    rehypePlugins: [rehypeInvertable],
+  },
   integrations: [
     starlight({
       title: 'Zahkthar',
@@ -15,32 +18,39 @@ export default defineConfig({
           label: 'Français',
           lang: 'fr',
         },
-        en: {
-          label: 'English',
-          lang: 'en',
-        },
       },
-      defaultLocale: 'root',
 
       sidebar: [
         {
-          label: 'Electronique',
-          translations: {
-            'en': 'Electronics',
-          },
+          label: 'Électronique',
           items: [
             {
-              label: 'Les bases de l\'électronique',
-              translations: {
-                'en': 'Electronics for beginners',
-              },
+              label: "Les bases de l'électronique",
               autogenerate: { directory: 'electronics/basics' },
-            }
-          ]
-        }
+            },
+          ],
+        },
       ],
 
+      components: {
+        Footer: './src/components/Footer.astro',
+      },
+
       head: [
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:image',
+            content: 'https://zahkthar.fr/og-image.png',
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'twitter:image',
+            content: 'https://zahkthar.fr/og-image.png',
+          },
+        },
         {
           tag: 'script',
           attrs: {
