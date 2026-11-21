@@ -16,7 +16,7 @@ Les microcontrôleurs sont l'une des raisons pour lesquelles l'électronique mod
 
 Dans un précédent article sur les [circuits intégrés](/electronics/basics/component-integrated-circuit/), nous avions brièvement vu ce qu'était un processeur et ce qu'il permettait, je vais quand même rapidement le rappeler ici.
 
-Un processeur est un composant pouvant exécuter une liste d'instructions (que l'on appelle un programme) depuis une mémoire externe et communique avec l'extérieur via ses broches pour communiquer avec d'autres composants. Un microcontrôleur n'est ni plus ni moins que la somme de tout ceci :
+Un processeur est un composant qui peut exécuter une liste d'instructions (que l'on appelle un programme) depuis une mémoire externe et communique avec l'extérieur via ses broches pour interagir avec d'autres composants. Un microcontrôleur n'est ni plus ni moins que la somme de tout ceci :
 
 - Un processeur (le CPU) pour exécuter les instructions
 - De la mémoire (RAM, ROM, Flash) pour stocker les données et le programme
@@ -38,15 +38,15 @@ Imaginez que vous vouliez faire un système de domotique simple dans votre maiso
 
 Sans microcontrôleur, le projet est assez complexe. Pour le simplifier, on va dire qu'on fait une carte spécifique par couple chauffage-capteur. Dans ce cas, on retrouve une complexité modérée. Nous allons ici avoir besoin d'un amplificateur opérationnel. C'est un composant que l'on verra plus tard, mais qui peut faire tout un tas de traitements analogiques sur les signaux et les tensions. Nous allons l'utiliser pour comparer la tension de notre capteur avec une tension représentant notre température de consigne (la consigne peut être fixe ou être réglée avec un potentiomètre). Maintenant, en sortie du comparateur, nous avons un signal qui peut nous dire si oui ou non, la température est :
 
-- En dessous de la consigne → Le comparateur sortira une tension négative
-- Au-dessus de la consigne → Le comparateur sortira une tension positive
+- En dessous de la consigne → Le comparateur sortira sa tension basse (0 V en alimentation simple, ou une tension négative en alimentation symétrique)
+- Au-dessus de la consigne → Le comparateur sortira une tension positive (proche de sa tension d'alimentation)
 
 Il ne restera plus qu'à relier la sortie du comparateur à un relais normalement fermé (ici, le relais fait office de transistor, mais est électriquement plus adapté au passage de gros courants, ici un chauffage). Voilà donc le comportement prévu du relais :
 
 - Le relais va s'ouvrir lorsque la température sera trop haute, débranchant ainsi le chauffage
 - Le relais va se fermer lorsque la température sera trop basse, rebranchant ainsi le chauffage
 
-C'est bien le comportement voulu de notre chauffage, nous pouvons insérer le relais directement dans le câble de notre chauffage (après avoir évidemment bien vérifié que les relais pouvaient se piloter avec la tension de nos comparateurs et pouvaient manipuler le 230V). Les fluctuations de températures vont bien alimenter ou désalimenter notre chauffage et ainsi stabiliser sa température.
+C'est bien le comportement voulu de notre chauffage, nous pouvons insérer le relais directement dans le câble de notre chauffage (après avoir évidemment bien vérifié que les relais pouvaient se piloter avec la tension de nos comparateurs et pouvaient manipuler le 230V). Les fluctuations de température vont bien alimenter ou désalimenter notre chauffage et ainsi stabiliser sa température.
 
 Petite parenthèse à noter, ce n'est pas un principe de régulation très efficace :
 
@@ -65,15 +65,15 @@ Le microcontrôleur va :
 
 - Récupérer la température du capteur
 - La comparer en interne avec une valeur, ici la consigne
-- Écrire une donnée binaire, 5V ou 0V par exemple, sur une de ses sorties.
+- Écrire une donnée binaire, 3,3 V ou 0 V par exemple (ou 5 V / 0 V sur d'autres cartes comme l'Arduino), sur une de ses sorties.
 
-Un relais devra toujours être utilisé pour faire la passerelle 5V → 230V.
+Un relais devra toujours être utilisé pour faire la passerelle basse tension (3,3 V / 5 V) → 230 V.
 
 On peut changer la consigne en réécrivant le programme ou encore mieux, si l'on a branché des boutons et un écran au microcontrôleur, la modifier via une interface homme-machine (IHM). On pourra également, à titre d'exemple, faire transiter les informations via une communication sans fil, si l'on ne peut ou ne veut pas faire de circuit câblé.
 
 Les intérêts principaux sont ici :
 
-- La simplicité, la complexité du circuit n'est plus exponentielle en fonction du nombre de capteurs actionneurs.
+- La simplicité, la complexité du circuit n'est plus exponentielle en fonction du nombre de capteurs/actionneurs.
 - La possibilité de changer la logique du programme. Pour changer la consigne de température, un simple potentiomètre suffisait pour le circuit purement analogique, mais s'il fallait changer la méthode de régulation ? Il aurait fallu reconstruire une nouvelle carte, sûrement beaucoup plus complexe.
 
 On comprend mieux pourquoi les microcontrôleurs sont utilisés partout dans les circuits modernes. Une application, une calculatrice possède des dizaines de boutons, un écran, permet de faire des calculs, voire de faire tourner des programmes ! La complexité pour faire un tel circuit uniquement avec des transistors et des amplificateurs opérationnels serait démentielle, mais reste mesurée avec un microcontrôleur.
@@ -82,12 +82,12 @@ On comprend mieux pourquoi les microcontrôleurs sont utilisés partout dans les
 
 ### Le projet
 
-L'exemple que je ferai ici sera celui avec le microcontrôleur, qui sera un ESP32, voici donc les deux documents principaux, je commenterais par la suite.
+L'exemple que je ferai ici sera celui avec le microcontrôleur, qui sera un ESP32, voici donc les deux documents principaux, je commenterai par la suite.
 
 ![Circuit thermomètre + chauffage ESP32](../../../../assets/images/Electronique/Cours/BasesMicrocontroleurs/Circuit_ESP32.png "Circuit thermomètre + chauffage ESP32")
 
 ```cpp
-#include <Arduino.h> // La librarie Arduino
+#include <Arduino.h> // La librairie Arduino
 #include <DHT.h>     // La librairie du thermomètre
 
 #define DHTTYPE DHT22   // Type du capteur, ici DHT22
@@ -114,7 +114,7 @@ void setup() {
     Serial.println("Système démarré...");
 }
 
-// Cette fonction va s'éxécuter en boucle
+// Cette fonction va s'exécuter en boucle
 void loop() {
     // Lire la température
     float temperature = dht.readTemperature();
@@ -148,11 +148,11 @@ Ici, nous avons deux choses très importantes pour notre mini-projet, le circuit
 
 Le schéma du circuit est très simple, en voici une description rapide :
 
-- Nous avons le fil rouge, qui permet de distribuer l'alimentation en 5V de l'ESP32 au capteur et au relais
-- Le fil noir est la masse, le 0V
+- Nous avons le fil rouge, qui permet de distribuer l'alimentation 5 V de l'ESP32 au capteur et au relais
+- Le fil noir est la masse, le 0 V
 - Le fil violet qui est relié au pin numéro 4 de l'ESP32 comme on peut le lire dans le code, sur lequel va transiter la donnée de la température
-- Le fil bleu qui est le fil de donnée du relais, relié au pin 5 de l'ESP32 et qui permet d'envoyer un ordre d'ouverture ou de fermeture au relais.
-- Le côté non câblé du relais serait relié à notre chauffage entre ses pins COM et NC (commun et normalement fermé), quand le relais reçoit un 1, il y a un lien électrique entre COM et NC, quand il reçoit 0 le lien se fait entre COM et NO (normalement ouvert).
+- Le fil bleu qui est le fil de données du relais, relié au pin 5 de l'ESP32 et qui permet d'envoyer un ordre d'ouverture ou de fermeture au relais.
+- Le côté non câblé du relais doit être relié à notre chauffage entre ses pins **COM et NO** (commun et normalement ouvert) : quand le relais reçoit 0 (au repos), le lien électrique se fait entre COM et NC (normalement fermé) et le chauffage est coupé ; quand le relais reçoit un 1 (`HIGH`), le contact bascule entre COM et NO et le chauffage est alimenté.
 
 Maintenant, sans entrer dans les détails (des articles traitant spécifiquement de programmation embarquée sont prévus), le code fonctionne de cette manière :
 
@@ -170,8 +170,8 @@ En jouant un peu avec la température du capteur, on peut voir ceci :
 
 - Dans la première mesure, il faisait 24°C, donc le chauffage était éteint, ce qui est bien l'attendu.
 - À la mesure suivante, on imagine un énorme coup de froid (ou un rapide coup de souris dans le simulateur en l’occurrence), 5.3°C, le chauffage s'allume donc.
-- Dans les mesures suivantes, la température remonte (très vite quand on sait qu'il n'y a que 2 secondes entre les mesures, mais c'est pour l'exemple) et dépasse la consigne. Le chauffage se reteint donc. Ce qui est bien conforme à l'attendu. On se retrouve donc dans le même cas de figure qu'à la première mesure.
+- Dans les mesures suivantes, la température remonte (très vite quand on sait qu'il n'y a que 2 secondes entre les mesures, mais c'est pour l'exemple) et dépasse la consigne. Le chauffage s'éteint donc. Ce qui est bien conforme à l'attendu. On se retrouve donc dans le même cas de figure qu'à la première mesure.
 
 ## Conclusion
 
-On a pu l'entrevoir, les microcontrôleurs sont vraiment très adaptés pour implémenter ce qui nécessite de la logique et du traitement de données. Dans notre petit exemple, il n'y avait qu'un seul couple capteur/actionneur, mais là, on se rend compte que pour en ajouter un deuxième, il suffirait de préciser une nouvelle ligne tout en haut pour les fils du relais et du capteur et de copier-coller la condition d'ouverture/fermeture du relais. La seule limite de ce fonctionnement très simpliste serait si l'on utilise réellement beaucoup de couple capteur/actionneur, auquel cas, on manquerait de broches sur l'ESP32. Des solutions existent pour régler ce problème tout en simplifiant encore plus le circuit, comme les liaisons séries (SPI/I2C/CAN ...) qui sont une solution plutôt logicielle ou même des multiplexeurs et démultiplexeurs pour une solution plus matérielle.
+On a pu l'entrevoir, les microcontrôleurs sont vraiment très adaptés pour implémenter ce qui nécessite de la logique et du traitement de données. Dans notre petit exemple, il n'y avait qu'un seul couple capteur/actionneur, mais là, on se rend compte que pour en ajouter un deuxième, il suffirait de préciser une nouvelle ligne tout en haut pour les fils du relais et du capteur et de copier-coller la condition d'ouverture/fermeture du relais. La seule limite de ce fonctionnement très simpliste serait si l'on utilise réellement beaucoup de couples capteur/actionneur, auquel cas, on manquerait de broches sur l'ESP32. Des solutions existent pour régler ce problème tout en simplifiant encore plus le circuit, comme les liaisons série (SPI/I2C/CAN ...) qui sont une solution plutôt logicielle ou même des multiplexeurs et démultiplexeurs pour une solution plus matérielle.

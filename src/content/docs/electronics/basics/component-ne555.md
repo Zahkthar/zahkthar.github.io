@@ -1,6 +1,6 @@
 ---
 title: "Le NE555 : Une introduction aux oscillateurs"
-description: "Découvrez le NE555, un des circuits integrés les plus populaires"
+description: "Découvrez le NE555, un des circuits intégrés les plus populaires"
 
 sidebar:
   order: 10
@@ -35,31 +35,31 @@ Les autres composants ont déjà été traités. Trois résistances sur la parti
 Entre la tension d'alimentation (Vcc) et la masse (GND), on retrouve trois résistances d'une valeur R (les trois sont identiques).
 Si vous vous souvenez bien de l'article sur [les diviseurs](/electronics/basics/course-dividers-laws/), vous devriez vous souvenir que la tension aux bornes d'une résistance dans une série de résistances est obtenue en multipliant la tension d'alimentation par le pourcentage de la résistance sur la résistance totale. Si une résistance prend 45% de la résistance totale, la tension à ses bornes sera naturellement de 45%.
 
-$$U_{Rx} = \text{U} * \frac{\text{Rx}}{\sum_{i = 1}^{n} \text{Ri}}$$
+$$U_{R_x} = U \cdot \frac{R_x}{\sum_{i = 1}^{n} R_i}$$
 
-Ici, nous savons que U = Vcc, soit la tension d'alimentation, que Rx est égal à R dans la mesure ou les trois résistances sont identiques et que la somme des résistances en série ici est de 3R.
+Ici, nous savons que $U = V_{cc}$, soit la tension d'alimentation, que $R_x$ est égal à $R$ dans la mesure où les trois résistances sont identiques et que la somme des résistances en série ici est de $3R$.
 Nous pouvons donc réarranger la formule comme ceci :
 
-$$U_{R} = \text{Vcc} * \frac{\text{R}}{3\text{R}}$$
-$$U_{R} = \text{Vcc} * \frac{1}{3}$$
-$$U_{R} = \frac{\text{Vcc}}{3}$$
+$$U_{R} = V_{cc} \cdot \frac{R}{3R}$$
+$$U_{R} = V_{cc} \cdot \frac{1}{3}$$
+$$U_{R} = \frac{V_{cc}}{3}$$
 
 Nous avons donc **1/3** de la tension à l'entrée de **COMP2** et **2/3** de la tension à l'entrée de **COMP1** ainsi que dans la sortie **Control Voltage**.
 
-Si vous vous êtes dits : "les trois résistances ne sont pas réellement en série car elles sont branchées aux comparateurs. Du courant est donc censé partir par là". Vous avez eu une bonne intuition, en temps normal, un pont diviseur de tension ne peut pas être chargé. Cela fausserait le calcul. Ici nous pouvons faire cela car la quantité de courant entrant dans un amplificateur opérationnel est négligeable, nous pouvons considérer que c'est 0A.
+Si vous vous êtes dit : "les trois résistances ne sont pas réellement en série car elles sont branchées aux comparateurs. Du courant est donc censé partir par là". Vous avez eu une bonne intuition, en temps normal, un pont diviseur de tension ne peut pas être chargé. Cela fausserait le calcul. Ici nous pouvons faire cela car la quantité de courant entrant dans un amplificateur opérationnel est négligeable, nous pouvons considérer que c'est 0A.
 
 ### Les comparateurs
 
 Ici nous allons survoler une application spécifique de l'amplificateur opérationnel, le comparateur. C'est le montage le plus simple que l'on puisse faire avec un AOP, nous n'avons donc pas besoin de trop rentrer dans les détails techniques ici.
 
-Un amplificateur opérationnel est alimenté avec une tension dite symétrique, c'est-à-dire en +5V au "+" et -5V au "-".
+L'alimentation des AOP peut se faire de plusieurs façons, ici il est alimenté entre la tension d'alimentation $V_{cc}$ (ex. $+5\,\text{V}$) et la masse GND ($0\,\text{V}$).
 
 Le comparateur prend deux entrées et renvoie une tension. Il n'y a ici que deux cas possibles :
 
-- Si V+ > V- alors Vout = Vcc
-- Si V+ < V- alors Vout = -Vcc
+- Si $V_+ > V_-$ alors $V_{out} = V_{cc}$
+- Si $V_+ < V_-$ alors $V_{out} = 0\,\text{V}$ (GND)
 
-La sortie des deux comparateurs étant un circuit logique, ici une bascule RS, Vcc et -Vcc seront assimilés à 1 et à 0.
+La sortie des deux comparateurs étant reliée à un circuit logique (ici une bascule RS), $V_{cc}$ et $0\,\text{V}$ seront assimilés à 1 et à 0.
 
 D'ici on peut se rendre compte de plusieurs choses :
 
@@ -77,7 +77,7 @@ Là vous allez vous demander "mais c'est quoi cette bascule RS à la fin ?" et v
 Une bascule RS nous offre deux moyens de changer sa valeur :
 
 - L'entrée S, set, stocke un 1 dans la bascule
-- L'entrée R, reset, stocke un 0 dans la bascule, R1 sur le schéma ici est simplement une inversion de R. Si l'on envoie un 0 dans la broche reset, on stockera un 0 dans la bascule.
+- L'entrée R, reset, stocke un 0 dans la bascule. Sur le diagramme interne du NE555, la broche Reset comporte un petit cercle (inversion logique) : si l'on envoie un 0 dans la broche reset, on stockera un 0 dans la bascule.
 
 Elle nous donne aussi deux moyens de récupérer sa valeur :
 
@@ -105,13 +105,13 @@ On peut en déduire basiquement trois modes de fonctionnement pour le NE555. Le 
 
 ![Circuit mode bistable](../../../../assets/images/Electronique/Composants/NE555/bistable-circuit.png "Circuit mode bistable")
 
-Partons du principe que la valeur de départ est 0. Ce n'est pas très important de toutes façon mais Trigger est relié à 5V et Threshold est en l'air. Il n'y a donc pas de contrainte sur la valeur de sortie du 555. La valeur de sortie par défaut sera la valeur par défaut de la bascule RS, qui est indéterminée, pas de bol. On reverra ça plus en détail dans un prochain article sur les mémoires électroniques.
+Partons du principe que la valeur de départ est 0. Ce n'est pas très important de toute façon mais Trigger est relié à 5V et Threshold est en l'air. Il n'y a donc pas de contrainte sur la valeur de sortie du 555. La valeur de sortie par défaut sera la valeur par défaut de la bascule RS, qui est indéterminée, pas de bol. On reverra ça plus en détail dans un prochain article sur les mémoires électroniques.
 
-Tant que l'on ne fait rien, la sortie reste à 0, nous avons un premier état stable. Lorsque nous appuyons sur le bouton de droite, relié à trigger, nous allons relier la broche Trigger à la masse. Or on l'avait vu juste au-dessus, Si Trigger < 1/3 de Vcc (Vcc = 5V dans ce schéma), la sortie du 555 monte à 1.
+Tant que l'on ne fait rien, la sortie reste à 0, nous avons un premier état stable. Lorsque nous appuyons sur le bouton de droite, relié à trigger, nous allons relier la broche Trigger à la masse. Or on l'avait vu juste au-dessus, si Trigger < 1/3 de Vcc (Vcc = 5V dans ce schéma), la sortie du 555 monte à 1.
 
 Maintenant on peut appuyer autant de fois que l'on veut sur ce bouton, l'état est stable et restera à 1.
 
-Si en revanche on appuye sur le bouton relié à reset, on envoie un 0 dans la broche reset, qui est inversée (on voit le petit cercle) et donc envoie un 1 dans le R (reset) de la bascule. La sortie du 555 retombe donc à 0, dans le même état qu'au démarrage du circuit.
+Si en revanche on appuie sur le bouton relié à reset, on envoie un 0 dans la broche reset, qui est inversée (on voit le petit cercle) et donc envoie un 1 dans le R (reset) de la bascule. La sortie du 555 retombe donc à 0, dans le même état qu'au démarrage du circuit.
 
 ![Trame mode bistable](../../../../assets/images/Electronique/Composants/NE555/bistable-oscillo.png "Trame mode bistable")
 
@@ -131,17 +131,17 @@ Il nous faut nous rappeler d'une information importante là, dans le [diagramme 
 
 Maintenant que nous savons ça, nous pouvons réfléchir au circuit. Nous allons considérer l'état par défaut comme étant 0 (nous verrons pourquoi cette fois-ci, cet état est déterminé).
 
-Le pin discharge est donc relié à la masse. Si le condensateur était chargé, il se déchargerait par cette broche, on peut donc dire que le condensateur est déchargé. Threshold est donc à 0V, inférieur à 2/3 de Vcc et Trigger est à 5V, donc supérieure à 1/3 de Vcc. Il n'y a donc aucune condition de changement de valeur remplie. Voilà pour l'état initial du circuit.
+Le pin discharge est donc relié à la masse. Si le condensateur était chargé, il se déchargerait par cette broche, on peut donc dire que le condensateur est déchargé. Threshold est donc à 0V, inférieur à 2/3 de Vcc et Trigger est à 5V, donc supérieur à 1/3 de Vcc. Il n'y a donc aucune condition de changement de valeur remplie. Voilà pour l'état initial du circuit.
 
 #### Appui sur le bouton
 
 Maintenant nous allons appuyer brièvement sur le bouton relié à Trigger, qui va relier le pin à la masse. Trigger sera donc inférieur à 1/3 de Vcc comme nous l'avons vu au-dessus pour le [mode bistable](#mode-bistable), ce qui va mettre la sortie à 1. La sortie étant à 1, le pin Discharge va se déconnecter de la masse, il sera donc "en l'air". Nous avons donc un parfait circuit RC !
 
-Dans un précédent article sur [le condensateur](/electronics/basics/component-capacitor/), j'avais présenté le principe de **constante de temps** dans un circuit RC série. On voyait notamment qu'une fois la constante de temps notée **τ** pouvait être obtenue par le produit $R * C$.
+Dans un précédent article sur [le condensateur](/electronics/basics/component-capacitor/), j'avais présenté le principe de **constante de temps** dans un circuit RC série. On voyait notamment que la constante de temps notée **$\tau$** était obtenue par le produit $R \cdot C$.
 
-Ici, le condensateur va se charger jusqu'à 2/3 de Vcc, **66%**. Une fois la constante de temps dans un circuit RC permettait une charge de 63% (se référer à l'article sur le condensateur), il faudra donc attendre un petit peu plus qu'une fois la constante de temps du circuit RC. Le calcul ne sera pas démontré ici mais le temps que ce condensateur mettra pour atteindre 2/3 de Vcc est de :
+Ici, le condensateur va se charger jusqu'à 2/3 de Vcc, soit environ **66,7%**. Comme une constante de temps ($1\tau$) dans un circuit RC permet une charge de 63% (se référer à l'article sur le condensateur), il faudra donc attendre un petit peu plus qu'une constante de temps. Le calcul ne sera pas démontré ici mais le temps que ce condensateur mettra pour atteindre 2/3 de Vcc est de :
 
-$$\text{t} = 1.1 * R * C$$
+$$t = 1{,}1 \cdot R \cdot C$$
 
 Soit environ 0.011s = 11ms avec les valeurs d'exemple.
 
@@ -175,15 +175,15 @@ Ici on observe bien notre signal carré en sortie, exactement comme nous l'avion
 
 Elles ne seront pas démontrées ici mais voici la formule pour calculer la fréquence d'oscillation ainsi que le rapport cyclique de ce circuit :
 
-$$f = \frac{1.44}{(\text{R1} + 2 * \text{R2}) * \text{C1}}$$
+$$f = \frac{1{,}44}{(R_1 + 2 \cdot R_2) \cdot C_1}$$
 
-$$\alpha = \frac{\text{R2}}{(\text{R1} + 2 * \text{R2})}$$
+$$\alpha = \frac{R_1 + R_2}{R_1 + 2 \cdot R_2}$$
 
-Le circuit du dessus avec R1 = 1k, R2 = 68k et C1 = 10uF oscille donc à une fréquence de 1.0511Hz, soit environ **1Hz** et a un rapport cyclique d'environ 0.4963%, soit environ **50%** !
+Le circuit du dessus avec $R_1 = 1\,\text{k}\Omega$, $R_2 = 68\,\text{k}\Omega$ et $C_1 = 10\,\mu\text{F}$ oscille donc à une fréquence de $1{,}0511\,\text{Hz}$, soit environ **1 Hz**, et a un rapport cyclique d'environ **50,36%**, soit environ **50%** ! (Le condensateur se chargeant à travers $R_1 + R_2$ et se déchargeant uniquement à travers $R_2$, le rapport cyclique est toujours supérieur à 50% dans ce montage standard).
 
 #### Très court rappel
 
-La fréquence est, pour un signal périodique le nombre de fois que sa période se répète à chaque seconde. La période est l'intervalle de temps nécessaire à une partie du signal pour se répéter (d'où le terme périodique donc, qui revient toutes les périodes). Ces deux grandeurs sont l'inverse l'une de l'autre. $f = 1/T$ et $T = 1/f$ avec f la fréquence en Hz (équivalant à $s^{-1}$ ou "par seconde") et T la période en seconde.
+La fréquence est, pour un signal périodique, le nombre de fois que sa période se répète à chaque seconde. La période est l'intervalle de temps nécessaire à une partie du signal pour se répéter (d'où le terme périodique donc, qui revient toutes les périodes). Ces deux grandeurs sont l'inverse l'une de l'autre. $f = 1/T$ et $T = 1/f$ avec $f$ la fréquence en Hz (équivalant à $\text{s}^{-1}$ ou "cycles par seconde") et $T$ la période en secondes.
 
 Le rapport cyclique est le pourcentage à l'état haut par rapport à la période. Si un oscillateur 1Hz a un rapport cyclique de 75%, il passera 750ms à l'état haut, et donc naturellement 250ms à l'état bas.
 
@@ -193,7 +193,7 @@ J'aimerais vous donner ce petit tableau que j'ai pris sur [ce site](https://elec
 
 #### Disclaimer
 
-Comme vous avez pu le voir avec les valeurs de fréquences et de rapport cyclique de notre oscillateur, ce n'est pas très précis tout ça... Et bien c'est tout à fait vrai ! Mais ce composant n'est pas à jeter pour autant, très loin de là. Il n'y a pas de réelles solutions à ce problème de précision, si ce n'est changer de méthode lorsqu'il nous faut un oscillateur à haute précision. L'exemple du 1Hz était là pour montrer ce problème. Dans une montre électrique par exemple, on voudrait un 1Hz très précis qui dérive peu. Là on a un 1.05Hz (soit 1.05 secondes par seconde), ce qui n'est pas très bon, voire même carrément mauvais.
+Comme vous avez pu le voir avec les valeurs de fréquences et de rapport cyclique de notre oscillateur, ce n'est pas très précis tout ça... Et bien c'est tout à fait vrai ! Mais ce composant n'est pas à jeter pour autant, très loin de là. Il n'y a pas de réelles solutions à ce problème de précision, si ce n'est changer de méthode lorsqu'il nous faut un oscillateur à haute précision. L'exemple du 1Hz était là pour montrer ce problème. Dans une montre électrique par exemple, on voudrait un 1Hz très précis qui dérive peu. Là on a environ 1,05 Hz (soit une période d'environ 0,951 s au lieu de 1 s exactement, une dérive de 5 %), ce qui n'est pas très bon, voire même carrément mauvais.
 
 Pour générer une fréquence dont la précision n'est pas très importante en revanche, comme un son d'alarme pour un buzzer ou pour des applications en beaucoup plus haute fréquence (la fréquence max étant de l'ordre du MHz selon les constructeurs), le NE555 reste quasiment le choix par défaut tellement il est simple d'utilisation (du moins comparé aux autres types d'oscillateurs que nous verrons bien un jour).
 

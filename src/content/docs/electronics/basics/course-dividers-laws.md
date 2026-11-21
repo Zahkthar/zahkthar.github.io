@@ -24,31 +24,31 @@ $$U - U_1 - U_2 = 0$$
 
 Si on ajoute à cela la loi d'Ohm, ça nous donne :
 
-$$U - (R_1 * I_1) - (R_2 * I_2) = 0$$
+$$U - (R_1 \cdot I_1) - (R_2 \cdot I_2) = 0$$
 
 L'intensité étant la même partout dans une branche, on peut simplifier par :
 
-$$U - I * (R_1 + R_2) = 0$$
+$$U - I \cdot (R_1 + R_2) = 0$$
 
-$$U = I * (R_1 + R_2)$$
+$$U = I \cdot (R_1 + R_2)$$
 
 Nous pouvons donc en déduire ceci :
 
 $$I = \frac{U}{R_1 + R_2}$$
 
-$$U_2 = I * R_2 = \frac{U * R_2}{R_1 + R_2}$$
+$$U_2 = I \cdot R_2 = \frac{U \cdot R_2}{R_1 + R_2}$$
 
 Par souci de lisibilité, dans la pratique on écrira plutôt :
 
-$$U2 = U * \frac{R_2}{R_1 + R_2}$$
+$$U_2 = U \cdot \frac{R_2}{R_1 + R_2}$$
 
-$\frac{R_2}{R_1 + R_2}$ étant simplement le **"pourcentage"** de $R_2$ par rapport à la somme $R_1$ + $R_2$. Le fait qu'on le multiplie par $U$ est assez significatif ici. **La tension se sépare proportionnellement entre les résistances**. Si $R_2$ représente 18% de la résistance R1 + $R_2$, la tension $U_2$ représentera aussi 18% de la tension $U_1 + U_2$.
+$\frac{R_2}{R_1 + R_2}$ étant simplement le **"pourcentage"** de $R_2$ par rapport à la somme $R_1 + R_2$. Le fait qu'on le multiplie par $U$ est assez significatif ici. **La tension se sépare proportionnellement entre les résistances**. Si $R_2$ représente 18% de la résistance $R_1 + R_2$, la tension $U_2$ représentera aussi 18% de la tension $U_1 + U_2$.
 
 Nous venons ici de démontrer la formule de ce qu'on appelle un **pont diviseur de tension**. Je vais ici vous donner plusieurs formules qui vont de pair avec celle que nous venons de voir, libre à vous de les démontrer formellement.
 
 En gardant la même idée (que la tension se sépare proportionnellement entre les résistances), on peut étendre à une branche où il y aurait plus que deux résistances :
 
-$$U_{R_x} = U * \frac{R_x}{\sum_{i = 1}^{n} R_i}$$
+$$U_{R_x} = U \cdot \frac{R_x}{\sum_{i = 1}^{n} R_i}$$
 
 En français : dans une branche de **n résistances distinctes**, la tension aux bornes de **la résistance x** est égale à la tension totale de la branche multipliée par **le pourcentage que représente la résistance x par rapport à la somme des n résistances de la branche**.
 
@@ -56,7 +56,7 @@ Maintenant vous vous dites : "Mais ok très bien je viens d'apprendre une nouvel
 
 Imaginez que vous ayez un capteur qui vous envoie une plage de 0 à 50V, et que votre microcontrôleur n'accepte que 5V max dans ses entrées. (ce qui arrive occasionnellement). Là vous vous dites évidemment :
 
-"Ok très bien je dois couper 50V en deux parties pour avoir 5V. J'aurais donc une partie de 5V, et une partie de 45V. Je vais donc faire un pont diviseur de tension dans lequel $R_2$ représentera 5/50ème, soit 10% de la résistance, comme ça j'aurais U2 qui vaudra 10% de la tension, et donc 5V !"
+"Ok très bien je dois couper 50V en deux parties pour avoir 5V. J'aurai donc une partie de 5V, et une partie de 45V. Je vais donc faire un pont diviseur de tension dans lequel $R_2$ représentera 5/50ème, soit 10% de la résistance, comme ça j'aurai $U_2$ qui vaudra 10% de la tension, et donc 5V !"
 
 Bien joué, c'est exactement le bon raisonnement 😀 !
 
@@ -84,7 +84,7 @@ Avec :
 
 $$R_{eq} = \frac{R_2 \cdot R_L}{R_2 + R_L}$$
 
-Si la charge RL est constante, $R_{eq}$ sera stable. Sinon $R_{eq}$ et donc le rapport de division du pont diviseur changera en permanence.
+Si la charge $R_L$ est constante, $R_{eq}$ sera stable. Sinon $R_{eq}$ et donc le rapport de division du pont diviseur changera en permanence.
 
 Quelle est donc la bonne solution pour abaisser une tension dans le but d'alimenter quelque chose ?
 
@@ -100,15 +100,15 @@ Pour exactement la même raison que dans l'article sur [la résistance](/electro
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Diviseur_de_courant.svg" alt="Pont diviseur de courant non chargé" class="invertable" />
 
-Dans ce pont diviseur de courant, nous affirmons que l'intensité dans la branche I2 est égale à :
+Dans ce pont diviseur de courant, nous affirmons que l'intensité $I_2$ dans la branche 2 est égale à :
 
-$$I_2 = I * \frac{G_2}{G_1 + G_2}$$
+$$I_2 = I \cdot \frac{G_2}{G_1 + G_2}$$
 
-Avec I valant l'intensité totale et $G_1$ et $G_2$ l'inverse de $R_1$ et $R_2$. Libre à vous de prouver formellement cette formule.
+Avec $I$ valant l'intensité totale et $G_1$ et $G_2$ l'inverse de $R_1$ et $R_2$. Libre à vous de prouver formellement cette formule.
 
 Exactement comme pour le pont diviseur de tension, nous pouvons généraliser un peu cette formule dans le cas où il y aurait plus de résistances en parallèle.
 
-$$I_{Rx} = I * \frac{G_x}{\sum_{i = 1}^{n} G_i}$$
+$$I_{R_x} = I \cdot \frac{G_x}{\sum_{i = 1}^{n} G_i}$$
 
 Ce qui en français donne : à un nœud du circuit où il y a **n branches distinctes** contenant des résistances, **le courant partant dans la branche x** est égal à l'intensité totale à ce nœud multipliée par **le pourcentage** que représente **la conductance de la branche x** par rapport à la **somme de toutes les conductances**.
 

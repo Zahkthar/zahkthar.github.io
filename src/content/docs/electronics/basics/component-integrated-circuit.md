@@ -30,7 +30,7 @@ Un exemple classique de circuit intégré est le LM7805, un régulateur de tensi
 
 Le circuit vient du [datasheet](https://www.sparkfun.com/datasheets/Components/LM7805.pdf) d'un fabricant de LM7805, qui montre une certaine facilité d'utilisation. Il faut cependant en entrée une tension un peu plus élevée qu'en sortie, de l'ordre d'environ 2V. Si l'entrée est en dessous de 7V (dans le cas d'un régulateur 5V), la sortie ne sera pas stable.
 
-Ce petit composant peut débiter jusqu'à 1.5A sans broncher, ce qui le rend idéal pour alimenter beaucoup de circuits !
+Ce petit composant peut débiter jusqu'à $1{,}5\,\text{A}$, ce qui le rend idéal pour alimenter beaucoup de circuits ! **Attention toutefois à la dissipation thermique** : la tension excédentaire est dissipée en chaleur ($P = (U_{\text{entrée}} - 5\,\text{V}) \cdot I$). À $1{,}5\,\text{A}$ avec $12\,\text{V}$ en entrée, le régulateur dissipe plus de $10\,\text{W}$ : un dissipateur thermique (radiateur) adapté est donc indispensable pour éviter la surchauffe.
 
 #### Petite parenthèse sur les noms de CI
 
@@ -54,9 +54,9 @@ Pour créer une porte AND à la main, il nous aurait fallu 2 transistors et au m
 
 ![Diagramme logique 7408](../../../../assets/images/Electronique/Composants/CircuitIntegre/7408LogicDiagram.png "Diagramme logique 7408 [invertable]")
 
-Les deux schémas viennent du [datasheet juste ici](https://www.ti.com/lit/ds/symlink/sn54ls08-sp.pdf) et nous montre assez simplement pourquoi ces composants sont utilisés presque partout ! Il s'alimente en 5V par le pin VCC, et le pin GND doit être relié à la masse. Une fois cela fait, nous pouvons nous servir des portes logiques, les brancher en cascade ou bien les utiliser séparément, comme vous voulez !
+Les deux schémas viennent de la [datasheet juste ici](https://www.ti.com/lit/ds/symlink/sn54ls08-sp.pdf) et nous montrent assez simplement pourquoi ces composants sont utilisés presque partout ! Il s'alimente en 5V par le pin VCC, et le pin GND doit être relié à la masse. Une fois cela fait, nous pouvons nous servir des portes logiques, les brancher en cascade ou bien les utiliser séparément, comme vous voulez !
 
-Ce CI fait parti d'une famille bien connue de circuit intégrés. La famille des 74XY !
+Ce CI fait partie d'une famille bien connue de circuits intégrés. La famille des 74XY !
 
 #### Encore une parenthèse sur les noms
 
@@ -64,7 +64,7 @@ Encore un temps d'explication pour décortiquer les noms de circuits logiques !
 
 Les noms des circuits de cette famille sont divisés en 3 parties :
 
-- Le 74 vient de Texas Instrument. Les composants dits TTL (nous y reviendrons dans quelques lignes) chez TI sont séparés en 3 gammes de températures
+- Le 74 vient de Texas Instruments. Les composants dits TTL (nous y reviendrons dans quelques lignes) chez TI sont séparés en 3 gammes de températures
   - 54 supportant des températures comprises entre -55°C et 125°C (militaire)
   - 64 supportant des températures comprises entre -40°C et 85°C (industriel)
   - 74 supportant des températures comprises entre 0°C et 70°C (commercial) -> Ce que nous avons ici
@@ -72,22 +72,22 @@ Les noms des circuits de cette famille sont divisés en 3 parties :
   - Rien : TTL standard (Transistor–transistor logic) -> Utilisation de transistors bipolaires saturés. La première technologie, vitesse de commutation faible et haute consommation électrique.
   - L -> Réduit la consommation électrique en augmentant la valeur des résistances, mais au prix de la vitesse de commutation.
   - S -> Met une diode Schottky entre la base et le collecteur pour augmenter la vitesse de commutation, toujours une grosse consommation électrique.
-  - LS -> Un mélange entre L et S, on réduit la vitesse et la consommation électrique tout en augmentant la vitesse avec la diode Schottky. On a donc une version améliorée du TTL standard !
+  - LS -> Un mélange entre L et S, on réduit la consommation électrique tout en conservant une vitesse de commutation élevée grâce aux diodes Schottky. On a donc une version améliorée du TTL standard !
     - Et quelques autres dont on ne parlera pas ici.
 - Enfin, nous avons la fonction du circuit, voici quelques exemples :
   - 00 -> Quatre portes NAND à 2 entrées chacune
   - 04 -> Six portes NOT
   - 08 -> Quatre portes AND à 2 entrées chacune (cf. l'image juste au-dessus)
   - 30 -> Une porte NAND à huit entrées
-  - 4075 -> Trois portes OU à trois entrées chacune (et pourquoi pas ?)
+  - 32 -> Quatre portes OR à 2 entrées chacune
 
-Ça nous fait un sacré pavé, mais au moins ça vous permettra de comprendre pourquoi le datasheet du 7408 parle également de 74S08, de 74LS08 et de ses équivalents en 54 (Le SN devant est un préfixe spécifique à Texas Instruments, il ne fait pas partie du nom).
+Ça nous fait un sacré pavé, mais au moins ça vous permettra de comprendre pourquoi la datasheet du 7408 parle également de 74S08, de 74LS08 et de leurs équivalents en 54 (Le SN devant est un préfixe spécifique à Texas Instruments, il ne fait pas partie du nom).
 
-Comme vous l'auriez peut-être remarqué, la technologie TTL pure tend à disparaître avec le temps, les transistors saturés consommant plus que nécessaire. Des alternatives existent comme CMOS, nous serons amenés à en reparler ne vous inquiétez pas.
+Comme vous l'aurez peut-être remarqué, la technologie TTL pure tend à disparaître avec le temps, les transistors saturés consommant plus que nécessaire. Des alternatives existent comme CMOS, nous serons amenés à en reparler ne vous inquiétez pas.
 
 ### Le cerveau électronique : Le CPU
 
-Ah le CPU ! Que faire aujourd'hui sans un CPU, il est partout, même quand on n'a pas réellement besoin de lui tant le fait de l'utiliser est pratique. Il aura bien sûr des articles sur ce blog, et même sûrement une série entière tant on ne peut voir le monde de l'électronique qu'à travers lui !
+Ah le CPU ! Que faire aujourd'hui sans un CPU, il est partout, même quand on n'a pas réellement besoin de lui tant le fait de l'utiliser est pratique. Il y aura bien sûr des articles sur ce blog, et même sûrement une série entière tant on ne peut voir le monde de l'électronique qu'à travers lui !
 
 Le **CPU**, ou Central Processing Unit, est un exemple emblématique de l'évolution des circuits intégrés. Les processeurs modernes intègrent des milliards de transistors sur une seule puce, permettant des calculs complexes à une vitesse vertigineuse.
 
@@ -95,10 +95,10 @@ De tous les CPU qui existent, du légendaire Zilog Z80 (ZX Spectrum pour les plu
 
 #### Mais qu'est-ce qu'un CPU au juste ?
 
-Nous reparlerons d'architecture processeur ici, mais pour garder la chose simple, nous pouvons dire qu'un CPU est une boîte noire exécutant des instructions et interagissant via ses pins d'entrées/sorties. Nous pouvons quand même dépoussiérer un peu quelques une de ses parties :
+Nous reparlerons d'architecture processeur ici, mais pour garder la chose simple, nous pouvons dire qu'un CPU est une boîte noire exécutant des instructions et interagissant via ses pins d'entrées/sorties. Nous pouvons quand même dépoussiérer un peu quelques-unes de ses parties :
 
 - La mémoire (stockant le programme et ses valeurs intermédiaires) est souvent externe (une **RAM** si volatile, **ROM** si persistante) mais elle peut aussi être interne dans le cas d'un microcontrôleur. Dans certains cas, lorsque l'accès à la mémoire est complexe, on peut utiliser un composant appelé **MMU** (Memory Management Unit) permettant de servir d'intermédiaire avec le CPU, lui permettant de déléguer la complexité d'accès.
-- La partie en charge des calculs est appelée l'**ALU** (Arithmetic Logic Unit). Si les calculs peuvent être faits sur des nombres à virgules, il y aura également la présence d'un **FPU** (Floating-Point Unit). Ils prennent deux valeurs en entrées et produisent un résultat.
+- La partie en charge des calculs est appelée l'**ALU** (Arithmetic Logic Unit). Si les calculs peuvent être faits sur des nombres à virgule, il y aura également la présence d'un **FPU** (Floating-Point Unit). Ils prennent deux valeurs en entrées et produisent un résultat.
 - L'unité de contrôle permet de décoder les instructions et de faire communiquer les bons modules ensemble. Par exemple, si l'instruction est une addition entière, alors il enverra les données à l'ALU et fera stocker le résultat à l'emplacement mémoire demandé.
 - L'horloge est là pour donner le pas, c'est le composant dont on parle quand on parle de la fréquence d'un processeur (3GHz par exemple). Il doit générer un signal régulier que devront suivre toutes les parties du CPU.
 - Les registres servent de mémoire interne au CPU, ils sont souvent très petits et en faible nombre, ce qui ne leur permet pas de stocker des gros volumes de données. En revanche, ils permettent de garder en mémoire des informations très importantes pour le bon fonctionnement des programmes qu'ils exécutent, nous les reverrons bien assez tôt !
@@ -113,9 +113,9 @@ Nous n'avons pourtant à l'heure actuelle pas tout découvert des circuits inté
 
 - Plus de miniaturisation, nous avons encore un peu de marge pour réduire la taille des transistors et ainsi en mettre toujours plus dans un même espace
 - Utiliser la 3ème dimension. Même si la miniaturisation en 2D est encore pensable, il va être difficile de tenir la loi de Moore tant la finesse de gravure est faible (environ 10nm), il est cependant imaginable d'empiler des puces de silicium verticalement, permettant de se jeter une nouvelle fois dans une course à la miniaturisation !
-- Une meilleure utilisation de l'énergie, l'amélioration des IC est aujourd'hui surtout concentrée sur la performance brute, avec un intérêt tout relatif pour l'économie d'énergie. Un PC gaming peut consommer autant qu'un chauffage de salon, simplement pour faire tourner des jeux vidéo en haute résolution.
+- Une meilleure utilisation de l'énergie, l'amélioration des CI est aujourd'hui surtout concentrée sur la performance brute, avec un intérêt tout relatif pour l'économie d'énergie. Un PC gaming peut consommer autant qu'un chauffage de salon, simplement pour faire tourner des jeux vidéo en haute résolution.
 - Sans oublier les technologies quantiques, même si on semble encore avoir le temps de voir venir avant d'en voir dans le commerce pour le grand public.
 
 ## Conclusion
 
-Les circuits intégrés, sont au cœur de presque tous les circuits électroniques modernes. Ils offrent des solutions compactes tout en restant efficaces pour répondre au besoin croissant de miniaturisation et de complexité. Cette évolution a permis la création de dispositifs électroniques de plus en plus sophistiqués, simplifiant la conception tout en réduisant la complexité des montages électroniques. Dans les prochains articles, nous explorerons plus en détail certaines applications spécifiques des circuits intégrés, mettant en lumière leur utilisation pratique. À bientôt !
+Les circuits intégrés sont au cœur de presque tous les circuits électroniques modernes. Ils offrent des solutions compactes tout en restant efficaces pour répondre au besoin croissant de miniaturisation et de complexité. Cette évolution a permis la création de dispositifs électroniques de plus en plus sophistiqués, simplifiant la conception tout en réduisant la complexité des montages électroniques. Dans les prochains articles, nous explorerons plus en détail certaines applications spécifiques des circuits intégrés, mettant en lumière leur utilisation pratique. À bientôt !

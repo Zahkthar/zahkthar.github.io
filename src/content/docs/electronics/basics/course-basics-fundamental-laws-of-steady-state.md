@@ -18,16 +18,16 @@ Nous allons donc commencer par quelques définitions peut-être évidentes pour 
 
 N'importe quel matériau conducteur dans un circuit fermé contenant un électromoteur (ça peut être un générateur, une batterie, une pile, un panneau solaire, etc...) est traversé par un courant électrique. Le courant électrique est en réalité un flux d'électrons qui traverse le circuit depuis une borne du générateur dans l'objectif d'y retourner par son autre borne.
 
-La charge électrique d'un électron étant négative ($-1{,}6 \times 10^{-19}\text{ C}$ -> Coulombs), le sens conventionnel du courant (du + vers le -) est opposé à celui des électrons (du - vers le +)
+La charge électrique d'un électron étant négative ($-1{,}6 \times 10^{-19}\,\text{C}$ -> coulombs), le sens conventionnel du courant (du + vers le -) est opposé à celui des électrons (du - vers le +).
 
-Si on note "$dq$" la charge électrique en Coulombs transportée par les électrons traversant un conducteur pendant une durée "$dt$", l'intensité que l'on notera I (ou i) sera donnée par la formule :
+Si on note "$dq$" la charge électrique en coulombs transportée par les électrons traversant un conducteur pendant une durée "$dt$", l'intensité que l'on notera $I$ (ou $i$) sera donnée par la formule :
 
 $$I = \frac{dq}{dt}$$
 
 Où :
 
-- $I$ est en **Ampères** (A)
-- $dq$ est en **Coulombs** (C)
+- $I$ est en **ampères** (A)
+- $dq$ est en **coulombs** (C)
 - $dt$ est en **secondes** (s)
 
 ### La loi des nœuds
@@ -52,7 +52,7 @@ L'énergie potentielle dépend directement de la hauteur à laquelle se trouve l
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg" alt="Pont diviseur de tension" class="invertable" />
 
-Dans ce circuit, que l'on appelle un "pont diviseur de tension" (nous y reviendrons plus tard), si on imagine que $U$ est la tension d'alimentation du circuit, 5V par exemple, avant la première résistance la tension sera égale à U, soit 5V. Après la première résistance, la tension aura chuté. Après la deuxième résistance, la tension sera égale à 0.
+Dans ce circuit, que l'on appelle un "pont diviseur de tension" (nous y reviendrons plus tard), si on imagine que $U$ est la tension d'alimentation du circuit, $5\,\text{V}$ par exemple, avant la première résistance la tension sera égale à $U$, soit $5\,\text{V}$. Après la première résistance, la tension aura chuté. Après la deuxième résistance, la tension sera égale à $0\,\text{V}$.
 
 L'intérêt de ce circuit étant de convertir une tension en une tension plus basse en jouant sur le rapport entre les deux résistances.
 
@@ -60,7 +60,7 @@ L'intérêt de ce circuit étant de convertir une tension en une tension plus ba
 
 La différence de potentiel (aussi appelée ddp à l'écrit) est une grandeur que l'on confond souvent avec la tension. La différence de potentiel, comme son nom l'indique, est une différence entre deux points d'un circuit. Elle demande donc un point de repère.
 
-Si l'on reprend le circuit ci-dessus et que l'on admet que pour les 5V totaux, il y a une répartition égale de la tension entre les deux résistances, nous nous retrouvons donc avec $U_1$ qui vaut $2{,}5\,\text{V}$ et $U_2$ qui vaut aussi $2{,}5\,\text{V}$. Mais d'où viennent ces $2{,}5\,\text{V}$ ? En réalité $U_1$ est une **différence** de potentiel et représente donc le résultat de la soustraction entre la tension $U$ et la tension après le passage dans la résistance. Nous avons donc bien $5\,\text{V} - 2{,}5\,\text{V} = 2.5\,\text{V}$. $U_2$ suit exactement le même raisonnement. Nous n'avons plus que $2{,}5\,\text{V}$ après le passage du courant dans $R_1$. La différence entre $2{,}5\,\text{V}$ et 0V est donc de $2{,}5\,\text{V} - 0\,\text{V} = 2.5\,\text{V}$.
+Si l'on reprend le circuit ci-dessus et que l'on admet que pour les $5\,\text{V}$ totaux, il y a une répartition égale de la tension entre les deux résistances, nous nous retrouvons donc avec $U_1$ qui vaut $2{,}5\,\text{V}$ et $U_2$ qui vaut aussi $2{,}5\,\text{V}$. Mais d'où viennent ces $2{,}5\,\text{V}$ ? En réalité $U_1$ est une **différence** de potentiel et représente donc le résultat de la soustraction entre la tension $U$ et la tension après le passage dans la résistance. Nous avons donc bien $5\,\text{V} - 2{,}5\,\text{V} = 2{,}5\,\text{V}$. $U_2$ suit exactement le même raisonnement. Nous n'avons plus que $2{,}5\,\text{V}$ après le passage du courant dans $R_1$. La différence entre $2{,}5\,\text{V}$ et $0\,\text{V}$ est donc de $2{,}5\,\text{V} - 0\,\text{V} = 2{,}5\,\text{V}$.
 
 On admet donc que lorsque l'on parle généralement de tension, on parle de la valeur de la tension à un point du circuit alors que si l'on parle de la tension **aux bornes** ou **autour** d'un composant, nous parlons bien de la différence entre le point avant et après ledit composant, de la tension présente à ses bornes en somme (si la tension est représentée par une flèche comme ci-dessus avec $U$, $U_1$ et $U_2$, on peut aussi appeler la ddp par son nom sur le schéma).
 
@@ -76,7 +76,7 @@ Dans cette image, nous pouvons voir une maille d'un circuit plus grand. Selon ce
 
 $$v_1 + v_2 + v_3 + v_4 = 0$$
 
-Si nous reprenons un exemple avec une tension d'alimentation de 5V et que nous admettons que $R_1 = R_2 = R_3$, c'est à dire que la tension aux bornes de chaque résistance est égale. Nous aurons donc :
+Si nous reprenons un exemple avec une tension d'alimentation de $5\,\text{V}$ et que nous admettons que $R_1 = R_2 = R_3$, c'est-à-dire que la tension aux bornes de chaque résistance est égale, nous aurons donc :
 
 $$v_1 = v_2 = v_3 = v_4 / 3$$
 
@@ -86,7 +86,7 @@ $$5 - 1{,}66 - 1{,}66 - 1{,}66 \approx 0\,\text{V}$$
 
 Ce qui correspond bien à ce que nous attendions.
 
-**Note 1** : Pour calculer une différence de potentiel il faut simplement faire la soustraction entre la tension avant le composant et la tension après (ce qui permet d'avoir le delta). Sur le dernier schéma, v1 peut aussi être nommée "$U_{ab}$" soit "La différence de tension entre le point **a** et le point **b**" Nous pouvons donc la calculer en faisant $U_{ab} = U_a - U_b$ (A noter qu'une tension négative est une tension positive dans l'autre sens -> $-U_{ab} = U_{ba}$ il suffit d'inverser le sens de la flèche).
+**Note 1** : Pour calculer une différence de potentiel il faut simplement faire la soustraction entre la tension avant le composant et la tension après (ce qui permet d'avoir le delta). Sur le dernier schéma, $v_1$ peut aussi être nommée "$U_{ab}$" soit "La différence de tension entre le point **a** et le point **b**". Nous pouvons donc la calculer en faisant $U_{ab} = U_a - U_b$ (À noter qu'une tension négative est une tension positive dans l'autre sens -> $-U_{ab} = U_{ba}$ il suffit d'inverser le sens de la flèche).
 
 **Note 2** : Quand on a le nom de la différence de potentiel, $U_{ab}$ par exemple, la flèche part de la 2ème lettre et pointe vers la première.
 
@@ -102,15 +102,15 @@ La résistance électrique est la propriété d'un conducteur à s'opposer au pa
 
 ### La loi d'Ohm
 
-La loi d'Ohm est la loi empirique nommée en référence à **Georg Simon Ohm** qui l'a publiée en 1827 qui relie l'intensité du courant électrique traversant un conducteur à la tension à ses bornes. Elle énonce que :
+La loi d'Ohm est la loi empirique nommée en référence à **Georg Simon Ohm**, qui l'a publiée en 1827 et qui relie l'intensité du courant électrique traversant un conducteur à la tension à ses bornes. Elle énonce que :
 
-$$U = R * I$$
+$$U = R \cdot I$$
 
 Où :
 
-- $U$ est la tension en **Volts** (V)
-- $R$ est la résistance en **Ohms** (Ω)
-- $I$ est l'intensité en **Ampères** (A)
+- $U$ est la tension en **volts** (V)
+- $R$ est la résistance en **ohms** (Ω)
+- $I$ est l'intensité en **ampères** (A)
 
 On appelle un conducteur **ohmique** un composant qui respecte la loi d'Ohm (nous verrons dans d'autres articles que ce n'est pas tout le temps le cas). La résistance est un exemple de conducteur ohmique.
 
@@ -127,13 +127,13 @@ La principale caractéristique d'une résistance étant d'opposer une plus ou mo
 
 La puissance électrique consommée par un dipôle se calcule avec la formule suivante :
 
-$$P = U * I$$
+$$P = U \cdot I$$
 
 Où :
 
-- $P$ est la puissance en **Watts** (W)
-- $U$ est la tension en **Volts** (V)
-- $I$ est l'intensité en **Ampères** (A)
+- $P$ est la puissance en **watts** (W)
+- $U$ est la tension en **volts** (V)
+- $I$ est l'intensité en **ampères** (A)
 
 La puissance correspond au débit d'énergie électrique reçue par le conducteur (**attention !** Ce n'est pas le débit de charge électrique/le flux électrique passant dans le conducteur, à savoir [l'intensité](#la-charge-électrique-lintensité-et-la-loi-des-nœuds), il s'agit bien ici d'un débit **d'énergie**). D'où cette formule également valide :
 
@@ -141,22 +141,22 @@ $$P = W / t$$
 
 Où :
 
-- $P$ est la puissance en **Watts** (W)
-- $W$ est la quantité d'énergie en **Joules** (J)
+- $P$ est la puissance en **watts** (W)
+- $W$ est la quantité d'énergie en **joules** (J)
 - $t$ est le temps en **secondes** (s)
 
 ### L'énergie
 
 La quantité d'énergie électrique consommée par un conducteur pendant un temps donné est donnée par la formule suivante :
 
-$$W = P * t$$
+$$W = P \cdot t$$
 
 Avec les mêmes unités que la formule ci-dessus.
 
 **Note 1** : En utilisant la loi d'Ohm, nous pouvons trouver de nouvelles formules pour calculer l'énergie. Par exemple : $W = U \cdot I \cdot t$, ou encore $W = R \cdot I^{2} \cdot t$. À vous de jouer avec les formules selon les informations dont vous disposez !
 
-**Note 2** : Avec la formule $W = P * t$, on déduit qu'un Joule correspond à une puissance d'un Watt pendant une durée d'une seconde, soit $1 \text{W . s}$
+**Note 2** : Avec la formule $W = P \cdot t$, on déduit qu'un joule correspond à une puissance d'un watt pendant une durée d'une seconde, soit $1\,\text{W}\cdot\text{s}$.
 
-**Note 3** : $1\,\text{kWh} = 1000\,\text{Wh} = 1000 * (3600 \,\text{J}) = 3{,}6 * 10^6 \,\text{J} = 3{,}6\,\text{MJ}$
+**Note 3** : $1\,\text{kWh} = 1000\,\text{Wh} = 1000 \cdot (3600 \,\text{J}) = 3{,}6 \cdot 10^6 \,\text{J} = 3{,}6\,\text{MJ}$
 
 **Note 4** : $1 \,\text{ch (cheval-vapeur)} = 736\,\text{W}$
