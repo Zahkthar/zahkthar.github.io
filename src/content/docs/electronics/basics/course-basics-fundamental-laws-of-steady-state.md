@@ -52,7 +52,7 @@ L'énergie potentielle dépend directement de la hauteur à laquelle se trouve l
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Pont_diviseur_tension.svg" alt="Pont diviseur de tension" class="invertable" />
 
-Dans ce circuit, que l'on appelle un "pont diviseur de tension" (nous y reviendrons plus tard), si on imagine que U est la tension d'alimentation du circuit, 5V par exemple, avant la première résistance la tension sera égale à U, soit 5V. Après la première résistance, la tension aura chuté. Après la deuxième résistance, la tension sera égale à 0.
+Dans ce circuit, que l'on appelle un "pont diviseur de tension" (nous y reviendrons plus tard), si on imagine que $U$ est la tension d'alimentation du circuit, 5V par exemple, avant la première résistance la tension sera égale à U, soit 5V. Après la première résistance, la tension aura chuté. Après la deuxième résistance, la tension sera égale à 0.
 
 L'intérêt de ce circuit étant de convertir une tension en une tension plus basse en jouant sur le rapport entre les deux résistances.
 
@@ -60,7 +60,7 @@ L'intérêt de ce circuit étant de convertir une tension en une tension plus ba
 
 La différence de potentiel (aussi appelée ddp à l'écrit) est une grandeur que l'on confond souvent avec la tension. La différence de potentiel, comme son nom l'indique, est une différence entre deux points d'un circuit. Elle demande donc un point de repère.
 
-Si l'on reprend le circuit ci-dessus et que l'on admet que pour les 5V totaux, il y a une répartition égale de la tension entre les deux résistances, nous nous retrouvons donc avec $U_1$ qui vaut $2{,}5\text{V}$ et $U_2$ qui vaut aussi $2{,}5\text{V}$. Mais d'où viennent ces $2{,}5\text{V}$ ? En réalité $U_1$ est une **différence** de potentiel et représente donc le résultat de la soustraction entre la tension $U$ et la tension après le passage dans la résistance. Nous avons donc bien $5\text{V} - 2{,}5\text{V} = 2.5\text{V}$. $U_2$ suit exactement le même raisonnement. Nous n'avons plus que $2{,}5\text{V}$ après le passage du courant dans $R_1$. La différence entre $2{,}5\text{V}$ et 0V est donc de $2{,}5\text{V} - 0\text{V} = 2.5\text{V}$.
+Si l'on reprend le circuit ci-dessus et que l'on admet que pour les 5V totaux, il y a une répartition égale de la tension entre les deux résistances, nous nous retrouvons donc avec $U_1$ qui vaut $2{,}5\,\text{V}$ et $U_2$ qui vaut aussi $2{,}5\,\text{V}$. Mais d'où viennent ces $2{,}5\,\text{V}$ ? En réalité $U_1$ est une **différence** de potentiel et représente donc le résultat de la soustraction entre la tension $U$ et la tension après le passage dans la résistance. Nous avons donc bien $5\,\text{V} - 2{,}5\,\text{V} = 2.5\,\text{V}$. $U_2$ suit exactement le même raisonnement. Nous n'avons plus que $2{,}5\,\text{V}$ après le passage du courant dans $R_1$. La différence entre $2{,}5\,\text{V}$ et 0V est donc de $2{,}5\,\text{V} - 0\,\text{V} = 2.5\,\text{V}$.
 
 On admet donc que lorsque l'on parle généralement de tension, on parle de la valeur de la tension à un point du circuit alors que si l'on parle de la tension **aux bornes** ou **autour** d'un composant, nous parlons bien de la différence entre le point avant et après ledit composant, de la tension présente à ses bornes en somme (si la tension est représentée par une flèche comme ci-dessus avec $U$, $U_1$ et $U_2$, on peut aussi appeler la ddp par son nom sur le schéma).
 
@@ -80,9 +80,9 @@ Si nous reprenons un exemple avec une tension d'alimentation de 5V et que nous a
 
 $$v_1 = v_2 = v_3 = v_4 / 3$$
 
-Soit $1{,}66 \cdots \text{V}$ par résistance. Mais là vous vous demandez sûrement : "Mais $5 \text{V} + 1{,}66 \text{V} + 1{,}66 \text{V} + 1{,}66 \text{V}$ ça fait $10$ pas $0$" et oui, vu comme ça, le résultat est bien de $10 \text{V}$. Mais il y a un souci, une résistance **s'oppose** au passage du courant, donc ici la tension **chute** de $1{,}66 \text{V}$ entre l'entrée et la sortie de la résistance. Si vous regardez une nouvelle fois [le schéma du pont diviseur](#la-tension-électrique), vous remarquerez que les flèches représentant les tensions $U_1$ et $U_2$ sont dans le sens opposé à la flèche représentant la tension d'alimentation $U$. C'est justement en raison du fait que la résistance s'oppose au passage du courant. Si nous reprenons donc notre calcul où nous en étions mais cette fois-ci en inversant les tensions aux bornes des résistances, nous obtenons :
+Soit $1{,}66 \cdots \,\text{V}$ par résistance. Mais là vous vous demandez sûrement : "Mais $5 \,\text{V} + 1{,}66 \,\text{V} + 1{,}66 \,\text{V} + 1{,}66 \,\text{V}$ ça fait $10$ pas $0$" et oui, vu comme ça, le résultat est bien de $10 \,\text{V}$. Mais il y a un souci, une résistance **s'oppose** au passage du courant, donc ici la tension **chute** de $1{,}66 \,\text{V}$ entre l'entrée et la sortie de la résistance. Si vous regardez une nouvelle fois [le schéma du pont diviseur](#la-tension-électrique), vous remarquerez que les flèches représentant les tensions $U_1$ et $U_2$ sont dans le sens opposé à la flèche représentant la tension d'alimentation $U$. C'est justement en raison du fait que la résistance s'oppose au passage du courant. Si nous reprenons donc notre calcul où nous en étions mais cette fois-ci en inversant les tensions aux bornes des résistances, nous obtenons :
 
-$$5 - 1{,}66 - 1{,}66 - 1{,}66 \approx 0\text{ V}$$
+$$5 - 1{,}66 - 1{,}66 - 1{,}66 \approx 0\,\text{V}$$
 
 Ce qui correspond bien à ce que nous attendions.
 
@@ -157,6 +157,6 @@ Avec les mêmes unités que la formule ci-dessus.
 
 **Note 2** : Avec la formule $W = P * t$, on déduit qu'un Joule correspond à une puissance d'un Watt pendant une durée d'une seconde, soit $1 \text{W . s}$
 
-**Note 3** : $1\text{kWh} = 1000\text{Wh} = 1000 * (3600 \text{J}) = 3{,}6 * 10^6 \text{J} = 3{,}6\text{MJ}$
+**Note 3** : $1\,\text{kWh} = 1000\,\text{Wh} = 1000 * (3600 \,\text{J}) = 3{,}6 * 10^6 \,\text{J} = 3{,}6\,\text{MJ}$
 
-**Note 4** : $1 \text{ch (cheval-vapeur)} = 736\text{W}$
+**Note 4** : $1 \,\text{ch (cheval-vapeur)} = 736\,\text{W}$
