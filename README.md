@@ -2,8 +2,14 @@
 
 Articles à venir (pas d'ordre) :
 
+| Série - Les bases de l'électronique                                                             |
+| :---------------------------------------------------------------------------------------------: |
+| De la théorie à la pratique : Schémas, breadboard, outils de l'électronicien, datasheet, etc... |
+| Composants d'interface : boutons, potentiomètres et relais                                      |
+
 | Théorie - Numérique                                     |
 | :-----------------------------------------------------: |
+| Le transistor MOSFET et la logique CMOS                 |
 | Les circuits logiques programmables : FPGA/CPLD         |
 | Le multiplexage                                         |
 | Les mémoires numériques : RAM, ROM, EEPROM, Flash...    |

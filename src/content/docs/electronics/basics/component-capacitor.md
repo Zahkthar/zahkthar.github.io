@@ -14,7 +14,7 @@ C'est quand même un petit peu plus compliqué que ça malheureusement... Mais o
 
 Voici quelles formes peut avoir un condensateur :
 
-![Image condensateurs](https://upload.wikimedia.org/wikipedia/commons/b/b9/Capacitors_%287189597135%29.jpg "Condensateurs électrochimiques")
+![Différents condensateurs](https://upload.wikimedia.org/wikipedia/commons/b/b9/Capacitors_%287189597135%29.jpg "Différents condensateurs")
 
 ## Présentation rapide du composant
 
@@ -92,6 +92,19 @@ $$C = \frac{1}{\frac{1}{C_1} + \frac{1}{C_2} + \frac{1}{C_3}} = 33{,}3\,\mu\text
 À noter que la formule quand il n'y a que 2 condensateurs fonctionne toujours :
 
 $$C = \frac{C_1 \cdot C_2}{C_1 + C_2}$$
+
+## Quantité d'énergie stockée
+
+La quantité d'énergie que peut stocker un condensateur est donné par la formule suivante :
+
+$$E_C = \frac{1}{2} \cdot C U^2$$
+
+Avec :
+- $E_C$ l'énergie emmagasinée par le condensateur en **joules** (J).
+- $C$ la capacité du condensateur en **farads** (F)
+- $U$ la tension aux bornes du condensateur en **volts** (V)
+
+Cette formule peut se révéler très utile pour dimensionner un condensateur en fonction de ce qu'il a a alimenter ou du reste du circuit.
 
 ## Exemples d'utilisations pratiques
 

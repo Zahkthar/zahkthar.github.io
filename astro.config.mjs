@@ -28,6 +28,10 @@ export default defineConfig({
               label: "Les bases de l'électronique",
               autogenerate: { directory: 'electronics/basics' },
             },
+            {
+              label: 'Électronique analogique',
+              autogenerate: { directory: 'electronics/analog' },
+            },
           ],
         },
       ],
