@@ -5,6 +5,7 @@ description: "À quoi sert la diode ? Comment peut-on s'en servir ?"
 sidebar:
   order: 6
 
+pubDate: 2023-06-11
 draft: false
 ---
 

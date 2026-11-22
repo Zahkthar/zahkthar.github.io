@@ -5,6 +5,7 @@ description: "Comment diviser une tension ou un courant ?"
 sidebar:
   order: 5
 
+pubDate: 2023-04-23
 draft: false
 ---
 

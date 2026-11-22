@@ -5,6 +5,7 @@ description: "Le premier saut dans l'électronique moderne, la miniaturisation !
 sidebar:
   order: 9
 
+pubDate: 2023-11-25
 draft: false
 ---
 

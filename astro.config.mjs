@@ -36,11 +36,24 @@ export default defineConfig({
         },
       ],
 
+      social: [
+        { icon: 'rss', label: 'Flux RSS', href: '/rss.xml' },
+      ],
+
       components: {
         Footer: './src/components/Footer.astro',
       },
 
       head: [
+        {
+          tag: 'link',
+          attrs: {
+            rel: 'alternate',
+            type: 'application/rss+xml',
+            title: 'Zahkthar',
+            href: '/rss.xml',
+          },
+        },
         {
           tag: 'meta',
           attrs: {

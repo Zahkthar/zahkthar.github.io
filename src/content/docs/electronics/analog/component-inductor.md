@@ -5,6 +5,7 @@ description: "Découvrir le fonctionnement de la bobine, l'auto-induction, le ci
 sidebar:
   order: 1
 
+pubDate: 2026-11-22
 draft: false
 ---
 

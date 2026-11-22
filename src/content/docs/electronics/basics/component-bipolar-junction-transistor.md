@@ -5,6 +5,7 @@ description: "Démystifions le légendaire composant, le transistor !"
 sidebar:
   order: 7
 
+pubDate: 2023-09-24
 draft: false
 ---
 

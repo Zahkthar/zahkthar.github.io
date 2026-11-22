@@ -5,6 +5,7 @@ description: "Les principales lois à connaître pour pouvoir aller plus loin da
 sidebar:
   order: 1
 
+pubDate: 2022-09-15
 draft: false
 ---
 

@@ -5,6 +5,7 @@ description: "Comment définir l'électronique moderne avec un seul composant ?"
 sidebar:
   order: 11
 
+pubDate: 2025-03-02
 draft: false
 ---
 

@@ -5,6 +5,7 @@ description: "Qu'est-ce qu'une source d'énergie électrique ?"
 sidebar:
   order: 3
 
+pubDate: 2022-11-05
 draft: false
 ---
 

@@ -5,6 +5,7 @@ description: "Le condensateur se retrouve dans quasiment tous les circuits, pour
 sidebar:
   order: 4
 
+pubDate: 2023-01-31
 draft: false
 ---
 
