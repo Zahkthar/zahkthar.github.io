@@ -17,9 +17,9 @@ hero:
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-## Parcours actuel : Les bases de l'électronique
+## Série 1 : Les bases de l'électronique
 
-Cette première série de 11 articles pose les fondations indispensables pour lire des schémas, comprendre le rôle des composants et aborder vos premiers montages :
+Cette première série pose les fondations indispensables pour lire des schémas, comprendre le rôle des composants et aborder vos premiers montages :
 
 <CardGrid stagger>
   <LinkCard
@@ -44,7 +44,7 @@ Cette première série de 11 articles pose les fondations indispensables pour li
   />
 </CardGrid>
 
-### Tous les articles disponibles
+### Articles de la série
 
 1. [Les lois fondamentales en régime continu](/electronics/basics/course-basics-fundamental-laws-of-steady-state/)
 2. [La résistance](/electronics/basics/component-resistance/)
@@ -58,14 +58,25 @@ Cette première série de 11 articles pose les fondations indispensables pour li
 10. [Le NE555 : Une introduction aux oscillateurs](/electronics/basics/component-ne555/)
 11. [Introduction aux microcontrôleurs](/electronics/basics/course-microcontrollers-basics/)
 
+## Série 2 : Électronique analogique
+
+Cette série a pour objectif d'approfondir les composants réactifs, les signaux alternatifs, les amplificateurs opérationnels, les filtres et les systèmes radio :
+
+<LinkCard
+  title="1. L'inductance (la bobine)"
+  description="Fonctionnement de la bobine, auto-induction, stockage d'énergie magnétique, circuit RL et applications."
+  href="/electronics/analog/component-inductor/"
+/>
+
+### Articles disponibles
+
+1. [L'inductance (la bobine)](/electronics/analog/component-inductor/)
+
 ## Prochaines séries prévues
 
 <CardGrid>
   <Card title="Électronique numérique" icon="puzzle">
     Multiplexage, mémoires (RAM, ROM, Flash), convertisseurs CAN/CNA, protocoles UART/I2C/SPI et FPGA/CPLD.
-  </Card>
-  <Card title="Électronique analogique" icon="setting">
-    Amplificateurs opérationnels, impédances en régime alternatif, filtres, transformateurs et radiofréquences.
   </Card>
   <Card title="Programmation embarquée" icon="laptop">
     C/C++ bas niveau, gestion des périphériques (GPIO, PWM, interruptions, ADC) et architectures de firmware.
