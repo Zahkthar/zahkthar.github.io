@@ -26,4 +26,3 @@ Articles à venir (pas d'ordre) :
 | Station météo connectée                         |
 | Oscilloscope DIY                                |
 | Radio : Récepteur FM simple                     |
-| Radio : Brouilleur                              |

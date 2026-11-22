@@ -20,7 +20,7 @@ La résistivité d'un matériau (symbolisée par la lettre $\rho$ -> rho) repré
 
 ### La résistance électrique
 
-La résistance électrique dans une résistance dépend directement de la résistivité du matériau utilisé, qu'on va venir diviser ou multiplier selon la longueur et la section de notre conducteur. Sur les résistances, la valeur de la résistance électrique est généralement donnée via un code couleur que nous verrons juste après, mais si l'on voulait calculer soi-même la résistance d'un conducteur, nous pourrions utiliser cette formule :
+La résistance électrique dans une résistance dépend directement de la résistivité du matériau utilisé, qu'on va venir diviser ou multiplier selon la longueur et la section de notre conducteur. Sur les résistances, la valeur de la résistance électrique est généralement donnée via un code couleur que nous verrons [juste après](#le-code-couleur-et-marquage-des-résistances), mais si l'on voulait calculer soi-même la résistance d'un conducteur, nous pourrions utiliser cette formule :
 
 $$R = \rho \cdot \frac{L}{S}$$
 
@@ -131,3 +131,34 @@ Nous pouvons en déduire plusieurs choses :
 
 1. La résistance équivalente de plusieurs résistances en dérivation sera toujours plus petite que la plus petite des résistances prises en compte dans le calcul, ce qui correspond à l'idée générale juste au-dessus.
 2. Si deux résistances égales sont mises en dérivation, la résistance équivalente sera égale à une des résistances divisée par 2.
+
+
+## Le code couleur et marquage des résistances
+
+### Le code couleur
+
+Comme mentionné [au début de l'article](#la-résistance-électrique), la valeur des résistances peut être donnée selon un code couleur directement dessiné sur le corps de la résistance. Le voici (les images suivantes nous viennent tout droit de la [page Wikipédia sur la résistance](https://fr.wikipedia.org/wiki/R%C3%A9sistance_(composant))) : 
+
+![Code couleurs des résistances](../../../../assets/images/Electronique/Composants/Resistance/CodeCouleurs.png "Code couleurs des résistances")
+
+Tous les anneaux ne sont pas nécessairement utilisés sur toutes les résistances, le 3ème anneau de gauche typiquement n'est présent que quand la tolérance est inférieure ou égale à 2%. La lecture se fait de gauche à droite, on lit d'abord les chiffres significatifs, puis on multiplie le nombre obtenu par le coefficient donné par le dernier anneau de gauche. Pour savoir de quel côté est la gauche et la droite, l'anneau de tolérance est généralement plus espacé que les autres, et si une extrémité est couleur or ou argent, il s'agit nécessairement de la tolérance, et donc de la droite du code couleur.
+
+Pour une résistance typique de $1\,\text{k}\Omega$, le code couleur sera "Marron Noir Rouge" ($10 \cdot 100$) suivi d'une couleur pour la tolérance, par exemple Or pour une tolérance de 5%. Certaines résistances indiquent le coefficient de température de la résistance, qui indique en ppm la variation de résistance par degré. La majorité des résistances ont un coefficient positif, c'est-à-dire que leur résistance monte très légèrement quand leur température monte.
+
+La tolérance est simplement la fourchette dans laquelle sera la valeur réelle de la résistance. Avec une tolérance de 5%, la valeur réelle d'une résistance donnée pour $1\,\text{k}\Omega$ sera comprise entre $950\,\Omega$ et $1050\,\Omega$. Plus la tolérance est faible et plus la valeur réelle sera proche de la valeur voulue, mais le prix va nécessairement augmenter. Dans certains cas cela peut être utile, dans d'autres pas du tout.
+
+On peut voir une image avec plusieurs de ces composants ici :
+
+![Résistances traversantes](https://upload.wikimedia.org/wikipedia/commons/7/74/Resistors_(437342078).jpg "Résistances traversantes")
+
+Il en existe de différentes couleurs et de différentes tailles, la différence de taille venant surtout de la puissance maximale qu'elles peuvent dissiper. Les bleues à la deuxième rangée sont à titre d'exemple des résistances $1/4\,\text{W}$, elles peuvent donc dissiper cette puissance avant de surchauffer et de fondre ou de prendre feu.
+
+### Marquage des résistances CMS
+
+Il y a un cas spécifique au marquage des résistances et il apparaît quand les résistances sont trop petites pour avoir des bandes de couleurs écrites dessus. C'est notamment le cas des résistances dites CMS (Composant Monté en Surface, par opposition aux composants traversants, comme les résistances ci-dessus par exemple).
+
+![Résistance CMS](https://upload.wikimedia.org/wikipedia/commons/7/76/Register3.jpg "Résistance CMS")
+
+Ici comme on peut le voir, il n'y a pas de code couleur présent sur la résistance, mais seulement une valeur numérique. Il existe deux cas de figure :
+- Dans le cas où le nombre est à trois chiffres, les deux premiers sont les chiffres significatifs et le troisième le multiplicateur en puissance de dix. Dans l'exemple de l'image ci-dessus, il s'agit d'une résistance de $2\,\text{M}\Omega$ ($20 \cdot 10^5 \,\Omega$). Si la valeur de la résistance est inférieure à $10\,\Omega$, la position de la virgule est remplacée par un R ($5\,\Omega$ -> 5R0, $1{,}5\,\Omega$ -> 1R5).
+- Dans le cas où le nombre est à quatre chiffres, cela ressemble beaucoup sauf que ce sont les trois premiers chiffres qui sont significatifs et le quatrième qui est le multiplicateur. Si la valeur de résistance est inférieure à $100\,\Omega$, la position de la virgule est remplacée par un R.
