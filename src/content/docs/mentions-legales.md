@@ -16,7 +16,7 @@ Le site **zahkthar.fr** est un site personnel édité à titre non professionnel
 - **Contact** : [contact@zahkthar.fr](mailto:contact@zahkthar.fr)
 - **Statut** : Particulier — éditeur non professionnel (article 6-III-2 de la LCEN)
 
-Conformément à l'article 6-III-2 de la LCEN, l'éditeur agissant à titre non professionnel a fait le choix de ne pas rendre publiques son identité civile et son adresse personnelle ; ces informations ont été communiquées à l'hébergeur du site. *(Si vous souhaitez apparaître nominativement, vous pouvez remplacer ces lignes par vos nom, prénom et adresse postale.)*
+Conformément à l'article 6-III-2 de la LCEN, l'éditeur agissant à titre non professionnel a fait le choix de ne pas rendre publiques son identité civile et son adresse personnelle ; ces informations ont été communiquées à l'hébergeur du site.
 
 ## Hébergement
 
@@ -25,8 +25,6 @@ Le site est hébergé via le service **GitHub Pages** fourni par :
 - **Société** : GitHub, Inc. (pour l'Espace Économique Européen : GitHub B.V.)
 - **Adresse** : 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis *(entité UE : Prins Bernhardplein 200, 1097 JB Amsterdam, Pays-Bas)*
 - **Site web** : [https://pages.github.com](https://pages.github.com)
-
-*(À compléter le cas échéant avec le nom de votre bureau d'enregistrement pour le nom de domaine `zahkthar.fr`.)*
 
 ## Propriété intellectuelle
 

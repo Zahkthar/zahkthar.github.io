@@ -148,11 +148,15 @@ Ici, nous avons deux choses très importantes pour notre mini-projet, le circuit
 
 Le schéma du circuit est très simple, en voici une description rapide :
 
-- Nous avons le fil rouge, qui permet de distribuer l'alimentation 5 V de l'ESP32 au capteur et au relais
+- Nous avons le fil rouge, qui permet de distribuer l'alimentation 3,3 V de l'ESP32 au capteur et au relais
 - Le fil noir est la masse, le 0 V
 - Le fil violet qui est relié au pin numéro 4 de l'ESP32 comme on peut le lire dans le code, sur lequel va transiter la donnée de la température
 - Le fil bleu qui est le fil de données du relais, relié au pin 5 de l'ESP32 et qui permet d'envoyer un ordre d'ouverture ou de fermeture au relais.
 - Le côté non câblé du relais doit être relié à notre chauffage entre ses pins **COM et NO** (commun et normalement ouvert) : quand le relais reçoit 0 (au repos), le lien électrique se fait entre COM et NC (normalement fermé) et le chauffage est coupé ; quand le relais reçoit un 1 (`HIGH`), le contact bascule entre COM et NO et le chauffage est alimenté.
+
+À noter ici que le relais pourrait s'alimenter dans un circuit réel en 5 V et non en 3,3 V, auquel cas le fil rouge du relais devrait être relié au 5 V de l'ESP32 et non à son 3,3 V. L'information se trouve dans la datasheet du composant.
+
+Le DHT22 peut s'alimenter en 5 V, mais il utilise la tension d'alimentation pour transmettre ses données, et les pins de données de l'ESP32 ne sont pas tolérantes au 5 V, d'où l'alimentation en 3,3 V.
 
 Maintenant, sans entrer dans les détails (des articles traitant spécifiquement de programmation embarquée sont prévus), le code fonctionne de cette manière :
 
